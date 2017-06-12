@@ -9,7 +9,7 @@ public class Review {
 	private boolean isPositive;
 	private String originalReview;
 
-	private final String SEPERATOR = "./.";
+	private final String SEPERATOR = "\\./.";
 	private final String BLANK = "";
 
 	public List<Sentences> getListSentences() {
@@ -34,6 +34,9 @@ public class Review {
 
 	public void setOriginalReview(String originalReview) {
 		this.originalReview = originalReview;
+
+		// convert original review to sentences list
+		setListSentences(createSentencesList());
 	}
 
 	@Override
@@ -41,17 +44,22 @@ public class Review {
 		return null != originalReview ? originalReview : BLANK;
 	}
 
-	private List<Sentences> getSenTencesList() {
+	private List<Sentences> createSentencesList() {
+
 		List<Sentences> sentencesList = new ArrayList<>();
 		Sentences sentences;
-
+		
 		if (null != originalReview && BLANK != originalReview) {
-
-			String tempReview = new String(originalReview);
-			while (originalReview.contains(SEPERATOR)) {
-
+			
+			String[] reviewSentences = originalReview.split(SEPERATOR);
+			
+			for (int i = 0; i < reviewSentences.length; i++) {
+				sentences = new Sentences();
+				sentences.setOriginalSentences(reviewSentences[i]);
+				sentencesList.add(sentences);
 			}
 		}
+		
 		return sentencesList;
 	}
 }

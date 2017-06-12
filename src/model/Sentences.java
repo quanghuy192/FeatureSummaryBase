@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sentences {
@@ -8,7 +9,8 @@ public class Sentences {
 	private boolean isPositive;
 	private String originalSentences;
 
-	private final String SEPERATOR = "./.";
+	private final String BLANK = "";
+	private final String SEPERATOR = " ";
 
 	public List<Word> getListWord() {
 		return listWord;
@@ -32,6 +34,32 @@ public class Sentences {
 
 	public void setOriginalSentences(String originalSentences) {
 		this.originalSentences = originalSentences;
+
+		// convert original sentences to word list
+		setListWord(createWordList());
 	}
 
+	@Override
+	public String toString() {
+		return null != originalSentences ? originalSentences : BLANK;
+	}
+
+	private List<Word> createWordList() {
+
+		List<Word> wordList = new ArrayList<>();
+		Word word;
+
+		if (null != originalSentences && BLANK != originalSentences) {
+
+			String[] items = originalSentences.split(SEPERATOR);
+
+			for (int i = 0; i < items.length; i++) {
+				word = new Word();
+				word.setOriginalWord(items[i]);
+				wordList.add(word);
+			}
+		}
+
+		return wordList;
+	}
 }

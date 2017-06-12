@@ -4,17 +4,17 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src_tokenizer"/>
 	<classpathentry kind="src" path="src_vntagger"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/commons-cli-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/edu.stanford.nlp.tagger-2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/junit.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/maxent-2.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/opennlp-tools-1.4.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/org.eclipse.core.runtime-3.7.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/org.osgi.core-4.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/trove.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/vn.hus.nlp.fsm-1.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/vn.hus.nlp.sd-2.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/vn.hus.nlp.tokenizer-4.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dqhuy/workspace_java/WordTokenizerUties/lib/vn.hus.nlp.utils-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/edu.stanford.nlp.tagger-2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/junit.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/maxent-2.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/opennlp-tools-1.4.3.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/org.eclipse.core.runtime-3.7.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/trove.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/vn.hus.nlp.fsm-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/vn.hus.nlp.sd-2.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/vn.hus.nlp.tokenizer-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/huy/Downloads/FeatureSumaryBase/lib/vn.hus.nlp.utils-1.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

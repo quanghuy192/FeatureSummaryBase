@@ -3,21 +3,16 @@ package model;
 public class Word {
 
 	private final String BLANK = "";
+	private final String SEPERATOR = "/";
 
 	private String word;
 	private String type;
+	private String originalWord;
 
 	public Word() {
 	}
 
 	public Word(String value) {
-		String[] values = value.split("/");
-		if (values.length >= 2) {
-			if (!":".equalsIgnoreCase(values[0]) && !",".equalsIgnoreCase(values[0])) {
-				this.word = values[0];
-				this.type = values[1];
-			}
-		}
 	}
 
 	public String getWord() {
@@ -36,6 +31,17 @@ public class Word {
 		this.type = type;
 	}
 
+	public String getOriginalWord() {
+		return originalWord;
+	}
+
+	public void setOriginalWord(String originalWord) {
+		this.originalWord = originalWord;
+
+		// convert word
+		createWord();
+	}
+
 	@Override
 	public String toString() {
 		if (null != word && null != type) {
@@ -45,4 +51,15 @@ public class Word {
 		}
 	}
 
+	private void createWord() {
+		if (null != originalWord && BLANK != originalWord) {
+			String[] items = originalWord.split(SEPERATOR);
+			if (items.length >= 2) {
+				if (!":".equalsIgnoreCase(items[0]) && !",".equalsIgnoreCase(items[0])) {
+					this.word = items[0];
+					this.type = items[1];
+				}
+			}
+		}
+	}
 }
