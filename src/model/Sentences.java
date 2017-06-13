@@ -11,6 +11,7 @@ public class Sentences {
 
 	private final String BLANK = "";
 	private final String SEPERATOR = " ";
+	private final String SPLASH = "/";
 
 	public List<Word> getListWord() {
 		return listWord;
@@ -53,10 +54,24 @@ public class Sentences {
 
 			String[] items = originalSentences.split(SEPERATOR);
 
-			for (int i = 0; i < items.length; i++) {
+			int i = 0;
+			while (i < items.length) {
 				word = new Word();
-				word.setOriginalWord(items[i]);
+				if (items[i].contains(SPLASH)) {
+					word.setOriginalWord(items[i]);
+					i++;
+				} else {
+					int s = 0;
+					String multiWord = BLANK;
+					while (!multiWord.contains(SPLASH)) {
+						s++;
+						multiWord = new StringBuilder(items[i]).append(SEPERATOR).append(items[i + s]).toString();
+					}
+					word.setOriginalWord(multiWord);
+					i += s;
+				}
 				wordList.add(word);
+				System.out.println(word.getOriginalWord());
 			}
 		}
 
