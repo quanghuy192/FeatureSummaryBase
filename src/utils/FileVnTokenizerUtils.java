@@ -12,7 +12,7 @@ import java.util.List;
 
 import vn.hus.nlp.tokenizer.VietTokenizer;
 
-public class FileUtils {
+public class FileVnTokenizerUtils {
 
 	private FileReader reader;
 	private FileWriter writer;
@@ -25,7 +25,7 @@ public class FileUtils {
 	private final String SEPERATOR_CHAR = "##########";
 	private final String BLANK_CHAR = "";
 
-	public FileUtils() {
+	public FileVnTokenizerUtils() {
 		try {
 			tokenizer = new VietTokenizer();
 

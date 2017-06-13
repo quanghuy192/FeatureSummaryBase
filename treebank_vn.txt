@@ -1,0 +1,49 @@
+N-Danh từ
+Np-Danh từ riêng
+Nc-Danh từ chỉ loại
+Nu-Danh từ đơn vị
+V-Động từ
+A-Tính từ
+P-Đại từ
+L-Định từ
+M-Số từ
+R-Phụ từ
+E-Giới từ
+C-Liên từ
+I-Thán từ
+T-Trợ từ, tiểu từ, từ tình thái
+U-Từ đơn lẻ
+Y-Từ viết tắt
+X-Các từ không phân loại được
+NP-Cụm danh từ
+VP-Cụm động từ
+AP-Cụm tính từ
+RP-Cụm phụ từ
+PP-Cụm giới từ
+QP-Cụm từ chỉ số lượng
+MDP-Cụm từ tình thái
+WHNP-Cụm danh từ nghi vấn (ai, cái gì, con gì, v.v.)
+WHAP-Cụm tính từ nghi vấn (lạnh thế nào, đẹp ra sao, v.v.)
+WHRP-Cụm từ nghi vấn dùng khi hỏi về thời gian, nơi chốn, v.v.
+WHPP-Cụm giới từ nghi vấn (với ai, bằng cách nào, v.v.)
+S-Câu trần thuật (khẳng định hoặc phủ định)
+SQ-Câu hỏi
+SBAR-Mệnh đề phụ (bổ nghĩa cho danh từ, động từ, và tính từ)
+SUB-Nhãn chức năng chủ ngữ
+DOB-Nhãn chức năng tân ngữ trực tiếp
+IOB-Nhãn chức năng tân ngữ gián tiếp
+TPC-Nhãn chức năng chủ đề
+PRD-Nhãn chức năng vị ngữ không phải cụm động từ
+LGS-Nhãn chức năng chủ ngữ logic của câu ở thể bị động
+EXT-Nhãn chức năng bổ ngữ chỉ phạm vi hay tần suất của hành động
+H-Nhãn phần tử trung tâm (của cụm từ hoặc mệnh đề)
+TC, CMD,EXC, SPL-Nhãn phân loại câu: đề-thuyết, mệnh lệnh, cảm thán, đặc biệt
+TTL-Tít báo hay tiêu đề
+VOC-Thành phần than gọi
+TMP-Nhãn chức năng trạng ngữ chỉ thời gian
+LOC-Nhãn chức năng trạng ngữ chỉ nơi chốn
+DIR-Nhãn chức năng trạng ngữ chỉ hướng
+MNR-Nhãn chức năng trạng ngữ chỉ cách thức
+PRP-Nhãn chức năng trạng ngữ chỉ mục đích hay lý do
+ADV-Nhãn chức năng trạng ngữ nói chung (dùng khi trạng ngữ không thuộc một trong các loại cụ thể trên)
+

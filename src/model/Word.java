@@ -59,6 +59,10 @@ public class Word {
 					this.word = items[0];
 					this.type = items[1];
 				}
+			} else if (items.length >= 1) {
+				if (!":".equalsIgnoreCase(items[0]) && !",".equalsIgnoreCase(items[0])) {
+					this.word = items[0];
+				}
 			}
 		}
 	}
