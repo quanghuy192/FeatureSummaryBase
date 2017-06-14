@@ -1,6 +1,8 @@
 package utils;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import controller.AprioriAlgorithrm;
@@ -39,8 +41,22 @@ public class Test implements Serializable {
 //						newW.getWord() + "==" + newW.getType() + "==" + VnPOS_Utils.get_VN_POS_mean(newW.getType()));
 //			}
 //		}
+		String[][][] data = { { { "1" }, { "A", "C", "D" } },
+				  { { "2" }, { "B", "C", "E" } },
+				  { { "3" }, { "A", "B", "C", "E" } },
+				  { { "4" }, { "B", "E" } }
+				};
+		HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
+
+		List<String[]> datas;
+		for (int i = 0; i < data.length; i++) {
+			String[][] items = data[i];
+			datas = new ArrayList<>();
+			datas.add(items[1]);
+			dataItems.put(i, datas);
+		}
 		
 		AprioriAlgorithrm al = new AprioriAlgorithrm();
-		al.generate_K_ItemSet(null);
+		al.generate_K_ItemSet(dataItems);
 	}
 }
