@@ -41,6 +41,6 @@ public class Test implements Serializable {
 //		}
 		
 		AprioriAlgorithrm al = new AprioriAlgorithrm();
-		// al.test();
+		al.generate_K_ItemSet(null);
 	}
 }

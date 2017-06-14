@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class AprioriAlgorithrm {
 
-	private List<String> itemList;
 	private String[][][] data = { { { "1" }, { "A", "C", "D" } },
 								  { { "2" }, { "B", "C", "E" } },
 								  { { "3" }, { "A", "B", "C", "E" } },
@@ -17,17 +16,14 @@ public class AprioriAlgorithrm {
 	
 	private HashMap<Integer, List<String[]>> dataItems;
 	private HashMap<Integer, List<String[]>> dataResultItems;
-	private List<String[]> candidateItemList;
 	
 	private int N;
 	private int SUPPORT_MIN = 2;
 	private int CONFIDENCE = 2;
 
 	public AprioriAlgorithrm() {
-		itemList = new ArrayList<>();
 		dataItems = new HashMap<>();
 		dataResultItems = new HashMap<>();
-		candidateItemList = new ArrayList<>();
 
 		N = data.length;
 		List<String[]> datas;
@@ -39,32 +35,65 @@ public class AprioriAlgorithrm {
 		}
 	}
 
-	private void generateK_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
+	public HashMap<Integer, List<String[]>> generate_K_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
 
 		List<String[]> itemList = getItems(dataItemsParent);
 		List<Item> itemsRule = new ArrayList<>();
 		for (String[] s : itemList) {
-			if(!itemsRule.contains(s)){
+			if (!itemsRule.contains(s)) {
 				itemsRule.add(new Item(s, 1));
-			}else{
-				Item i = getValue(s, itemsRule);
-				if(null != i && i.getQuantity() > -1){
+			} else {
+				Item i = getItem(s, itemsRule);
+				if (null != i && i.getQuantity() > -1) {
 					int quantity = i.getQuantity();
 					i.setQuantity(quantity++);
 					itemsRule.add(i);
 				}
 			}
 		}
-		
+
 		for (Item i : itemsRule) {
-			int percent = i.getQuantity()/N;
-			if(percent >= SUPPORT_MIN){
-				
+			int percent = i.getQuantity() / N;
+			int count = 0;
+			List<String[]> subList;
+			if (percent >= SUPPORT_MIN) {
+				subList = new ArrayList<>();
+				subList.add(i.getValue());
+				dataResultItems.put(count, subList);
+				count++;
 			}
+		}
+
+		HashMap<Integer, List<String[]>> dataItemsChild = getItemsChild(dataResultItems);
+		if (dataItemsChild.size() > 0) {
+			return generate_K_ItemSet(dataItemsChild);
+		} else {
+			return dataItemsChild;
 		}
 	}
 
-	private Item getValue(String[] value, List<Item> items) {
+	private HashMap<Integer, List<String[]>> getItemsChild(HashMap<Integer, List<String[]>> items) {
+		HashMap<Integer, List<String[]>> dataItemsChild = new HashMap<>();
+		List<String[]> itemList = getItems(items);
+		List<String> itemAtom = getAtomItems(items);
+		List<Object[]> existList = new ArrayList<>();
+		int count = 0;
+		for (String[] s : itemList) {
+			for (String a : itemAtom) {
+				List<String> temp = Arrays.asList(s);
+				temp.add(a);
+				if (!existList.contains(temp.toArray())) {
+					List<String[]> item = new ArrayList<>();
+					item.add((String[]) temp.toArray());
+					dataItemsChild.put(count, item);
+				}
+			}
+		}
+
+		return dataItemsChild;
+	}
+
+	private Item getItem(String[] value, List<Item> items) {
 		for (Item i : items) {
 			Item temp = new Item(value, i.getQuantity());
 			if (i.equals(temp)) {
@@ -86,7 +115,21 @@ public class AprioriAlgorithrm {
 		}
 		return itemList;
 	}
-
+	
+	private List<String> getAtomItems(HashMap<Integer, List<String[]>> dataItemsParent) {
+		List<String> itemList = new ArrayList<>();
+		for (Map.Entry<Integer, List<String[]>> map : dataItemsParent.entrySet()) {
+			List<String[]> itemValue = map.getValue();
+			for (String[] s : itemValue) {
+				for (String subS : s) {
+					if(!itemList.contains(subS)){
+						itemList.add(subS);
+					}
+				}
+			}
+		}
+		return itemList;
+	}
 
 	private class Item{
 		private String[] value;
