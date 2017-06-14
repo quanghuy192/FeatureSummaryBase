@@ -16,6 +16,7 @@ public class AprioriAlgorithrm {
 	
 	private HashMap<Integer, List<String[]>> dataItems;
 	private HashMap<Integer, List<String[]>> dataResultItems;
+	private HashMap<Integer, List<String[]>> dataOriginalItems;
 	
 	private int N;
 	private int step = 0;
@@ -39,6 +40,7 @@ public class AprioriAlgorithrm {
 	public HashMap<Integer, List<String[]>> generate_K_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
 
 		step++;
+		dataOriginalItems = dataItemsParent;
 		if(step == 1){
 			dataItemsParent = getAtomFirstData(dataItemsParent);
 		}
@@ -59,7 +61,7 @@ public class AprioriAlgorithrm {
 		}
 
 		for (Item i : itemsRule) {
-			int percent = i.getQuantity() / N;
+			double percent = 1.0 * i.getQuantity() / N;
 			int count = 0;
 			List<String[]> subList;
 			if (percent >= SUPPORT_MIN) {
