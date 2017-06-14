@@ -15,8 +15,8 @@ public class AprioriAlgorithrm {
 								  { { "4" }, { "B", "E" } }
 								};
 	
-	private HashMap<Integer, List<String>> dataItems;
-	private HashMap<Integer, List<String>> dataResultItems;
+	private HashMap<Integer, List<String[]>> dataItems;
+	private HashMap<Integer, List<String[]>> dataResultItems;
 	private List<String[]> candidateItemList;
 	
 	private int N;
@@ -28,24 +28,26 @@ public class AprioriAlgorithrm {
 		dataItems = new HashMap<>();
 		dataResultItems = new HashMap<>();
 		candidateItemList = new ArrayList<>();
-		
-		N = data.length;
 
+		N = data.length;
+		List<String[]> datas;
 		for (int i = 0; i < data.length; i++) {
 			String[][] items = data[i];
-			dataItems.put(i, Arrays.asList(items[1]));
+			datas = new ArrayList<>();
+			datas.add(items[1]);
+			dataItems.put(i, datas);
 		}
 	}
 
-	private void generateK_ItemSet(HashMap<Integer, List<String>> dataItemsParent) {
+	private void generateK_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
 
-		List<String> itemList = getItems(dataItemsParent);
+		List<String[]> itemList = getItems(dataItemsParent);
 		List<Item> itemsRule = new ArrayList<>();
-		for (String s : itemList) {
+		for (String[] s : itemList) {
 			if(!itemsRule.contains(s)){
-				// itemsRule.add(new Item(s, 1));
+				itemsRule.add(new Item(s, 1));
 			}else{
-				Item i = getItem(s,itemsRule);
+				Item i = getValue(s, itemsRule);
 				if(null != i && i.getQuantity() > -1){
 					int quantity = i.getQuantity();
 					i.setQuantity(quantity++);
@@ -62,20 +64,21 @@ public class AprioriAlgorithrm {
 		}
 	}
 
-	private Item getItem(String value, List<Item> items) {
+	private Item getValue(String[] value, List<Item> items) {
 		for (Item i : items) {
-			if (i.getValue().equals(value)) {
+			Item temp = new Item(value, i.getQuantity());
+			if (i.equals(temp)) {
 				return i;
 			}
 		}
 		return null;
 	}
 
-	private List<String> getItems(HashMap<Integer, List<String>> dataItemsParent) {
-		List<String> itemList = new ArrayList<>();
-		for (Map.Entry<Integer, List<String>> map : dataItemsParent.entrySet()) {
-			List<String> itemValue = map.getValue();
-			for (String s : itemValue) {
+	private List<String[]> getItems(HashMap<Integer, List<String[]>> dataItemsParent) {
+		List<String[]> itemList = new ArrayList<>();
+		for (Map.Entry<Integer, List<String[]>> map : dataItemsParent.entrySet()) {
+			List<String[]> itemValue = map.getValue();
+			for (String[] s : itemValue) {
 				if(!itemList.contains(s)){
 					itemList.add(s);
 				}
