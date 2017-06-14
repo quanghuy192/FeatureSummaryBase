@@ -87,6 +87,7 @@ public class AprioriAlgorithrm {
 			list = new ArrayList<>();
 			list.add(new String[] { s });
 			itemsFirst.put(count, list);
+			count++;
 		}
 		return itemsFirst;
 	}
