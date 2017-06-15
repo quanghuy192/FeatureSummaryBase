@@ -93,35 +93,6 @@ public class AprioriAlgorithrm {
 		}
 	}
 
-	/**
-	 * 
-	 * Blute-Force algorithm
-	 * Find the pattern substring matching in parent string
-	 * (maybe optimization with KMP, Boyer-Moore algorithm)  
-	 * 
-	 * @param parent
-	 * @param child
-	 * @return
-	 */
-	public boolean checkSubArrayContain(String[] parent, String[] child) {
-		for (int i = 0; i < parent.length; i++) {
-			int j = i;
-			int s = 0;
-			while (s < child.length) {
-				if (child[s].equalsIgnoreCase(parent[j])) {
-					s++;
-					j++;
-					if (s == child.length) {
-						return true;
-					}
-				} else {
-					break;
-				}
-			}
-		}
-		return false;
-	}
-
 	private HashMap<Integer, List<String[]>> getAtomFirstData(HashMap<Integer, List<String[]>> dataItemsParent) {
 		HashMap<Integer, List<String[]>> itemsFirst = new HashMap<>();
 		List<String> atomItems = getAtomItems(dataItemsParent);

@@ -12,12 +12,14 @@ public class Item {
 	public Item(String[] itemsChild) {
 		super();
 		this.itemsChild = itemsChild;
+		quantity = 1;
 	}
 
 	public Item(String[] itemsParent, String[] itemsChild) {
 		super();
 		this.itemsParent = itemsParent;
 		this.itemsChild = itemsChild;
+		quantity = 1;
 	}
 
 	public int getQuantity() {
@@ -34,6 +36,10 @@ public class Item {
 
 	public void setItemsParent(String[] itemsParent) {
 		this.itemsParent = itemsParent;
+		
+		if(checkSubArrayContain(itemsParent, itemsChild)){
+			quantity++;
+		}
 	}
 
 	public String[] getItemsChild() {
@@ -78,5 +84,35 @@ public class Item {
 			}
 		}
 		return true;
+	}
+	
+
+	/**
+	 * 
+	 * Blute-Force algorithm
+	 * Find the pattern substring matching in parent string
+	 * (maybe optimization with KMP, Boyer-Moore algorithm)  
+	 * 
+	 * @param parent
+	 * @param child
+	 * @return
+	 */
+	public boolean checkSubArrayContain(String[] parent, String[] child) {
+		for (int i = 0; i < parent.length; i++) {
+			int j = i;
+			int s = 0;
+			while (s < child.length) {
+				if (child[s].equalsIgnoreCase(parent[j])) {
+					s++;
+					j++;
+					if (s == child.length) {
+						return true;
+					}
+				} else {
+					break;
+				}
+			}
+		}
+		return false;
 	}
 }
