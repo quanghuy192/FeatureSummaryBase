@@ -30,7 +30,7 @@ public class AprioriAlgorithrm {
 	
 	private int N;
 	private int step = 0;
-	private int SUPPORT_MIN = 2;
+	private double SUPPORT_MIN = 0.6;
 	private int CONFIDENCE_MIN = 2;
 
 	public AprioriAlgorithrm() {
@@ -66,16 +66,16 @@ public class AprioriAlgorithrm {
 					itemsRule.add(i);
 				} else {
 					Item clone = getItem(child, itemsRule);
-					if (null != i) {
+					if (null != clone) {
 						clone.setItemsParent(parent);
 					}
 				}
 			}
 		}
 
+		int count = 0;
 		for (Item i : itemsRule) {
 			double percent = 1.0 * i.getQuantity() / N;
-			int count = 0;
 			List<String[]> subList;
 			if (percent >= SUPPORT_MIN) {
 				subList = new ArrayList<>();
@@ -111,21 +111,36 @@ public class AprioriAlgorithrm {
 		HashMap<Integer, List<String[]>> dataItemsChild = new HashMap<>();
 		List<String[]> itemList = getItems(items);
 		List<String> itemAtom = getAtomItems(items);
-		List<Object[]> existList = new ArrayList<>();
+		List<String[]> existList = new ArrayList<>();
 		int count = 0;
 		for (String[] s : itemList) {
 			for (String a : itemAtom) {
-				List<String> temp = Arrays.asList(s);
+				List<String> temp = convertArrayToList(s);
 				temp.add(a);
-				if (!existList.contains(temp.toArray())) {
+				if (!existList.contains(convertListToArray(temp))) {
 					List<String[]> item = new ArrayList<>();
-					item.add((String[]) temp.toArray());
+					item.add(convertListToArray(temp));
 					dataItemsChild.put(count, item);
+					count++;
 				}
 			}
 		}
 
 		return dataItemsChild;
+	}
+	
+	private List<String> convertArrayToList(String[] arr){
+		List<String> temp = new ArrayList<>();
+		for (String s : arr) {
+			temp.add(s);
+		}
+		return temp;
+	}
+	
+	private String[] convertListToArray(List<String> list){
+		String[] temp = new String[list.size()];
+		list.toArray(temp);
+		return temp;
 	}
 
 	private Item getItem(String[] values, List<Item> items) {
