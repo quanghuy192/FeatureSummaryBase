@@ -6,6 +6,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import model.Item;
+
+/**
+ * Apriori algorithm 
+ * Find the pattern substring matching in parent string
+ * (maybe optimization with Apriori-TID, Apriori-Habrid algorithm)
+ * 
+ * @author dqhuy
+ *
+ */
 public class AprioriAlgorithrm {
 
 	private String[][][] data = { { { "1" }, { "A", "C", "D" } },
@@ -21,7 +31,7 @@ public class AprioriAlgorithrm {
 	private int N;
 	private int step = 0;
 	private int SUPPORT_MIN = 2;
-	private int CONFIDENCE = 2;
+	private int CONFIDENCE_MIN = 2;
 
 	public AprioriAlgorithrm() {
 		dataItems = new HashMap<>();
@@ -45,17 +55,20 @@ public class AprioriAlgorithrm {
 			dataItemsParent = getAtomFirstData(dataItemsParent);
 		}
 		
-		List<String[]> itemList = getItems(dataItemsParent);
+		List<String[]> itemsParent = getOriginalItems();
+		List<String[]> itemsChild = getItems(dataItemsParent);
 		List<Item> itemsRule = new ArrayList<>();
-		for (String[] s : itemList) {
-			if (!itemsRule.contains(s)) {
-				itemsRule.add(new Item(s, 1));
-			} else {
-				Item i = getItem(s, itemsRule);
-				if (null != i && i.getQuantity() > -1) {
-					int quantity = i.getQuantity();
-					i.setQuantity(quantity++);
+		
+		for (String[] child : itemsChild) {
+			for (String[] parent : itemsParent) {
+				Item i = new Item(parent, child);
+				if (!itemsRule.contains(i)) {
 					itemsRule.add(i);
+				} else {
+					Item clone = getItem(child, itemsRule);
+					if (null != i) {
+						clone.setItemsParent(parent);
+					}
 				}
 			}
 		}
@@ -66,7 +79,7 @@ public class AprioriAlgorithrm {
 			List<String[]> subList;
 			if (percent >= SUPPORT_MIN) {
 				subList = new ArrayList<>();
-				subList.add(i.getValue());
+				subList.add(i.getItemsChild());
 				dataResultItems.put(count, subList);
 				count++;
 			}
@@ -78,6 +91,35 @@ public class AprioriAlgorithrm {
 		} else {
 			return dataItemsChild;
 		}
+	}
+
+	/**
+	 * 
+	 * Blute-Force algorithm
+	 * Find the pattern substring matching in parent string
+	 * (maybe optimization with KMP, Boyer-Moore algorithm)  
+	 * 
+	 * @param parent
+	 * @param child
+	 * @return
+	 */
+	public boolean checkSubArrayContain(String[] parent, String[] child) {
+		for (int i = 0; i < parent.length; i++) {
+			int j = i;
+			int s = 0;
+			while (s < child.length) {
+				if (child[s].equalsIgnoreCase(parent[j])) {
+					s++;
+					j++;
+					if (s == child.length) {
+						return true;
+					}
+				} else {
+					break;
+				}
+			}
+		}
+		return false;
 	}
 
 	private HashMap<Integer, List<String[]>> getAtomFirstData(HashMap<Integer, List<String[]>> dataItemsParent) {
@@ -115,9 +157,9 @@ public class AprioriAlgorithrm {
 		return dataItemsChild;
 	}
 
-	private Item getItem(String[] value, List<Item> items) {
+	private Item getItem(String[] values, List<Item> items) {
 		for (Item i : items) {
-			Item temp = new Item(value, i.getQuantity());
+			Item temp = new Item(values);
 			if (i.equals(temp)) {
 				return i;
 			}
@@ -152,68 +194,9 @@ public class AprioriAlgorithrm {
 		}
 		return itemList;
 	}
-
-	private class Item{
-		private String[] value;
-		private int quantity;
-		
-		private int HASH_CONST = 17;
-		
-		public Item(String[] value, int quantity) {
-			super();
-			this.value = value;
-			this.quantity = quantity;
-		}
-		
-		public String[] getValue() {
-			return value;
-		}
-
-		public void setValue(String[] value) {
-			this.value = value;
-		}
-
-		public int getQuantity() {
-			return quantity;
-		}
-		public void setQuantity(int quantity) {
-			this.quantity = quantity;
-		}
-
-		@Override
-		public int hashCode() {
-
-			int hash_code = HASH_CONST;
-
-			int valueHash = value == null ? 1 : 0;
-			hash_code = HASH_CONST + 31 * valueHash;
-			hash_code = HASH_CONST + 31 * quantity;
-
-			return hash_code;
-		}
-
-		@Override
-		public boolean equals(Object o) {
-
-			if (o == this) {
-				return true;
-			}
-			if (!(o instanceof Item)) {
-				return false;
-			}
-
-			Item i = (Item) o;
-
-			if (i.getValue().length != value.length) {
-				return false;
-			}
-
-			for (int j = 0; j < value.length; j++) {
-				if (!value[j].equals(i.getValue()[j])) {
-					return false;
-				}
-			}
-			return true;
-		}
+	
+	private List<String[]> getOriginalItems() {
+		return getItems(dataOriginalItems);
 	}
+
 }

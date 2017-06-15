@@ -42,10 +42,10 @@ public class Test implements Serializable {
 //			}
 //		}
 		String[][][] data = { { { "1" }, { "A", "C", "D" } },
-				  { { "2" }, { "B", "C", "E" } },
-				  { { "3" }, { "A", "B", "C", "E" } },
-				  { { "4" }, { "B", "E" } }
-				};
+				  			  { { "2" }, { "B", "C", "E" } },
+				              { { "3" }, { "A", "B", "C", "E" } },
+				              { { "4" }, { "B", "E" } }
+				            };
 		HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
 
 		List<String[]> datas;
@@ -58,5 +58,9 @@ public class Test implements Serializable {
 		
 		AprioriAlgorithrm al = new AprioriAlgorithrm();
 		al.generate_K_ItemSet(dataItems);
+		
+//		String[] parent = {"A","B","C","A","D","G","B","C","E","F"};
+//		String[] child = {"A","D","G","B"};
+//		System.out.println(al.checkSubArrayContain(parent, child));
 	}
 }
