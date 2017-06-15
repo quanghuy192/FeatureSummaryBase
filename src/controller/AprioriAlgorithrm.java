@@ -1,11 +1,11 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import model.ComplexArray;
 import model.Item;
 
 /**
@@ -111,18 +111,19 @@ public class AprioriAlgorithrm {
 		HashMap<Integer, List<String[]>> dataItemsChild = new HashMap<>();
 		List<String[]> itemList = getItems(items);
 		List<String> itemAtom = getAtomItems(items);
-		List<String[]> existList = new ArrayList<>();
+		List<ComplexArray> existList = new ArrayList<>();
 		int count = 0;
 		for (String[] s : itemList) {
 			for (String a : itemAtom) {
 				List<String> temp = convertArrayToList(s);
 				temp.add(a);
 				String[] subArr = convertListToArray(temp);
-				if (!existList.contains(subArr)) {
+				ComplexArray complex = new ComplexArray(subArr);
+				if (!existList.contains(complex)) {
 					List<String[]> item = new ArrayList<>();
 					item.add(subArr);
 					dataItemsChild.put(count, item);
-					existList.add(subArr);
+					existList.add(complex);
 					count++;
 				}
 			}
