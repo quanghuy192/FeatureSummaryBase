@@ -47,7 +47,7 @@ public class ComplexArray {
 			return false;
 		}
 		List<String> parent = convertArrayToList(complexObject);
-		for (String s : parent) {
+		for (String s : i.getComplexObject()) {
 			if (!parent.contains(s)) {
 				return false;
 			}
