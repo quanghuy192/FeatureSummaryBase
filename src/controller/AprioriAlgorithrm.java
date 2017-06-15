@@ -117,10 +117,12 @@ public class AprioriAlgorithrm {
 			for (String a : itemAtom) {
 				List<String> temp = convertArrayToList(s);
 				temp.add(a);
-				if (!existList.contains(convertListToArray(temp))) {
+				String[] subArr = convertListToArray(temp);
+				if (!existList.contains(subArr)) {
 					List<String[]> item = new ArrayList<>();
-					item.add(convertListToArray(temp));
+					item.add(subArr);
 					dataItemsChild.put(count, item);
+					existList.add(subArr);
 					count++;
 				}
 			}
