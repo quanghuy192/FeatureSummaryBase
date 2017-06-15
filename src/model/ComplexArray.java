@@ -1,10 +1,13 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ComplexArray {
 
 	private String[] complexObject;
 	private int HASH_CONST = 17;
-	
+
 	public ComplexArray(String[] complexObject) {
 		super();
 		this.complexObject = complexObject;
@@ -43,12 +46,21 @@ public class ComplexArray {
 		if (i.getComplexObject().length != complexObject.length) {
 			return false;
 		}
-		for (int j = 0; j < i.getComplexObject().length; j++) {
-			if (!complexObject[j].contains(i.getComplexObject()[j])) {
+		List<String> parent = convertArrayToList(complexObject);
+		for (String s : parent) {
+			if (!parent.contains(s)) {
 				return false;
 			}
 		}
 		return true;
+	}
+
+	private List<String> convertArrayToList(String[] arr) {
+		List<String> temp = new ArrayList<>();
+		for (String s : arr) {
+			temp.add(s);
+		}
+		return temp;
 	}
 
 }
