@@ -115,10 +115,16 @@ public class AprioriAlgorithrm {
 		int count = 0;
 		for (String[] s : itemList) {
 			for (String a : itemAtom) {
+				
 				List<String> temp = convertArrayToList(s);
+				if(temp.contains(a)){
+					continue;
+				}
+				
 				temp.add(a);
 				String[] subArr = convertListToArray(temp);
 				ComplexArray complex = new ComplexArray(subArr);
+				
 				if (!existList.contains(complex)) {
 					List<String[]> item = new ArrayList<>();
 					item.add(subArr);
