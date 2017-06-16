@@ -141,33 +141,38 @@ public class WordUtils {
 	}
 	
 	// Generate feature base raw file
-	public void generateFeatureBaseFile(){
-		
+	public void generateFeatureBaseFile() {
+
 		// open and create new output file
+		FileWriter mWriter = null;
+		BufferedWriter mBufferedWriter = null;
 		try {
-			writer = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
-			bufferedWriter = new BufferedWriter(writer);
-			
+			mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
+			mBufferedWriter = new BufferedWriter(mWriter);
+
 			List<Review> listReview = getReviewList();
 			for (Review r : listReview) {
-				
+
 				List<Sentences> sentences = r.getListSentences();
 				for (Sentences s : sentences) {
-					
+
 					List<Word> words = s.getListWord();
 					for (Word w : words) {
-						if(nounTagList.contains(w.getType())){
-							bufferedWriter.write(w.getWord() + BLANK);
+						if (nounTagList.contains(w.getType())) {
+							mBufferedWriter.write(w.getWord() + BLANK);
+							System.out.print(w.getWord() + BLANK);
 						}
 					}
 				}
-				bufferedWriter.write("\n");
-				bufferedWriter.write("\n");
+				System.out.println();
+				mBufferedWriter.write("\n");
+				mBufferedWriter.write("\n");
 			}
+			mBufferedWriter.close();
+			mWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			closeWrite();
 			System.out.println("Done !!!!!!!");
 		}
 	}
