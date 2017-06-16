@@ -27,7 +27,7 @@ public class FeatureBaseUtils {
 	// generate feature base after filter
 	public HashMap<Integer, List<String[]>> featureBase(){
 		
-		HashMap<Integer, List<String[]>> featureBase = new HashMap<>();
+		HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
 		
 		// read data include noun & noun phase
 		List<String[]> lineList = new ArrayList<String[]>();
@@ -37,7 +37,7 @@ public class FeatureBaseUtils {
 			while (null != (s = bufferedReader.readLine())) {
 				String[] wordList = s.split(BLANK);
 				lineList.add(wordList);
-				featureBase.put(count, lineList);
+				featureBases.put(count, lineList);
 				count++;
 			}
 		} catch (IOException e) {
@@ -46,7 +46,7 @@ public class FeatureBaseUtils {
 			close();
 		}
 
-		return featureBase;
+		return featureBases;
 	}
 	
 	private void close() {

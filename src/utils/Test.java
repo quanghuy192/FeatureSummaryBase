@@ -4,11 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import controller.AprioriAlgorithrm;
-import model.Review;
-import model.Sentences;
-import model.Word;
+import java.util.Map;
 
 public class Test implements Serializable {
 
@@ -63,11 +59,22 @@ public class Test implements Serializable {
 			dataItems.put(ii, datas);
 		}
 		
-		AprioriAlgorithrm al = new AprioriAlgorithrm();
-		al.generate_K_ItemSet(dataItems);
+//		AprioriAlgorithrm al = new AprioriAlgorithrm();
+//		al.generate_K_ItemSet(dataItems);
+		HashMap<Integer, List<String[]>> featureBases = new FeatureBaseUtils().featureBase();
+		for (Map.Entry<Integer, List<String[]>> strings : featureBases.entrySet()) {
+			for (String[] s : strings.getValue()) {
+				for (String string : s) {
+					System.out.print(string + " ");
+				}
+				System.out.println();
+			}
+		}
 		
 //		String[] parent = {"A","B","C","A","D","G","B","C","E","F"};
 //		String[] child = {"A","D","G","B"};
 //		System.out.println(al.checkSubArrayContain(parent, child));
+		
+		
 	}
 }

@@ -160,11 +160,11 @@ public class WordUtils {
 					for (Word w : words) {
 						if (nounTagList.contains(w.getType())) {
 							mBufferedWriter.write(w.getWord() + BLANK);
-							System.out.print(w.getWord() + BLANK);
+							// System.out.print(w.getWord() + BLANK);
 						}
 					}
 				}
-				System.out.println();
+				// System.out.println();
 				mBufferedWriter.write("\n");
 				mBufferedWriter.write("\n");
 			}
