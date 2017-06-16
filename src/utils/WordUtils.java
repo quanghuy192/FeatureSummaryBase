@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Review;
+import model.Sentences;
+import model.Word;
 import vn.hus.nlp.tagger.VietnameseMaxentTagger;
 import vn.hus.nlp.utils.UTF8FileUtility;
 
@@ -22,9 +24,20 @@ public class WordUtils {
 	private BufferedWriter bufferedWriter;
 	private final String FILE_OUTPUT_NAME = "words_with_tags.txt";
 	private final String FILE_INPUT_NAME = "reviews_data.txt";
+	private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
+	private final String BLANK = " ";
+	
+	private List<String> nounTagList;
 
 	public WordUtils() {
 		try {
+			nounTagList = new ArrayList<>();
+			nounTagList.add("N");
+			nounTagList.add("Np");
+			nounTagList.add("Nc");
+			nounTagList.add("Nu");
+			nounTagList.add("NP");
+			
 			writer = new FileWriter(new File(FILE_OUTPUT_NAME));
 			bufferedWriter = new BufferedWriter(writer);
 		} catch (IOException e) {
@@ -93,7 +106,7 @@ public class WordUtils {
 		}
 	}
 
-	public List<Review> getReviewList() {
+	private List<Review> getReviewList() {
 
 		// Create data
 		generateWordTagData();
@@ -125,7 +138,38 @@ public class WordUtils {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-
+	}
+	
+	// Generate feature base raw file
+	public void generateFeatureBaseFile(){
+		
+		// open and create new output file
+		try {
+			writer = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
+			bufferedWriter = new BufferedWriter(writer);
+			
+			List<Review> listReview = getReviewList();
+			for (Review r : listReview) {
+				
+				List<Sentences> sentences = r.getListSentences();
+				for (Sentences s : sentences) {
+					
+					List<Word> words = s.getListWord();
+					for (Word w : words) {
+						if(nounTagList.contains(w.getType())){
+							bufferedWriter.write(w.getWord() + BLANK);
+						}
+					}
+				}
+				bufferedWriter.write("\n");
+				bufferedWriter.write("\n");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			closeWrite();
+			System.out.println("Done !!!!!!!");
+		}
 	}
 
 }

@@ -14,9 +14,10 @@ public class Test implements Serializable {
 
 	public static void main(String[] args) {
 		WordUtils wordUtils = new WordUtils();
-		List<Review> listReview = wordUtils.getReviewList();
-		List<Sentences> sentences = listReview.get(0).getListSentences();
-		List<Word> words = sentences.get(0).getListWord();
+		wordUtils.generateFeatureBaseFile();
+//		List<Review> listReview = wordUtils.getReviewList();
+//		List<Sentences> sentences = listReview.get(0).getListSentences();
+//		List<Word> words = sentences.get(0).getListWord();
 
 //		int i = 0;
 //		while (i < words.size()) {
@@ -41,6 +42,12 @@ public class Test implements Serializable {
 //						newW.getWord() + "==" + newW.getType() + "==" + VnPOS_Utils.get_VN_POS_mean(newW.getType()));
 //			}
 //		}
+		
+//		for (Word word : words) {
+//			System.out.println(
+//					word.getWord() + "==" + word.getType() + "==" + VnPOS_Utils.get_VN_POS_mean(word.getType()));
+//		}
+		
 		String[][][] data = { { { "1" }, { "A", "C", "D" } },
 				  			  { { "2" }, { "B", "C", "E" } },
 				              { { "3" }, { "A", "B", "C", "E" } },
@@ -49,11 +56,11 @@ public class Test implements Serializable {
 		HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
 
 		List<String[]> datas;
-		for (int i = 0; i < data.length; i++) {
-			String[][] items = data[i];
+		for (int ii = 0; ii < data.length; ii++) {
+			String[][] items = data[ii];
 			datas = new ArrayList<>();
 			datas.add(items[1]);
-			dataItems.put(i, datas);
+			dataItems.put(ii, datas);
 		}
 		
 		AprioriAlgorithrm al = new AprioriAlgorithrm();
