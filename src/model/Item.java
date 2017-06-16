@@ -15,14 +15,14 @@ public class Item {
 	public Item(String[] itemsChild) {
 		super();
 		this.itemsChild = itemsChild;
-		quantity = 1;
+		quantity = 0;
 	}
 
 	public Item(String[] itemsParent, String[] itemsChild) {
 		super();
 		this.itemsParent = itemsParent;
 		this.itemsChild = itemsChild;
-		quantity = 1;
+		quantity = 0;
 	}
 
 	public int getQuantity() {

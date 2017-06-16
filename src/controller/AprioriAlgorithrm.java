@@ -30,7 +30,7 @@ public class AprioriAlgorithrm {
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.6;
+	private double SUPPORT_MIN = 2;
 	private int CONFIDENCE_MIN = 2;
 
 	public AprioriAlgorithrm() {
@@ -70,6 +70,7 @@ public class AprioriAlgorithrm {
 			for (String[] parent : itemsParent) {
 				Item i = new Item(parent, child);
 				if (!itemsRule.contains(i)) {
+					i.setItemsParent(parent);
 					itemsRule.add(i);
 				} else {
 					Item clone = getItem(child, itemsRule);
@@ -81,8 +82,10 @@ public class AprioriAlgorithrm {
 		}
 
 		int count = 0;
+		dataResultItems.clear();
 		for (Item i : itemsRule) {
-			double percent = 1.0 * i.getQuantity() / N;
+			// double percent = 1.0 * i.getQuantity() / N;
+			double percent = 1.0 * i.getQuantity();
 			List<String[]> subList;
 			if (percent >= SUPPORT_MIN) {
 				subList = new ArrayList<>();
