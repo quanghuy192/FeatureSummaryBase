@@ -50,14 +50,21 @@ public class AprioriAlgorithrm {
 	public HashMap<Integer, List<String[]>> generate_K_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
 
 		step++;
-		dataOriginalItems = dataItemsParent;
-		if(step == 1){
-			dataItemsParent = getAtomFirstData(dataItemsParent);
-		}
 		
-		List<String[]> itemsParent = getOriginalItems();
-		List<String[]> itemsChild = getItems(dataItemsParent);
+		List<String[]> itemsChild = null;
 		List<Item> itemsRule = new ArrayList<>();
+		
+		if(step == 1){
+			dataOriginalItems = dataItemsParent;
+			dataItemsParent = getAtomFirstData(dataItemsParent);
+			itemsChild = getItems(dataItemsParent);
+		}else{
+			itemsChild = new ArrayList<>();
+			for (Map.Entry<Integer, List<String[]>> map : dataItemsParent.entrySet()) {
+				itemsChild.add(map.getValue().get(0));
+			}
+		}
+		List<String[]> itemsParent = getOriginalItems();
 		
 		for (String[] child : itemsChild) {
 			for (String[] parent : itemsParent) {
@@ -152,9 +159,9 @@ public class AprioriAlgorithrm {
 		return temp;
 	}
 
-	private Item getItem(String[] values, List<Item> items) {
+	private Item getItem(String[] child, List<Item> items) {
 		for (Item i : items) {
-			Item temp = new Item(values);
+			Item temp = new Item(i.getItemsParent(),child);
 			if (i.equals(temp)) {
 				return i;
 			}

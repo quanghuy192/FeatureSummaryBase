@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Item {
 	
 	private int quantity;
@@ -75,9 +78,9 @@ public class Item {
 		}
 
 		Item i = (Item) o;
-		if (i.getItemsChild().length != itemsChild.length) {
+		/*if (i.getItemsChild().length != itemsChild.length) {
 			return false;
-		}
+		}*/
 		for (int j = 0; j < itemsChild.length; j++) {
 			if (!itemsChild[j].equals(i.getItemsChild()[j])) {
 				return false;
@@ -97,7 +100,7 @@ public class Item {
 	 * @param child
 	 * @return
 	 */
-	public boolean checkSubArrayContain(String[] parent, String[] child) {
+	/*public boolean checkSubArrayContain(String[] parent, String[] child) {
 		for (int i = 0; i < parent.length; i++) {
 			int j = i;
 			int s = 0;
@@ -114,5 +117,23 @@ public class Item {
 			}
 		}
 		return false;
+	}*/
+	
+	public boolean checkSubArrayContain(String[] parent, String[] child) {
+		List<String> parentList = convertArrayToList(parent);
+		for (String s : child) {
+			if (!parentList.contains(s)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	private List<String> convertArrayToList(String[] arr) {
+		List<String> temp = new ArrayList<>();
+		for (String s : arr) {
+			temp.add(s);
+		}
+		return temp;
 	}
 }
