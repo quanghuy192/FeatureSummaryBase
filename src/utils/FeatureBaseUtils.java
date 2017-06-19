@@ -9,46 +9,46 @@ import java.util.HashMap;
 import java.util.List;
 
 public class FeatureBaseUtils {
-	
+
 	private FileReader reader;
 	private BufferedReader bufferedReader;
-	private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
-	private final String BLANK = " ";
-	
+	// private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
+	// private final String BLANK = " ";
+
 	public FeatureBaseUtils() {
-		try {
-			reader = new FileReader(new File(FEATURE_BASE_RAW_FILE));
-			bufferedReader = new BufferedReader(reader);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		// try {
+		// reader = new FileReader(new File(FEATURE_BASE_RAW_FILE));
+		// bufferedReader = new BufferedReader(reader);
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
 	}
 
 	// generate feature base after filter
-	public HashMap<Integer, List<String[]>> featureBase(){
-		
-		HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
-		
-		// read data include noun & noun phase
-		List<String[]> lineList = new ArrayList<String[]>();
-		String s;
-		int count = 0;
-		try {
-			while (null != (s = bufferedReader.readLine())) {
-				String[] wordList = s.split(BLANK);
-				lineList.add(wordList);
-				featureBases.put(count, lineList);
-				count++;
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			close();
-		}
+	public HashMap<Integer, List<String[]>> featureBase() {
 
-		return featureBases;
+		// HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
+
+		// read data include noun & noun phase
+		// List<String[]> lineList = new ArrayList<String[]>();
+		// String s;
+		// int count = 0;
+		// try {
+		// while (null != (s = bufferedReader.readLine())) {
+		// String[] wordList = s.split(BLANK);
+		// lineList.add(wordList);
+		// featureBases.put(count, lineList);
+		// count++;
+		// }
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// } finally {
+		// close();
+		// }
+
+		return new WordUtils().generateFeatureBase();
 	}
-	
+
 	private void close() {
 		try {
 			bufferedReader.close();

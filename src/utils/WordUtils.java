@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import model.Review;
@@ -24,9 +25,9 @@ public class WordUtils {
 	private BufferedWriter bufferedWriter;
 	private final String FILE_OUTPUT_NAME = "words_with_tags.txt";
 	private final String FILE_INPUT_NAME = "reviews_data.txt";
-	private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
-	private final String BLANK = " ";
-	
+	// private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
+	private final String BLANK = "";
+
 	private List<String> nounTagList;
 
 	public WordUtils() {
@@ -37,7 +38,7 @@ public class WordUtils {
 			nounTagList.add("Nc");
 			nounTagList.add("Nu");
 			nounTagList.add("NP");
-			
+
 			writer = new FileWriter(new File(FILE_OUTPUT_NAME));
 			bufferedWriter = new BufferedWriter(writer);
 		} catch (IOException e) {
@@ -139,42 +140,53 @@ public class WordUtils {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// Generate feature base raw file
-	public void generateFeatureBaseFile() {
+	public HashMap<Integer, List<String[]>> generateFeatureBase() {
 
 		// open and create new output file
-		FileWriter mWriter = null;
-		BufferedWriter mBufferedWriter = null;
-		try {
-			mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
-			mBufferedWriter = new BufferedWriter(mWriter);
+		// FileWriter mWriter = null;
+		// BufferedWriter mBufferedWriter = null;
+		// try {
+		// mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
+		// mBufferedWriter = new BufferedWriter(mWriter);
+		HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
+		List<String[]> featureList = new ArrayList<>();
+		List<String> feaatures;
+		int count = 0;
 
-			List<Review> listReview = getReviewList();
-			for (Review r : listReview) {
+		List<Review> listReview = getReviewList();
+		for (Review r : listReview) {
 
-				List<Sentences> sentences = r.getListSentences();
-				for (Sentences s : sentences) {
+			feaatures = new ArrayList<>();
+			List<Sentences> sentences = r.getListSentences();
+			for (Sentences s : sentences) {
 
-					List<Word> words = s.getListWord();
-					for (Word w : words) {
-						if (nounTagList.contains(w.getType())) {
-							mBufferedWriter.write(w.getWord() + BLANK);
-							// System.out.print(w.getWord() + BLANK);
-						}
+				List<Word> words = s.getListWord();
+				for (Word w : words) {
+					if (nounTagList.contains(w.getType()) && BLANK != w.getWord()) {
+						// mBufferedWriter.write(w.getWord() + BLANK);
+						// System.out.print(w.getWord() + BLANK);
+						feaatures.add(w.getWord());
 					}
 				}
-				// System.out.println();
-				mBufferedWriter.write("\n");
-				mBufferedWriter.write("\n");
 			}
-			mBufferedWriter.close();
-			mWriter.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			System.out.println("Done !!!!!!!");
+
+			featureList.add(GeneralUtil.convertListToArray(feaatures));
+			featureBases.put(count, featureList);
+			count++;
+			// System.out.println();
+			// mBufferedWriter.write("\n");
+			// mBufferedWriter.write("\n");
 		}
+		// mBufferedWriter.close();
+		// mWriter.close();
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// } finally {
+		// System.out.println("Done !!!!!!!");
+		// }
+		return featureBases;
 	}
 
 }

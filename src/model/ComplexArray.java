@@ -1,7 +1,8 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import utils.GeneralUtil;
 
 public class ComplexArray {
 
@@ -46,21 +47,13 @@ public class ComplexArray {
 		if (i.getComplexObject().length != complexObject.length) {
 			return false;
 		}
-		List<String> parent = convertArrayToList(complexObject);
+		List<String> parent = GeneralUtil.convertArrayToList(complexObject);
 		for (String s : i.getComplexObject()) {
 			if (!parent.contains(s)) {
 				return false;
 			}
 		}
 		return true;
-	}
-
-	private List<String> convertArrayToList(String[] arr) {
-		List<String> temp = new ArrayList<>();
-		for (String s : arr) {
-			temp.add(s);
-		}
-		return temp;
 	}
 
 }

@@ -7,6 +7,7 @@ import java.util.Map;
 
 import model.ComplexArray;
 import model.Item;
+import utils.GeneralUtil;
 
 /**
  * Apriori algorithm 
@@ -18,13 +19,6 @@ import model.Item;
  */
 public class AprioriAlgorithrm {
 
-	private String[][][] data = { { { "1" }, { "A", "C", "D" } },
-								  { { "2" }, { "B", "C", "E" } },
-								  { { "3" }, { "A", "B", "C", "E" } },
-								  { { "4" }, { "B", "E" } }
-								};
-	
-	private HashMap<Integer, List<String[]>> dataItems;
 	private HashMap<Integer, List<String[]>> dataResultItems;
 	private HashMap<Integer, List<String[]>> dataOriginalItems;
 	
@@ -34,22 +28,13 @@ public class AprioriAlgorithrm {
 	private int CONFIDENCE_MIN = 2;
 
 	public AprioriAlgorithrm() {
-		dataItems = new HashMap<>();
 		dataResultItems = new HashMap<>();
-
-		N = data.length;
-		List<String[]> datas;
-		for (int i = 0; i < data.length; i++) {
-			String[][] items = data[i];
-			datas = new ArrayList<>();
-			datas.add(items[1]);
-			dataItems.put(i, datas);
-		}
 	}
 
 	public HashMap<Integer, List<String[]>> generate_K_ItemSet(HashMap<Integer, List<String[]>> dataItemsParent) {
 
 		step++;
+		N = dataItemsParent.size();
 		
 		List<String[]> itemsChild = null;
 		List<Item> itemsRule = new ArrayList<>();
@@ -125,13 +110,13 @@ public class AprioriAlgorithrm {
 		for (String[] s : itemList) {
 			for (String a : itemAtom) {
 				
-				List<String> temp = convertArrayToList(s);
+				List<String> temp = GeneralUtil.convertArrayToList(s);
 				if(temp.contains(a)){
 					continue;
 				}
 				
 				temp.add(a);
-				String[] subArr = convertListToArray(temp);
+				String[] subArr = GeneralUtil.convertListToArray(temp);
 				ComplexArray complex = new ComplexArray(subArr);
 				
 				if (!existList.contains(complex)) {
@@ -145,20 +130,6 @@ public class AprioriAlgorithrm {
 		}
 
 		return dataItemsChild;
-	}
-	
-	private List<String> convertArrayToList(String[] arr){
-		List<String> temp = new ArrayList<>();
-		for (String s : arr) {
-			temp.add(s);
-		}
-		return temp;
-	}
-	
-	private String[] convertListToArray(List<String> list){
-		String[] temp = new String[list.size()];
-		list.toArray(temp);
-		return temp;
 	}
 
 	private Item getItem(String[] child, List<Item> items) {

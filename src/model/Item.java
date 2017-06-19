@@ -1,7 +1,6 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
+import utils.GeneralUtil;
 
 public class Item {
 	
@@ -40,7 +39,7 @@ public class Item {
 	public void setItemsParent(String[] itemsParent) {
 		this.itemsParent = itemsParent;
 		
-		if(checkSubArrayContain(itemsParent, itemsChild)){
+		if(GeneralUtil.checkSubArrayContain(itemsParent, itemsChild)){
 			quantity++;
 		}
 	}
@@ -78,9 +77,7 @@ public class Item {
 		}
 
 		Item i = (Item) o;
-		/*if (i.getItemsChild().length != itemsChild.length) {
-			return false;
-		}*/
+
 		for (int j = 0; j < itemsChild.length; j++) {
 			if (!itemsChild[j].equals(i.getItemsChild()[j])) {
 				return false;
@@ -89,51 +86,4 @@ public class Item {
 		return true;
 	}
 	
-
-	/**
-	 * 
-	 * Blute-Force algorithm
-	 * Find the pattern substring matching in parent string
-	 * (maybe optimization with KMP, Boyer-Moore algorithm)  
-	 * 
-	 * @param parent
-	 * @param child
-	 * @return
-	 */
-	/*public boolean checkSubArrayContain(String[] parent, String[] child) {
-		for (int i = 0; i < parent.length; i++) {
-			int j = i;
-			int s = 0;
-			while (s < child.length) {
-				if (child[s].equalsIgnoreCase(parent[j])) {
-					s++;
-					j++;
-					if (s == child.length) {
-						return true;
-					}
-				} else {
-					break;
-				}
-			}
-		}
-		return false;
-	}*/
-	
-	public boolean checkSubArrayContain(String[] parent, String[] child) {
-		List<String> parentList = convertArrayToList(parent);
-		for (String s : child) {
-			if (!parentList.contains(s)) {
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	private List<String> convertArrayToList(String[] arr) {
-		List<String> temp = new ArrayList<>();
-		for (String s : arr) {
-			temp.add(s);
-		}
-		return temp;
-	}
 }
