@@ -11,6 +11,7 @@ import model.I_Item;
  * optimization with Apriori-TID, Apriori-Habrid algorithm)
  * 
  * Optimization
+ * {@link https://www.academia.edu/6823564/The_Optimization_and_Improvement_of_the_Apriori_Algorithm}
  * 
  * 1) L1 = {large 1-itemsets}; 
  * 2) for (k=2; Lk-1 ≠ ∅ ; k++) 
