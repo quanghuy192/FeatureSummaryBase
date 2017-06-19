@@ -26,7 +26,7 @@ public class WordUtils {
 	private final String FILE_OUTPUT_NAME = "words_with_tags.txt";
 	private final String FILE_INPUT_NAME = "reviews_data.txt";
 	// private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
-	private final String BLANK = "";
+	private final String BLANK = " ";
 
 	private List<String> nounTagList;
 
@@ -151,7 +151,7 @@ public class WordUtils {
 		// mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
 		// mBufferedWriter = new BufferedWriter(mWriter);
 		HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
-		List<String[]> featureList = new ArrayList<>();
+		List<String[]> featureList;
 		List<String> feaatures;
 		int count = 0;
 
@@ -159,6 +159,7 @@ public class WordUtils {
 		for (Review r : listReview) {
 
 			feaatures = new ArrayList<>();
+			featureList = new ArrayList<>();
 			List<Sentences> sentences = r.getListSentences();
 			for (Sentences s : sentences) {
 

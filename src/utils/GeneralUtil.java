@@ -5,6 +5,9 @@ import java.util.List;
 
 public class GeneralUtil {
 	
+	private static long startTime;
+	private static long endTime;
+	
 	/**
 	 * private constructor
 	 * */
@@ -58,10 +61,28 @@ public class GeneralUtil {
 		return true;
 	}
 	
-	public static String[] convertListToArray(List<String> list){
+	public static boolean checkSubArrayContain(List<String> parent, List<String> child) {
+		for (String s : child) {
+			if (!parent.contains(s)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static String[] convertListToArray(List<String> list) {
 		String[] temp = new String[list.size()];
 		list.toArray(temp);
 		return temp;
+	}
+
+	public static void setTimeStart() {
+		startTime = System.nanoTime();
+	}
+
+	public static void setTimeEnd() {
+		endTime = System.nanoTime();
+		System.out.println("Took " + (endTime - startTime) + " ns");
 	}
 
 }

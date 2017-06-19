@@ -10,9 +10,34 @@ import model.Item;
 import utils.GeneralUtil;
 
 /**
- * Apriori algorithm 
- * Find the pattern substring matching in parent string
- * (maybe optimization with Apriori-TID, Apriori-Habrid algorithm)
+ * Apriori algorithm Find the pattern substring matching in parent string (maybe
+ * optimization with Apriori-TID, Apriori-Habrid algorithm)
+ * 
+ * Optimization
+ * 
+ * 1) L1 = {large 1-itemsets}; 
+ * 2) for (k=2; Lk-1 ≠ ∅ ; k++) 
+ * 3) { 
+ * 4)     Ck=apriori-gen(Lk-1); //generate new candidate itemsets 
+ * 5) for all transactions t∈D and t.delete=0 
+ * 6) { 
+ * 7)     if t.count<k then // if the size of transaction t is less than k, t is useless for Ck generated 
+ * 8)     t.delete=1  //mark t the deleting tag to skip over the record in next database scanning
+ * 9) 	  else 
+ * 10) { 
+ * 11) Ct=subset(Ck,t); //candidate itemsets contained in transaCion t 
+ * 12) if Ct = ∅ then // if t does not contain any subset of candidate itemsets Ck, mark the deleting tag 
+ * 13) 	  t.delete=1; 
+ * 14) else 
+ * 15) {
+ * 16) for all candidates c∈Ct 
+ * 17) c.count++; 
+ * 18) } 
+ * 19) } 
+ * 20) } 
+ * 21) Lk={c∈Ck|c.count ≥ minsup} 
+ * 22) } 
+ * 23) Answer= kLk;
  * 
  * @author dqhuy
  *
