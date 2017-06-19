@@ -46,7 +46,7 @@ public class I_AprioriAlgorithrm {
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 2;
 	private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -86,7 +86,7 @@ public class I_AprioriAlgorithrm {
 		int count = 0;
 		dataResultItems.clear();
 		for (I_Item i : itemsRule) {
-			double percent = 1.0 * i.getQuantity() / N;
+			double percent = 1.0 * i.getQuantity();
 			List<String> subList;
 			if (percent >= SUPPORT_MIN) {
 				subList = i.getItemsChild();
