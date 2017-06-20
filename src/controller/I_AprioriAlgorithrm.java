@@ -47,7 +47,7 @@ public class I_AprioriAlgorithrm {
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 2;
+	private double SUPPORT_MIN = 0.01;
 	private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -87,7 +87,7 @@ public class I_AprioriAlgorithrm {
 		int count = 0;
 		dataResultItems.clear();
 		for (I_Item i : itemsRule) {
-			double percent = 1.0 * i.getQuantity();
+			double percent = 1.0 * i.getQuantity() / N;
 			List<String> subList;
 			if (percent >= SUPPORT_MIN) {
 				subList = i.getItemsChild();
@@ -101,7 +101,7 @@ public class I_AprioriAlgorithrm {
 		if (dataItemsChild.size() > 0) {
 			return generate_K_ItemSet(dataItemsChild);
 		} else {
-			return dataItemsChild;
+			return dataResultItems;
 		}
 	}
 
@@ -121,12 +121,12 @@ public class I_AprioriAlgorithrm {
 
 	private List<I_ComplexArray> getItemsChild(List<I_ComplexArray> items) {
 		List<I_ComplexArray> dataItemsChild = new ArrayList<>();
-		List<I_ComplexArray> itemList = getItems(items);
 		List<String> itemAtom = getAtomItems(items);
-		for (I_ComplexArray s : itemList) {
+		for (I_ComplexArray s : items) {
 			for (String a : itemAtom) {
 				
-				List<String> temp = s.getComplexObject();
+				List<String> temp = new ArrayList<>();
+				temp.addAll(s.getComplexObject());
 				if(temp.contains(a)){
 					continue;
 				}
