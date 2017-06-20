@@ -3,6 +3,7 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import controller.I_AprioriAlgorithrm_Thread.AprioriAction;
 import model.I_ComplexArray;
 import model.I_Item;
 import utils.GeneralUtil;
@@ -41,16 +42,19 @@ import utils.GeneralUtil;
  * @author dqhuy
  *
  */
-public class I_AprioriAlgorithrm {
+public class I_AprioriAlgorithrm implements AprioriAction {
 
 	private List<I_ComplexArray> dataResultItems;
 	private List<I_ComplexArray> dataOriginalItems;
+	private volatile List<I_Item> itemsRule ;
 	
 	private int N;
 	private int step = 0;
 	private double SUPPORT_MIN = 0.2;
 	private double SUPPORT_MIN_FINAL = 0.01;
 	private int CONFIDENCE_MIN = 2;
+	
+	private int multiThread = 5;
 
 	public I_AprioriAlgorithrm() {
 		dataResultItems = new ArrayList<>();
@@ -66,7 +70,7 @@ public class I_AprioriAlgorithrm {
 			SUPPORT_MIN = SUPPORT_MIN_FINAL;
 		}
 
-		List<I_Item> itemsRule = new ArrayList<>();
+		itemsRule = new ArrayList<>();
 		// List<I_ComplexArray> itemsChild;
 
 		// Create large 1-itemsets
@@ -77,32 +81,38 @@ public class I_AprioriAlgorithrm {
 		// itemsChild = getItems(dataItemsParent);
 		
 		N = dataOriginalItems.size();
-
-		for (I_ComplexArray parent : dataOriginalItems) {
-			for (I_ComplexArray child : dataItemsParent) {
-				
-				int count = 0; // if count equal size of transaction, delete tag
-				if(parent.isDeleteTag()){
-					break;
-				}
 		
-				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
-				if (!itemsRule.contains(i)) {
-					i.setItemsParent(parent.getComplexObject());
-					itemsRule.add(i);
-					count++;
-				} else {
-					I_Item clone = getItem(child.getComplexObject(), itemsRule);
-					if (null != clone) {
-						clone.setItemsParent(parent.getComplexObject());
-					}
-				}
-				
-				if(count == parent.getComplexObject().size()){
-					parent.setDeleteTag(true);
-				}
-			}
+		// Run with multil thread
+		for (int i = 0; i < multiThread; i++) {
+			I_AprioriAlgorithrm_Thread thread = new I_AprioriAlgorithrm_Thread(this, i + 1, dataItemsParent);
+			thread.start();
 		}
+
+//		for (I_ComplexArray parent : dataOriginalItems) {
+//			for (I_ComplexArray child : dataItemsParent) {
+//				
+//				int count = 0; // if count equal size of transaction, delete tag
+//				if(parent.isDeleteTag()){
+//					break;
+//				}
+//		
+//				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
+//				if (!itemsRule.contains(i)) {
+//					i.setItemsParent(parent.getComplexObject());
+//					itemsRule.add(i);
+//					count++;
+//				} else {
+//					I_Item clone = getItem(child.getComplexObject(), itemsRule);
+//					if (null != clone) {
+//						clone.setItemsParent(parent.getComplexObject());
+//					}
+//				}
+//				
+//				if(count == parent.getComplexObject().size()){
+//					parent.setDeleteTag(true);
+//				}
+//			}
+//		}
 
 		int count = 0;
 		dataResultItems.clear();
@@ -195,5 +205,34 @@ public class I_AprioriAlgorithrm {
 			}
 		}
 		return itemList;
+	}
+	
+	@Override
+	public void action(List<I_ComplexArray> dataItemsParent) {
+		for (I_ComplexArray parent : dataOriginalItems) {
+			for (I_ComplexArray child : dataItemsParent) {
+
+				int count = 0; // if count equal size of transaction, delete tag
+				if (parent.isDeleteTag()) {
+					break;
+				}
+
+				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
+				if (!itemsRule.contains(i)) {
+					i.setItemsParent(parent.getComplexObject());
+					itemsRule.add(i);
+					count++;
+				} else {
+					I_Item clone = getItem(child.getComplexObject(), itemsRule);
+					if (null != clone) {
+						clone.setItemsParent(parent.getComplexObject());
+					}
+				}
+
+				if (count == parent.getComplexObject().size()) {
+					parent.setDeleteTag(true);
+				}
+			}
+		}
 	}
 }
