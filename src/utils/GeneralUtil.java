@@ -82,7 +82,7 @@ public class GeneralUtil {
 
 	public static void setTimeEnd() {
 		endTime = System.nanoTime();
-		System.out.println("Took " + (endTime - startTime) + " ns");
+		System.out.println("Took " + (1.0 * endTime/(1000000000) - 1.0 * startTime/(1000000000)) + " s");
 	}
 
 }

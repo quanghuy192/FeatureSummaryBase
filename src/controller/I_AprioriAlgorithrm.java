@@ -5,6 +5,7 @@ import java.util.List;
 
 import model.I_ComplexArray;
 import model.I_Item;
+import utils.GeneralUtil;
 
 /**
  * Apriori algorithm Find the pattern substring matching in parent string (maybe
@@ -47,7 +48,8 @@ public class I_AprioriAlgorithrm {
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 0.2;
+	private double SUPPORT_MIN_FINAL = 0.01;
 	private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -56,30 +58,48 @@ public class I_AprioriAlgorithrm {
 
 	public List<I_ComplexArray> generate_K_ItemSet(List<I_ComplexArray> dataItemsParent) {
 
+		GeneralUtil.setTimeStart();
 		step++;
-		N = dataItemsParent.size();
+		
+		SUPPORT_MIN *= 0.2 + Math.log(step);
+		if (SUPPORT_MIN < SUPPORT_MIN_FINAL) {
+			SUPPORT_MIN = SUPPORT_MIN_FINAL;
+		}
 
 		List<I_Item> itemsRule = new ArrayList<>();
-		List<I_ComplexArray> itemsChild;
+		// List<I_ComplexArray> itemsChild;
 
 		// Create large 1-itemsets
 		if (step == 1) {
 			dataOriginalItems = dataItemsParent;
 			dataItemsParent = getAtomFirstData(dataItemsParent);
 		}
-		itemsChild = getItems(dataItemsParent);
+		// itemsChild = getItems(dataItemsParent);
+		
+		N = dataOriginalItems.size();
 
-		for (I_ComplexArray child : itemsChild) {
-			for (I_ComplexArray parent : dataOriginalItems) {
+		for (I_ComplexArray parent : dataOriginalItems) {
+			for (I_ComplexArray child : dataItemsParent) {
+				
+				int count = 0; // if count equal size of transaction, delete tag
+				if(parent.isDeleteTag()){
+					break;
+				}
+		
 				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
 				if (!itemsRule.contains(i)) {
 					i.setItemsParent(parent.getComplexObject());
 					itemsRule.add(i);
+					count++;
 				} else {
 					I_Item clone = getItem(child.getComplexObject(), itemsRule);
 					if (null != clone) {
 						clone.setItemsParent(parent.getComplexObject());
 					}
+				}
+				
+				if(count == parent.getComplexObject().size()){
+					parent.setDeleteTag(true);
 				}
 			}
 		}
@@ -99,8 +119,10 @@ public class I_AprioriAlgorithrm {
 
 		List<I_ComplexArray> dataItemsChild = getItemsChild(dataResultItems);
 		if (dataItemsChild.size() > 0) {
+			GeneralUtil.setTimeEnd();
 			return generate_K_ItemSet(dataItemsChild);
 		} else {
+			GeneralUtil.setTimeEnd();
 			return dataResultItems;
 		}
 	}
@@ -139,7 +161,7 @@ public class I_AprioriAlgorithrm {
 				}
 			}
 		}
-		return dataItemsChild;
+ 		return dataItemsChild;
 	}
 
 	private I_Item getItem(List<String> child, List<I_Item> items) {
@@ -152,15 +174,15 @@ public class I_AprioriAlgorithrm {
 		return null;
 	}
 
-	private List<I_ComplexArray> getItems(List<I_ComplexArray> dataItemsParent) {
-		List<I_ComplexArray> itemList = new ArrayList<>();
-		for (I_ComplexArray i : dataItemsParent) {
-			if (!itemList.contains(i)) {
-				itemList.add(i);
-			}
-		}
-		return itemList;
-	}
+//	private List<I_ComplexArray> getItems(List<I_ComplexArray> dataItemsParent) {
+//		List<I_ComplexArray> itemList = new ArrayList<>();
+//		for (I_ComplexArray i : dataItemsParent) {
+//			if (!itemList.contains(i)) {
+//				itemList.add(i);
+//			}
+//		}
+//		return itemList;
+//	}
 	
 	private List<String> getAtomItems(List<I_ComplexArray> dataItemsParent) {
 		List<String> itemList = new ArrayList<>();

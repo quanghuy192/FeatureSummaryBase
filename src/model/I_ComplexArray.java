@@ -7,16 +7,19 @@ public class I_ComplexArray {
 	private int position;
 	private List<String> complexObject;
 	private int HASH_CONST = 17;
+	private boolean deleteTag;
 	
 	public I_ComplexArray(List<String> complexObject) {
 		super();
 		this.complexObject = complexObject;
+		deleteTag = false;
 	}
 
 	public I_ComplexArray(int position, List<String> complexObject) {
 		super();
 		this.position = position;
 		this.complexObject = complexObject;
+		deleteTag = false;
 	}
 
 	public List<String> getComplexObject() {
@@ -25,6 +28,14 @@ public class I_ComplexArray {
 
 	public void setComplexObject(List<String> complexObject) {
 		this.complexObject = complexObject;
+	}
+	
+	public boolean isDeleteTag() {
+		return deleteTag;
+	}
+
+	public void setDeleteTag(boolean deleteTag) {
+		this.deleteTag = deleteTag;
 	}
 
 	@Override
