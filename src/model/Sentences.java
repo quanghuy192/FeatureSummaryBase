@@ -63,15 +63,16 @@ public class Sentences {
 				} else {
 					int s = 0;
 					String multiWord = BLANK;
+					StringBuilder builder = new StringBuilder(items[i]).append(SEPERATOR);
 					while (!multiWord.contains(SPLASH)) {
 						s++;
-						multiWord = new StringBuilder(items[i]).append(SEPERATOR).append(items[i + s]).toString();
+						multiWord = builder.append(items[i + s]).toString();
 					}
 					word.setOriginalWord(multiWord);
-					i += s;
+					i += s + 1;
 				}
 				wordList.add(word);
-				System.out.println(word.getOriginalWord());
+				// System.out.println(word.getOriginalWord());
 			}
 		}
 

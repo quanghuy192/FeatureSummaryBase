@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import model.I_ComplexArray;
 import model.Review;
 import model.Sentences;
 import model.Word;
@@ -35,8 +36,8 @@ public class WordUtils {
 			nounTagList = new ArrayList<>();
 			nounTagList.add("N");
 			nounTagList.add("Np");
-			nounTagList.add("Nc");
-			nounTagList.add("Nu");
+			// nounTagList.add("Nc");
+			// nounTagList.add("Nu");
 			nounTagList.add("NP");
 
 			writer = new FileWriter(new File(FILE_OUTPUT_NAME));
@@ -142,7 +143,7 @@ public class WordUtils {
 	}
 
 	// Generate feature base raw file
-	public HashMap<Integer, List<String[]>> generateFeatureBase() {
+	public List<I_ComplexArray> generateFeatureBase() {
 
 		// open and create new output file
 		// FileWriter mWriter = null;
@@ -150,15 +151,13 @@ public class WordUtils {
 		// try {
 		// mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
 		// mBufferedWriter = new BufferedWriter(mWriter);
-		HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
-		List<String[]> featureList;
-		List<String> feaatures;
-		int count = 0;
+		List<I_ComplexArray> featureBases = new ArrayList<>();
+		List<String> featureList;
+		I_ComplexArray complexArray;
 
 		List<Review> listReview = getReviewList();
 		for (Review r : listReview) {
 
-			feaatures = new ArrayList<>();
 			featureList = new ArrayList<>();
 			List<Sentences> sentences = r.getListSentences();
 			for (Sentences s : sentences) {
@@ -168,14 +167,13 @@ public class WordUtils {
 					if (nounTagList.contains(w.getType()) && BLANK != w.getWord()) {
 						// mBufferedWriter.write(w.getWord() + BLANK);
 						// System.out.print(w.getWord() + BLANK);
-						feaatures.add(w.getWord());
+						featureList.add(w.getWord());
 					}
 				}
 			}
 
-			featureList.add(GeneralUtil.convertListToArray(feaatures));
-			featureBases.put(count, featureList);
-			count++;
+			complexArray = new I_ComplexArray(featureList);
+			featureBases.add(complexArray);
 			// System.out.println();
 			// mBufferedWriter.write("\n");
 			// mBufferedWriter.write("\n");

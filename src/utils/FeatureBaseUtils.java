@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import model.I_ComplexArray;
+
 public class FeatureBaseUtils {
 
 	private FileReader reader;
@@ -25,7 +27,7 @@ public class FeatureBaseUtils {
 	}
 
 	// generate feature base after filter
-	public HashMap<Integer, List<String[]>> featureBase() {
+	public List<I_ComplexArray> featureBase() {
 
 		// HashMap<Integer, List<String[]>> featureBases = new HashMap<>();
 
