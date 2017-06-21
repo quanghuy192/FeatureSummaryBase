@@ -1,7 +1,12 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import model.I_ComplexArray;
+import model.I_Item;
 
 public class GeneralUtil {
 	
@@ -84,5 +89,14 @@ public class GeneralUtil {
 		endTime = System.nanoTime();
 		System.out.println("Took " + (1.0 * endTime/(1000000000) - 1.0 * startTime/(1000000000)) + " s");
 	}
+	
+	public static List<I_Item> pruneDuplicateItem(List<I_Item> items) {
+		Set<I_Item> sets = new HashSet<>(items);
+		return new ArrayList<>(sets);
+	}
 
+	public static List<I_ComplexArray> pruneDuplicateComplex(List<I_ComplexArray> items) {
+		Set<I_ComplexArray> sets = new HashSet<>(items);
+		return new ArrayList<>(sets);
+	}
 }

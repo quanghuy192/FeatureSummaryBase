@@ -3,7 +3,8 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.I_AprioriAlgorithrm_Thread.AprioriAction;
+import controller.I_AprioriFindingSubChild_Thread.AprioriFindingSubChild;
+import controller.I_AprioriItemsChild_Thread.AprioriItemsChild;
 import model.I_ComplexArray;
 import model.I_Item;
 import utils.GeneralUtil;
@@ -42,19 +43,17 @@ import utils.GeneralUtil;
  * @author dqhuy
  *
  */
-public class I_AprioriAlgorithrm implements AprioriAction {
+public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItemsChild {
 
 	private List<I_ComplexArray> dataResultItems;
 	private List<I_ComplexArray> dataOriginalItems;
 	private volatile List<I_Item> itemsRule ;
+	private volatile List<I_ComplexArray> dataItemsChild;
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.2;
-	private double SUPPORT_MIN_FINAL = 0.01;
+	private double SUPPORT_MIN = 0.01;
 	private int CONFIDENCE_MIN = 2;
-	
-	private int multiThread = 5;
 
 	public I_AprioriAlgorithrm() {
 		dataResultItems = new ArrayList<>();
@@ -64,11 +63,6 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 
 		GeneralUtil.setTimeStart();
 		step++;
-		
-		SUPPORT_MIN *= 0.2 + Math.log(step);
-		if (SUPPORT_MIN < SUPPORT_MIN_FINAL) {
-			SUPPORT_MIN = SUPPORT_MIN_FINAL;
-		}
 
 		itemsRule = new ArrayList<>();
 		// List<I_ComplexArray> itemsChild;
@@ -83,9 +77,14 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 		N = dataOriginalItems.size();
 		
 		// Run with multil thread
-		for (int i = 0; i < multiThread; i++) {
-			I_AprioriAlgorithrm_Thread thread = new I_AprioriAlgorithrm_Thread(this, i + 1, dataItemsParent);
+		for (int i = 0; i < I_AprioriFindingSubChild_Thread.MULTI_THREAD; i++) {
+			I_AprioriFindingSubChild_Thread thread = new I_AprioriFindingSubChild_Thread(this, i, dataItemsParent);
 			thread.start();
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 
 //		for (I_ComplexArray parent : dataOriginalItems) {
@@ -113,6 +112,8 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 //				}
 //			}
 //		}
+		
+		itemsRule = GeneralUtil.pruneDuplicateItem(itemsRule);
 
 		int count = 0;
 		dataResultItems.clear();
@@ -127,8 +128,24 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 			}
 		}
 
-		List<I_ComplexArray> dataItemsChild = getItemsChild(dataResultItems);
+		// dataItemsChild = getItemsChild(dataResultItems);
+		dataItemsChild = new ArrayList<>();
+		
+		// Run with multil thread
+		for (int i = 0; i < I_AprioriItemsChild_Thread.MULTI_THREAD; i++) {
+			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItems);
+			thread.start();
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		dataItemsChild = GeneralUtil.pruneDuplicateComplex(dataItemsChild);
+		
 		if (dataItemsChild.size() > 0) {
+			System.out.println("Count : " + dataItemsChild.size());
 			GeneralUtil.setTimeEnd();
 			return generate_K_ItemSet(dataItemsChild);
 		} else {
@@ -151,28 +168,29 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 		return itemsFirst;
 	}
 
-	private List<I_ComplexArray> getItemsChild(List<I_ComplexArray> items) {
-		List<I_ComplexArray> dataItemsChild = new ArrayList<>();
-		List<String> itemAtom = getAtomItems(items);
-		for (I_ComplexArray s : items) {
-			for (String a : itemAtom) {
-				
-				List<String> temp = new ArrayList<>();
-				temp.addAll(s.getComplexObject());
-				if(temp.contains(a)){
-					continue;
-				}
-				
-				temp.add(a);
-				I_ComplexArray complex = new I_ComplexArray(temp);
-				
-				if (!dataItemsChild.contains(complex)) {
-					dataItemsChild.add(complex);
-				}
-			}
-		}
- 		return dataItemsChild;
-	}
+//	private List<I_ComplexArray> getItemsChild(List<I_ComplexArray> items) {
+//		
+//		List<I_ComplexArray> dataItemsChild = new ArrayList<>();
+//		List<String> itemAtom = getAtomItems(items);
+//		for (I_ComplexArray s : items) {
+//			for (String a : itemAtom) {
+//				
+//				List<String> temp = new ArrayList<>();
+//				temp.addAll(s.getComplexObject());
+//				if(temp.contains(a)){
+//					continue;
+//				}
+//				
+//				temp.add(a);
+//				I_ComplexArray complex = new I_ComplexArray(temp);
+//				
+//				if (!dataItemsChild.contains(complex)) {
+//					dataItemsChild.add(complex);
+//				}
+//			}
+//		}
+// 		return dataItemsChild;
+//	}
 
 	private I_Item getItem(List<String> child, List<I_Item> items) {
 		for (I_Item i : items) {
@@ -208,7 +226,10 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 	}
 	
 	@Override
-	public void action(List<I_ComplexArray> dataItemsParent) {
+	public void findSubChild(List<I_ComplexArray> dataItemsParent) {
+		
+		List<I_Item> itemsRuleLocal = new ArrayList<>();
+		
 		for (I_ComplexArray parent : dataOriginalItems) {
 			for (I_ComplexArray child : dataItemsParent) {
 
@@ -218,12 +239,12 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 				}
 
 				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
-				if (!itemsRule.contains(i)) {
+				if (!itemsRuleLocal.contains(i)) {
 					i.setItemsParent(parent.getComplexObject());
-					itemsRule.add(i);
+					itemsRuleLocal.add(i);
 					count++;
 				} else {
-					I_Item clone = getItem(child.getComplexObject(), itemsRule);
+					I_Item clone = getItem(child.getComplexObject(), itemsRuleLocal);
 					if (null != clone) {
 						clone.setItemsParent(parent.getComplexObject());
 					}
@@ -234,5 +255,31 @@ public class I_AprioriAlgorithrm implements AprioriAction {
 				}
 			}
 		}
+		
+		itemsRule.addAll(itemsRuleLocal);
+	}
+
+	@Override
+	public void getItemsChild(List<I_ComplexArray> items) {
+		List<I_ComplexArray> dataItemsChildLocal = new ArrayList<>();
+		List<String> itemAtom = getAtomItems(items);
+		for (I_ComplexArray s : items) {
+			for (String a : itemAtom) {
+				
+				List<String> temp = new ArrayList<>();
+				temp.addAll(s.getComplexObject());
+				if(temp.contains(a)){
+					continue;
+				}
+				
+				temp.add(a);
+				I_ComplexArray complex = new I_ComplexArray(temp);
+				
+				if (!dataItemsChildLocal.contains(complex)) {
+					dataItemsChildLocal.add(complex);
+				}
+			}
+		}
+		dataItemsChild.addAll(dataItemsChildLocal);
 	}
 }

@@ -51,12 +51,12 @@ public class FeatureBaseUtils {
 		return new WordUtils().generateFeatureBase();
 	}
 
-	private void close() {
-		try {
-			bufferedReader.close();
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+//	private void close() {
+//		try {
+//			bufferedReader.close();
+//			reader.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 }
