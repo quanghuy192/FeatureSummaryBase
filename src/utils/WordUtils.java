@@ -160,7 +160,7 @@ public class WordUtils {
 
 			featureList = new ArrayList<>();
 			List<Sentences> sentences = r.getListSentences();
-			for (Sentences s : sentences) {
+			for (Sentences s : sentences) { 
 
 				List<Word> words = s.getListWord();
 				for (Word w : words) {

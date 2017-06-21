@@ -52,7 +52,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 0.005;
 	private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -130,10 +130,11 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		// dataItemsChild = getItemsChild(dataResultItems);
 		dataItemsChild = new ArrayList<>();
+		List<I_ComplexArray> dataResultItemsClone = new ArrayList<>(dataResultItems);
 		
 		// Run with multil thread
 		for (int i = 0; i < I_AprioriItemsChild_Thread.MULTI_THREAD; i++) {
-			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItems);
+			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItemsClone);
 			thread.start();
 			try {
 				thread.join();

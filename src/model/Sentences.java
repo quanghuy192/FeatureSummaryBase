@@ -49,7 +49,6 @@ public class Sentences {
 
 		List<Word> wordList = new ArrayList<>();
 		Word word;
-
 		if (null != originalSentences && BLANK != originalSentences) {
 
 			String[] items = originalSentences.split(SEPERATOR);
@@ -62,13 +61,12 @@ public class Sentences {
 					i++;
 				} else {
 					int s = 0;
-					String multiWord = BLANK;
 					StringBuilder builder = new StringBuilder(items[i]);
-					while (!multiWord.contains(SPLASH)) {
+					while (!builder.toString().contains(SPLASH)) {
 						s++;
-						multiWord = builder.append(SEPERATOR).append(items[i + s]).toString();
+						builder.append(SEPERATOR).append(items[i + s]);
 					}
-					word.setOriginalWord(multiWord);
+					word.setOriginalWord(builder.toString());
 					i += s + 1;
 				}
 				wordList.add(word);
