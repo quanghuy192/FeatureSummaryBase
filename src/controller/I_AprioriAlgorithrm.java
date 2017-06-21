@@ -52,7 +52,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 	
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.005;
+	private double SUPPORT_MIN = 0.0095;
 	private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -146,10 +146,11 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		dataItemsChild = GeneralUtil.pruneDuplicateComplex(dataItemsChild);
 		
 		if (dataItemsChild.size() > 0) {
-			System.out.println("Count : " + dataItemsChild.size());
+			System.out.println("Count : " + dataItemsChild.size() + " items");
 			GeneralUtil.setTimeEnd();
 			return generate_K_ItemSet(dataItemsChild);
 		} else {
+			System.out.println("Count : " + dataItemsChild.size() + " items");
 			GeneralUtil.setTimeEnd();
 			return dataResultItems;
 		}

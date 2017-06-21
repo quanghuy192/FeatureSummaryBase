@@ -16,7 +16,7 @@ public class I_AprioriFindingSubChild_Thread extends Thread {
 
 	private long id;
 	private List<I_ComplexArray> dataItemsParent;
-	public static int MULTI_THREAD = 10;
+	public static int MULTI_THREAD = 15;
 
 	public I_AprioriFindingSubChild_Thread(AprioriFindingSubChild apriAction, long id, List<I_ComplexArray> dataItemsParent) {
 		super();
