@@ -132,7 +132,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		dataItemsChild = new ArrayList<>();
 		List<I_ComplexArray> dataResultItemsClone = new ArrayList<>(dataResultItems);
 		
-		// Run with multil thread
+		// Run with mullti thread
 		for (int i = 0; i < I_AprioriItemsChild_Thread.MULTI_THREAD; i++) {
 			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItemsClone);
 			thread.start();
