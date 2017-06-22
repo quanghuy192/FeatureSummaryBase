@@ -16,7 +16,7 @@ public class I_AprioriItemsChild_Thread extends Thread {
 
 	private long id;
 	private List<I_ComplexArray> dataItemsParent;
-	public static int MULTI_THREAD = 10;
+	public static int MULTI_THREAD = 1;
 
 	public I_AprioriItemsChild_Thread(AprioriItemsChild apriAction, long id, List<I_ComplexArray> dataItemsParent) {
 		super();
