@@ -1,8 +1,9 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class I_ComplexArray {
+public class I_ComplexArray implements Cloneable {
 
 	private int position;
 	private List<String> complexObject;
@@ -71,6 +72,23 @@ public class I_ComplexArray {
 			}
 		}
 		return true;
+	}
+	
+	@Override
+	public I_ComplexArray clone() throws CloneNotSupportedException {
+		
+		// Deep clone
+		
+		List<String> list = new ArrayList<String>();
+		for (String s : this.getComplexObject()) {
+			list.add(s);
+		}
+		
+		I_ComplexArray complexArray = new I_ComplexArray(list);
+		complexArray.position = position;
+		complexArray.setDeleteTag(deleteTag);
+
+		return complexArray;
 	}
 
 }

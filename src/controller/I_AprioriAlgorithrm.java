@@ -130,7 +130,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		// dataItemsChild = getItemsChild(dataResultItems);
 		dataItemsChild = new ArrayList<>();
-		List<I_ComplexArray> dataResultItemsClone = new ArrayList<>(dataResultItems);
+		List<I_ComplexArray> dataResultItemsClone = cloneArray(dataResultItems);
 		
 		// Run with mullti thread
 		for (int i = 0; i < I_AprioriItemsChild_Thread.MULTI_THREAD; i++) {
@@ -144,11 +144,12 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		}
 		
 		dataItemsChild = GeneralUtil.pruneDuplicateComplex(dataItemsChild);
-		SUPPORT_MIN *= 0.95;
+		// SUPPORT_MIN *= 0.97;
 		
 		if (dataItemsChild.size() > 0) {
 			show(dataItemsChild);
 			GeneralUtil.setTimeEnd();
+			System.out.println("Support min = " + SUPPORT_MIN);
 			System.out.println("Count : " + dataItemsChild.size() + " items");
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
@@ -161,6 +162,18 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			GeneralUtil.setTimeEnd();
 			return dataResultItems;
 		}
+	}
+
+	private List<I_ComplexArray> cloneArray(List<I_ComplexArray> resultItems) {
+		List<I_ComplexArray> dataResultItemsClone = new ArrayList<>();
+		for (I_ComplexArray c : resultItems) {
+			try {
+				dataResultItemsClone.add(c.clone());
+			} catch (CloneNotSupportedException e) {
+				e.printStackTrace();
+			}
+		}
+		return dataResultItemsClone;
 	}
 
 	private List<I_ComplexArray> getAtomFirstData(List<I_ComplexArray> dataItemsParent) {
