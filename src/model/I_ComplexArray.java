@@ -22,6 +22,14 @@ public class I_ComplexArray implements Cloneable {
 		this.complexObject = complexObject;
 		deleteTag = false;
 	}
+	
+	public int getPosition() {
+		return position;
+	}
+
+	public void setPosition(int position) {
+		this.position = position;
+	}
 
 	public List<String> getComplexObject() {
 		return complexObject;
@@ -81,13 +89,21 @@ public class I_ComplexArray implements Cloneable {
 		
 		List<String> list = new ArrayList<String>();
 		for (String s : this.getComplexObject()) {
-			list.add(s);
+			String a = new String(s);
+			list.add(a);
 		}
 		
-		I_ComplexArray complexArray = new I_ComplexArray(list);
-		complexArray.position = position;
-		complexArray.setDeleteTag(deleteTag);
+		I_ComplexArray complexArray = null;
+		try {
+			complexArray = (I_ComplexArray) super.clone();
+			complexArray.setComplexObject(list);
+			complexArray.position = getPosition();
+			complexArray.setDeleteTag(isDeleteTag());
 
+			return complexArray;
+		} catch (CloneNotSupportedException e) {
+			new AssertionError();
+		}
 		return complexArray;
 	}
 
