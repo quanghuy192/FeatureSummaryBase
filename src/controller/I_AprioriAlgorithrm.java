@@ -53,7 +53,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 	private int N;
 	private int step = 0;
 	private double SUPPORT_MIN = 0.01;
-	private int CONFIDENCE_MIN = 2;
+	// private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
 		dataResultItems = new ArrayList<>();
@@ -116,6 +116,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		itemsRule = GeneralUtil.pruneDuplicateItem(itemsRule);
 
 		int count = 0;
+		List<I_ComplexArray> dataResultItemsClone = cloneArray(dataResultItems);
 		dataResultItems.clear();
 		for (I_Item i : itemsRule) {
 			double percent = 1.0 * i.getQuantity() / N;
@@ -130,11 +131,10 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		// dataItemsChild = getItemsChild(dataResultItems);
 		dataItemsChild = new ArrayList<>();
-		List<I_ComplexArray> dataResultItemsClone = cloneArray(dataResultItems);
 		
-		// Run with mullti thread
+		// Run with multi thread
 		for (int i = 0; i < I_AprioriItemsChild_Thread.MULTI_THREAD; i++) {
-			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItemsClone);
+			I_AprioriItemsChild_Thread thread = new I_AprioriItemsChild_Thread(this, i, dataResultItems);
 			thread.start();
 			try {
 				thread.join();
@@ -160,7 +160,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		} else {
 			System.out.println("Count : " + dataItemsChild.size() + " items");
 			GeneralUtil.setTimeEnd();
-			return dataResultItems;
+			return dataResultItemsClone;
 		}
 	}
 

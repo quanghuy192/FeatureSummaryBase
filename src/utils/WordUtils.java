@@ -35,7 +35,7 @@ public class WordUtils {
 		try {
 			nounTagList = new ArrayList<>();
 			nounTagList.add("N");
-			// nounTagList.add("Np");
+			nounTagList.add("Np");
 			// nounTagList.add("Nc");
 			// nounTagList.add("Nu");
 			nounTagList.add("NP");

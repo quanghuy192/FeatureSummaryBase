@@ -86,7 +86,6 @@ public class I_ComplexArray implements Cloneable {
 	public I_ComplexArray clone() throws CloneNotSupportedException {
 		
 		// Deep clone
-		
 		List<String> list = new ArrayList<String>();
 		for (String s : this.getComplexObject()) {
 			String a = new String(s);
