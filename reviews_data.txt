@@ -1,301 +1,238 @@
-Điện thoại gì lèo tèo 3GB RAM, CPU 4 nhân trong khi người ta 8 nhân, 10 nhân, chạy thế quái nào được
+Đánh giá khá khách quan! Nhất là về RAM, cá nhân mình vẫn thấy IOS RAM 1G vẫn ổn ( vk đang xài ip6) nhưng lên 2G vẫn ngon hơn nhiều.
 
-Chúng ta chẳng cần quan tâm đến hiệu năng của iPhone, vì nó tốt và luôn tốt như thường lệ. Kỳ này thì Apple trang bị iPhone 7 Plus 3GB RAM, nhưng nó cũng chẳng khác biệt mấy so với iPhone 7 đâu vì lượng RAM đó dùng để gánh cho màn hình độ phân giải cao hơn. Trừ khi bạn mở quá nhiều ứng dụng mà lười tải lại thì iPhone 7 Plus mới chiếm ưu thế về RAM.
+Mình sẽ chờ ip7, vì chỉ với nâng cấp ram và camera thì chưa thuyết phục lắm để mua 6s
 
-Điện thoại 2016 mà màn hình vẫn dùng FullHD, thế thì rỗ chết. Dùng cái tấm nền gì 3 năm mà không thay đổi, lỳ như trâu. Hút máu, độ phân giải chả khác gì mấy điện thoại Android 6 triệu
+Ios gần với BB hơn, cùng độc quyền hệ điều hành, chạy mượt dù không cần cấu hình quá cao. MÀ giờ được trang bị hẳn ram 2gb. Tuyệt
 
-Thiết bị di động đầu tiên của Apple hỗ trợ DCI-P3 là iPad Pro 9.7”, trước đó thì dù Mac OS là hệ điều hành máy tính hỗ trợ quản lý màu sắc tốt nhất nhưng iOS thì chẳng có một cơ chế quản lý màu nào cả, giống như Android. iOS 9 trên iPad Pro 9.7 bắt đầu xuất hiện nhưng cơ chế quản lý màu và hoàn thiện hơn nữa trên iOS 10 của iPhone 7 Plus. Rõ ràng Google đã chậm chạp trong việc hỗ trợ Android, làm cho các nhà sản xuất nền tảng này bị mất lợi điểm so với Apple.
+Đang xài ip6s và năm trước thì xài 6, nhưng nói thật tình thì bài này nâng "bi" ip6s quá. Cảm nhận riêng là thích cai camera 12mpx. Cái force touch chỉ xài vài ngày đầu. Live photo thì tắt luôn sau 2 lần test. Tốc độ nhanh hơn 6 khong thấy khác biệt nhiều nếu ai khong chơi game (giống mình).
 
-Nếu quan tâm đến các con số benchmark thì iPhone 7 Plus mạnh hơn khoảng 40-50% so với thế hệ cũ, không phải vì nó có 4 nhân xử lý mà vì có xung nhịp cao hơn, lên tới 2.3GHz so với 1.8GHz trước kia. 2 nhân xử lý phụ trên iPhone 7 Plus có vẻ như không được thiết kế theo kiến trúc big.Little, nên nó sẽ không kích hoạt 4 nhân cùng lúc. 2 nhân phụ này có lẽ chỉ hoạt động khi máy ở chế độ sleep hoặc chạy ứng dụng rất nhẹ.
+Ngoài cái màn hình kém xa Z3, S6 hay G4 về cả chất lượng lẫn độ phân giải ra thì Ip6s khá ngon. Màn hình màu xỉn xỉn nhạt nhật, nếu soi kỹ thì man Ip6s vẫn rỗ như những máy Android HD cách đây 3 năm
 
-Trong thời gian vừa qua thì các bạn cũng có nghe về việc iPhone 32GB chậm hơn 128GB. Thực ra thì mình dùng 32GB cả tháng rồi dùng 128GB nửa tháng, chẳng thấy khác biệt thực tế nào ngoại trừ việc 32GB hết dung lượng nhanh hơn Trong các bài thử benchmark hay thử so sánh cạnh nhau, hoặc nếu bạn thường xuyên chép dữ liệu vào máy thì có thể 128GB sẽ có ưu thế hơn, nhưng mọi chuyện cũng chỉ có vậy.
+Về ngoại hình thì không nói làm gì, bản thân tôi cũng thấy 5/5S đẹp hơn. Có một chút nâng cấp về ram, nhưng giá thì đội lên gấp rưỡi. Không đáng để nâng cấp
 
-Có một số bạn nghĩ rằng mua 256GB sẽ là nhanh nhất, vì theo lý thuyết thì bộ nhớ flash dung lượng cao thường dùng nhiều chip nhỏ, chia nhiều làn dữ liệu để truyền tải nhanh hơn. Trên thực tế, Apple dùng chip nhớ dung lượng cao để tiết kiệm diện tích, nên tốc độ 256GB và 128GB là gần như tương đương. Hiệu năng SSD của iPhone 7 và iPhone 6 cũng không khác nhau mấy, Apple vẫn sử dụng controller riêng do họ từ chế tạo nên tốc độ cũng như băng thông iPhone 7 Plus vẫn dẫn đầu.
+Camera thua Lumia, với mấy con Z? Xin lỗi cho tôi cười phát đã rồi viết tiếp :D :D :D bảo so sánh với G4, S6 còn hợp lý
 
-Trong bài review iPhone 7 Plus này thì chúng ta có sự xuất hiện của mục bộ nhớ, vì năm nay Apple đã nâng gấp đôi dung lượng iPhone lên 32GB thay vì 16GB như năm ngoái. Cá nhân mình thấy 32GB là đủ, thậm chí dư xài nếu bạn mua các gói iCloud. Mình dùng iCloud giá khoảng 21 ngàn 1 tháng (0.99$), được 50GB, các hình ảnh đều được tải lên iCloud tiết kiệm rất nhiều dung lượng. Nếu bạn nghe nhạc nhiều thì 32GB là không đủ, còn với đại đa số người dùng mình thấy bản 32GB là hợp lý nhất về cả chi phí lẫn mức độ sử dụng.
+Quả thực nâng cấp ram và Apple A9 khiến ip nhanh và mạnh khủng khiếp. Cơ mà nó nặng kinh khủng. To và vướng nữa.
 
-Sử dụng pin 2900mAh, pin của iPhone 7 tốt hơn 6s Plus nhưng không nhiều. Nếu xài nhiều thì khoảng 3 giờ chiều iPhone 6s Plus hết pin còn iPhone 7 vào khoảng 4 giờ. Hôm nào mình dùng ít, 7 giờ hơn phải sạc lại iPhone 6s Plus thì iPhone 7 Plus còn khoảng 15%.
+Camera e thừa nhận là thua các flagships bên SS và LG, tuy nhiên k0 phải là quá tệ hại, lấy nét nhanh, chất lượng ảnh khá tốt, và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone, có điều là k0 dc nhất mà thôi
 
-Pin thì tốt rồi, nhưng mà iPhone 7 vẫn còn dùng sạc 5V 1A. Đây là năm 2016, tức iPhone ra được 9 năm rồi, mà Apple vẫn dùng cục sạc thời tiền sử với tốc độ sạc rất chậm này thì đúng là không thể chấp nhận được. Đây mới là hút máu thật sự. Chắc phải năm sau chúng ta mới có sạc mới, có thể là sạc nhanh.
+Màn hình thì 6splus là full HD, tuy nhiên e thấy màn hình của 6s thôi cũng rất tốt rồi, và như e nói, nếu 2k mà giảm thời lượng pin thì e chọn full HD để tăng thời gian sử dụng. và hiện nay nếu tăng độ phân giải mà vẫn tăng thời lượng pin thì đó là câu chuyện của tương lai
 
-Không phải là chiếc điện thoại có 2 camera đầu tiên, nhưng tính đến thời điểm này thì iPhone 7 Plus đang là sản phẩm ứng dụng 2 camera một cách hợp lý nhất với sự xuất hiện của một camera góc rộng và một camera tiêu cự trung bình.
+Iphone 6s vẩn camera lồi , ko đẹp tí nào , đành xài con 5s và 5c thêm 1 năm nửa , chờ iphone 7 thế nào
 
-Về chất lượng ảnh, ban ngày thì iPhone 7 Plus không khác biệt nhiều với iPhone 6s Plus, nhưng ban đêm thì bạn có thể thấy là Apple xử lý tốt hơn rất nhiều, đặc biệt là ở những khu vực phức tạp như shadow thì ít nhiễu và kiểm soát tốt hơn. Dù vậy, xét một cách tổng thể thì hiệu năng chụp đêm của iPhone 7 Plus vẫn thua một số đối thủ khác, dù những phần còn lại vẫn đủ sức gỡ lại.
+Nâng cấp rất đáng giá so với 6 nhưng vẫn chờ một sự thay đổi mạnh mẽ: viền màn hình mỏng hơn, pin dung lượng cao hơn, ram cũng ngon hơn.
 
-Về hai camera, thuật toán xử lý của Apple ngày càng tốt hơn. Ống kính 56mm thật sự rất ấn tượng khi đủ sáng nhưng ban đêm thì nó rất tệ, tệ đến nối Apple tắt đi và sử dụng zoom số từ cảm biến chính để chụp. Đó chính là lý do mà khi bạn che camera phụ đi và zoom 2x thì hình ảnh vẫn hiển thị như bình thường khi chụp thiếu sáng. Đây là điểm mình không thích, nếu như Apple trang bị cảm biến và ống kính tương tự cảm biến chính thì sẽ tốt hơn, nhưng tiếc là không được vậy.
+Nút home nhanh quá đáng. Có ai thấy rung động với ram 2gb của em 6s không ? Vừa xúc hôm qua, và không thấy hối hận tý nào.
 
-Khả năng quay phim của iPhone 7 Plus là tốt nhất ở thời điểm hiện tại so với tất cả các flagship trên thị trường. Apple sử dụng chip đồ họa của Imagination, được họ tối ưu lại và xử lý video tốt hơn hẳn các máy Android cao cấp dùng SnapDragon 820. Cứ thử quay phim trực tiếp từ hai máy thì các bạn sẽ thấy được sự khác biệt khá rõ ràng.
+Năm sau apple nâng cho nó lên 3GB RAM luôn đi xài cho khoẻ. Nâng cấp đáng giá nhất của con này mình nghĩ là RAM, làm cho việc trãi nghiệm máy thoải mái hơn.
 
-iPhone chưa bao giờ là chiếc điện thoại xuất sắc về mặt tính năng, những thứ nó mới bắt đầu trang bị thì người ta đã có cả 1-2 thế hệ trước. Nhưng nếu để sử dụng bình thường, ít nghịch, muốn cái gì đó nhanh, ổn định, luôn làm việc tốt khi chúng ta cần thì rõ ràng iPhone 7 Plus vẫn luôn là một thiết bị hàng đầu.
+Sao pin sạc đến 2h30 mới đầy nhĩ. Vài ảnh chụp từ em xám k gian, đẹp vãi.
 
-Sẽ hơi bất công khi nói iPhone 7 Plus chẳng có gì khác biệt so với iPhone 6s Plus. Nó được nâng cấp màn hình (khá nhiều), hiệu năng (40%), camera (lên gấp đôi, chụp chân dung tốt hơn), pin lâu hơn, nút Home tiện lợi hơn nhưng có lẽ từng đó là không đủ. Người ta vẫn sẽ mua iPhone 7 Plus, nhưng một phần là vì hợp đồng 2 năm từ iPhone 6/6 Plus đã hết hạn, một phần là vì Note 7 gặp sự cố, một phần nhỏ vì hai camera và chống nước, nhưng rõ ràng Apple cần làm nhiều hơn cho những sản phẩm thế hệ tiếp theo.
+Tôi cũng thấy Ad này "quảng cáo" hơi bị quá. 6S không có chống rung quang học, 1 điều mà Apple xúc phạm khách hàng.
 
-Dù sao đi nữa, iPhone 7 Plus vẫn là một chiếc điện thoại rất đáng mua, nhất là với những người hậu đậu sợ nước làm hỏng điện thoại hay muốn ghi lại những khung hình lạ mắt hơn, ấn tượng hơn với camera thứ 2.
+App cực tốt, ko bị lỗi vặt, ko hề bị bug, thiết kế đồng bộ, camera cân bằng tốt và cực nhanh, 3d touch tiện cực kỳ, live photo giúp e lưu những khoảng khắc với gấu sinh động.
 
-Điểm đáng ăn tiền nhất của Iphone 7 Plus là camera. Hiệu năng thì android vẫn hít khói Iphone 7 & 7 Plus rồi. mình dùng từ 6 plus lên 7 plus mà cảm giác máy nhanh hơn nhiều. Nhân tiện hôm nay 11.11 Lazada đang flash sale Iphone 7 14tr7. dùng mã Revolution thanh toán còn 14tr tròn. Iphone 7 32GB giá 14tr
+Imessage và facetime cực tiện, e hay thu âm hát hò mà cái mic của nó thu hay lắm, bảo mật hai lớp rất bảo mật, ko sợ mấy đứa em bấm bậy mua app loạn lên hết tiền trong creditcard.
 
-Nói gì nói chứ mình thích 7 plus jet black màu mới mẻ thích cái bóng loáng của nó với cái chống nước chiều đi học về bỏ túi ko sợ mưa ướt, đem vào toilet ko sợ rớt nước
+Apple music và các service rất rẻ mà tiện, nghe nhạc chất lượng cao nữa. Màn to nhưng tối ưu tốt ko gian hiển thị nên nhìn màn hình có vẻ to hơn cả note 5 dù thực tế nhỏ hơn. Màu sắc màn ổn tuy nhiên lỗi hở sáng màn hình vẫn còn dù rất nhẹ ko để ý kĩ sẽ ko thấy.
 
-Mấy bức ảnh chụp đẹp vãi
+Touch ID thế hệ 2 đọc cực kỳ nhanh (tuy phải thay đổi thói quen sử dụng một chút). Nâng cấp về ram nữa, nói chung cái gì cũng nhanh.
 
-Hơi cay vụ iphone 7 nó không trang bị camera kép. 
+RAM 2 GB quá bá đạo đối với hệ điều hành iOS. Mình là con trai còn thích cái phiên bản màu vàng hồng kìa, đẹp quá.
 
-Cho đến giờ này mình thấy iphone màn 4.7 inch vẫn là tuyệt vời nhất. Cầm nắm thao tác thuận tiện, pin ổn. Đúng nghĩa môt chiếc smartphone.
+Màn hình 3D Touch mang lại nhiều tiện ích trong quá trình sử dụng, ứng dụng trong tương lai chắc chắn sẽ ngày càng nhiều hơn.(cái này thì đang thấy nh người kêu quay lại thời kỳ cảm ứng điện trở)
 
-Gọn thiệt nhưng màn HD thì thôi 7 plus cho lành
+Live Photos: cái này liên quan đến cảm xúc nhiều hơn và đối với mình thì nó vô cùng đáng giá. (cái vớ vẩn này trên htc-nokia có từ lâu và còn ngon hơn mà họ còn ko thèm qc,ông mod này coi nó như phát minh vĩ đại nhất nhiều năm nay)
 
-Có tiền thì cứ chạy theo công nghệ thôi. K có tiền thì k nên đú. Mình đang xài 6s+ nhưng vẫn muốn đổi qua 7+. Thích thì nhích thế thôi, tiền mình mình xài.
+Iphone 6 và 6s có 3 nhược điểm rất lớn. Màn hình xấu so với các máy cao cấp khác. Hđh quá đóng ko cho copy gửi gọt gì cả. Giá quá đắt
 
-Máy chụp hình xóa phông tốt, đặc biệt là chụp ban đêm!
+Nút home nhạy quá mức cần thiết thật. Hơi nặng nhưng cầm rất chắc chắn. Sau khi dán miếng kính cường lực vào thì cầm lại hơi trơn, nhưng bx thích vậy thì đành chịu. Tôi vẫn đang xài nó kìa đời 2006.
 
-Đúng là dù ai nói ngả nói nghiêng, iPhone vẫn chỉ cần tốt hơn chính nó của năm trước đã là đủ lí do để mua rồi
+Ram 2gb thấy chỉ cần thiết vs những ng thích mở nhiều tab safari hay đa nhiệm như mình. Phần lớn số đông vẫn ok vs 1 gb ram.
 
-Ý bạn là chụp xoá phông ban đêm hay chụp ban đêm? Nếu là chụp tối ngược với ánh sáng mạnh thậm chí kể cả ban ngày nếu gặp ánh sáng mạnh rất dễ bị cháy hình. Điểm yếu là dải nhạy sáng của iphone so với bây giờ thì thực sự kém, quá kém.  Một điểm nữa là độ flare của camera iphone bị rất nhiều nếu chụp vào buổi tối gặp ánh sáng phức tạp và chỉ hơi mạnh một chút thôi là các đốm xanh trắng hiện lên nhiều. Iphone nên cải thiện chất luợng camera nhiều hơn nữa trc khi các đối thủ bắt đầu đuổi kịp ios về trải nghiệm.
+Camera 12mp nhưng chất lượng chụp đêm ko có nhiều đột phá, đặc biệt khi so vs note 5 hay g4 (ban ngày thì vẫn tuyệt vời như cũ 
 
-Về iPhone 7/7 Plus nói chung, Apple vẫn còn chọn nước đi quá an toàn, không có quá nhiều sự cải tiến thực sự so với thế hệ 6/6s. Không phải vì hãng không đủ khả năng mà vì Apple đang muốn bảo toàn doanh số và lợi nhuận của mình, điều này là sự thật, chúng ta phải chấp nhận nó. Bất kì nhà đầu tư nào cũng phải nghĩ đến lợi nhuận đầu tiên, nhất là Tim Cook là một doanh nhân, không phải một nhà sáng tạo như Steve Jobs. Mong rằng năm sau, cột mốc 10 năm iPhone, Apple sẽ làm cho những người dù là fan cứng của táo khuyết hay cả anti-fan và người dùng trung lập được chiêm ngưỡng một tuyệt tác điện thoại thật sự.
+3D touch thì mình ko dám ý kiến vì cần tgian để ng dùng thay đổi thói quen.
 
-Phải nói là dòng Plus của iP to quá, cầm rất khó chịu. Hy vọng iP8 Plus Apple sẽ làm gọn gàng hơn.
+Cái 3D touch chỉ maketing là chính, bấm như cảm ứng điện trở, không thực sự hữu dụng. Còn vân tay thì thực sự rất nhạy. Có mỗi cái nâng cấp ram là đáng giá nhất thôi.
 
-Vẫn thích 7 plus hơn 7 thường. 
+Đây là điều làm mình thất vọng nhất. Khi bấm mạnh, feedback click làm rung động phần mặt sau máy nhiều hơn là tác động lên ngón tay trên mặt kính màn hình. Không những thế, nó còn click 2 cái, không như Touchpad cho cảm giác bấm như với touchpad cơ học truyền thống.
 
-Bao giờ bạn mới chịu cập nhật đầu óc để không còn so sánh cấu hình ip và các máy android khác vậy? Cái hệ điều hành android cùi bắp nặng nề và mất ổn định nên mấy hãng sản xuất android phải cắn răng chạy đua cấu hình để máy chạy mượt chứ ai không muốn dùng cấu hình thấp để tăng lợi nhuận.
+Pin yếu quá dùng bất tiện. nâng câp ram xong, càng hao nhanh.
 
-Nhiều bạn lúc nào cũng chê màn HD thế ? iphone nó leo lên ngôi số 1 nhờ số điểm ảnh á ?
+Bốc phét, ip6 ios 8 của em so hiệu năng vs 6s cũng chả thua kém bao nhiêu. Đặc biệt là camera, chưa kể 3D touch chỉ làm rối thêm thao tác và đau tay, tốn bộ nhớ và pin.
 
-Thích nhất cái nút home và cách con chip phản hồi lại trên màn hình. 2 loa mới nghe thì hơi bỡ ngỡ
+Pin hẻo không trụ được hết ngày.
 
-Bạn dựa vào đâu lại nói cấu hình con ip bằng tầm trung của andriod thế, xl bạn chứ con snapdragon 821 hiệu năng điều thua con chip mới của ip bây giờ nhé, điểm antutu ip 7 plus đang là cao nhất rồi bạn
+Cái camera trước 5MP sao ko thấy a nhắc đến ta. cái này cũng quan trọng đối với chị em phụ nữ lắm chớ. 1.2MP đã rõ lắm rồi giờ lên 5MP ko biết nó thế nào
 
-Ip giờ đỡ hút máu hơn xưa nhiều, nhớ thời 5s hay 6 tầm tháng 11 vẫn còn 20 củ, ip7 giờ xuống gần 15 rồi
+Chờ the new Iphone. Ko thích cái lưng của 6 tí nào
 
-Tại nó đắt tiền cho nên cái gì dỡ người ta cũng vu vi cho qua, cấu hình iphone thì đáng tầm trung của android thui nếu không dựa trên thương hiệu và ios hahaha
+Chính xác là dùng ip6 Ram 1GB khi lướt web mà back lại là nó load lại từ đầu, ức chế vãi cứt ra 
 
-Người tiêu dùng bây giờ dễ dãi nhỉ, cấu hình tầm trung bán giá flagship mà ng ta cũng đâm đầu mua? Mình đề nghị tinh tế mở lớp phổ cập kiến thức smartphone và cho học viên thực hành trên smartphone đặc biệt là iPhone, để xoá nạn "cào bàn phím".
+Hóa ra bấy lâu nay các dòng ip 6s đổ xuống chơi game 3d vẫn lag, giật:( còn pin hẻo thế kia thì pó tay rồi, nửa ngày sạc một lần, ngày sạc hai làn:(. Với ip thì không nên lôi ram với chip để so sánh với dòng khác, vì hệ sinh thái nó khác.
 
-Thiếu phần review loa rồi mod. 7/7 plus có loa stereo thì ko biết âm lượng lớn hơn mấy đời trước nhiều ko?
+Pin gấp đôi iPhone 5s tôi đang dùng và gần bằng 6 plus. Có thể là pin 5s đã chai phần nào nhưng thế vẫn là quá tốt. Về tốc độ và trải nghiệm thì phải nói là gần như hoàn hảo, nhanh chóng mặt. Nhờ cái 3d touch thao tác cái gì cũng tiện, đang gõ dở chỉnh sửa rất nhanh, xem trước nội dung cũng là cái tôi cực thích. Tóm lại ngon và đáng đồng tiền, đáng cái giá hơn 17 triệu vô cùng. Nghĩ lại so với việc ngày xưa bỏ tiền mua con One M8 về xài thử, đắng hết cả lòng.
 
-Iphone có màn LCD xuất sắc nhất nhưng so với màn AMOLED thì có vẻ sẽ không bằng, nhất là khi hiển thị màu đen. Mai mình sẽ lấy 1 em 7 plus về so sánh thử với Note 7 trước khi mang trả em Sam 
+Tìm hiểu kỹ đi bạn, nhân của ios là nhân tùy biến, chip VGA cũng rất khủng chứ không phải loại thường. Nếu muốn so thì phải so trên cùng một phần cứng hoặc cùng một os.
 
-Cố lấy cái sac nhanh mà vẫn 2h30p. Về bắc lâu lâu mất điện 1 ngày thấy mấy bác đi sạc ké ngồi mòn đít chưa xong
+Có 1 điểm làm mình phần vân khá nhiều giữa iphone 6s và 6 là về vấn đề camera và màn hình vì tốc độ trên cả 2 con đều gần như là như nhau, nên ram không quan trọng lắm. Thât sự nếu nói về độ cao cấp thì 6s plus cao cấp hơn nhưng chính vì sự to bản của nó làm mình khá là rụt rè để sở hữu. Nếu như 6s gọn gàng đẹp mã nhưng lại rút giảm một số tính năng của camera và độ phân giải thì khá đáng tiếc.
 
-Thật sự là 1 fan của táo , nhưng theo cá nhân mình sử dụng qua rất nhiều máy ( android ..ios) mình xin chốt 1 câu muôn thuở , đt thì android và ipad thì ios , đừng bào chữa gì thêm, khi các bạn muốn so sánh về mẫu mã hoặc cấu hình giữa 2 hệ điều hành này nữa , mỗi cái có mỗi ưu và nhược riêng , riêng về khoản camera thì mình không ấn tượng lắm về táo và bản thân em đang sử dụng s7 edge thì cảm thấy nó hơn về 7plus ( cái hơn ở đây là em có thể chuyển qua chế độ chuyên nghiệp và tuỳ chỉnh sâu nhiều chức năng) , mọi mặt khác em không nói ai hơn ai vì bản thân em rất thích hệ sinh thái của táo , tức là đơn giản hoá mọi ứng dụng khi mình cần và không quá ư là rườm rà bận tâm nhiều thứ như trên android, nói đến đây chắc các bạn cũng hiểu là đèn nhà ai nấy sáng , táo vẫn là táo và ăn đờ roi vẫn là roi vậy thôi, như mod nói , thích thì mua ko phải lăn tăng , tiền tui thì tui mua , ờ hén
+Mình mới 6s đc mấy hôm , cảm nhận là cầm rất đầm tay . pin thì tạm ổn . cảm nhận cái ios nó ổn định ( không chậm mà cũng chả nhanh ) nhìn khá đơn giản ít app rác .
 
-Tham gia tinh tế từ 2009 mà k lượm lặt được tí nào ntn sao. Cấu hình tầm trung ấy vả chết hết đống cấu hình cao cấp đấy. sắp 2017 rồi bỏ bài ca cấu hình đi bạn à
+A đang dùng đấy, chú gato hả? A đẹp thì a dùng iPhone màu gì chả đẹp. Màu Rose Gold bên ngoài nó sang trọng và hợp với giới trẻ chứ chả có gì là nữ tính hết. Và có 1 điều chắc chắn là a chuẩn man và nhiều gái theo hơn chú nhé :))
 
-Không phải là chọn nc đi an toàn mà thực chất là chưa thể tìm ra đc cách nào đó tốt hơn cái thiết kế này và sau khi cái đc coi là flagship của android ra đời thì cũng chưa cây nào vượt lên hẳn về thiết kế, may ra có note7 nhưng độ hoàn thiện của note7 cũng tầm thường (cá nhân mình dù thiết kế đẹp đến mấy mà hoàn thiện kém thì cũng vứt đi). Hoặc là thiết kế này vẫn đang kiếm tiền tốt thì không việc gì phải tung chưởng mạnh vội.
+Camera vẫn để độ phân giải khá thấp so với mặt bằng trung để ém hàng, bây giờ máy mới được trang bị ram 2GB, trong khi thiên hạ ram 4gb, 6gb hết rồi. Táo chơi không đẹp nên vẫn không thích cho lắm
 
-Đương nhiên là thích thì mới mua rồi. IP thì luôn là 1 đt tốt vì nó chỉ làm ở phân khúc cao cấp nhất (trừ 5c với SE), chỉ là ko hợp với hệ sinh thái của nó thôi.
+Cái IOS 9 chết tiết lỗi tùm lùm, đơ app liên tọi, gọi điện, facebook đơ nhăn răng. Crash app. Search spotlight thì ko tìm được danh bạ. Ở đấy mà nâng bi 
 
-Xin lỗi cho mình hỏi 7 Plus quay video lấy nét xoá phông như mấy con DSLR đc ko ta?
+Tôi dùng hàng ngày S6 rất tiện, 6S plus bỏ túi quần hay túi áo suit cũng là 1 sự vướng víu do nặng. Cảm giác như 1 cái laptop bỏ túi quần vậy
 
-Gì chứ phần hơn kia là do apple không thích làm rối cái app camera mặc định thôi, chứ có mở các hàm ra cho dev làm app có thể tuỳ chỉnh mấy cái đó ấy chứ.
+Mua màu hồng vợ khoái quá trời, cười suốt :) , cám ơn bác.
 
-Nếu bác đổi về con 7 black thì em đồng ý. Còn bác về màu khác thì em thấy nó cứ tù tù
+Màu đen lên tivi ăn ảnh quá, nhưng phải ko dán màng hình, dán lên nó lộ ra phần miếng dán nhìn xấu lắm. có màu vàng là ok nhất
 
-IPhone giờ xấu kinh nhỉ, không so được với IP 5, 5S. Hàng Apple thích ở thiết kế đẹp, còn lại cũng bình thường. Trước có con Macbook Air mua được 1 năm thì đi cái ổ cứng, MacOS chạy mượt hơn Win 7, ̣8, ngang Win 10 để lướt Webs xem phim cũng ổn, nhưng ngoài thứ ấy ra thì không bằng Win. Dù sao thì trào lưu dùng đồ công nghệ mới đang dần thoái trào, giờ chủ yếu toàn người đi săn hàng giá rẻ chất lượng tốt, cũng chẳng đáng nhiêu tiền, nhưng bỏ hơn chục triệu cho một chiếc điện thoại có vẻ không hợp lý cho lắm.
+E cũng dùng 6plus 2 tháng trc khi chuyển qua 6s plus đây bác. Cảm nhận máy nhanh và nhẹ hơn thấy rõ, bắt LTE mạnh hơn. Duyệt web mở tabs ko bị reload, touch id nhận vân tay nhanh hẳn. Pin on screen thì như nhau nhưng stand by rất lâu sụt pin dù bật LTE. Vài cảm nhận riêng của e, e thấy dễ nhận bik sự khác nhau chứ ko phải soi kỹ mới thấy. ram 2gb cũng khá nhanh, mình chơi game mạnh mà không bị giật lag các kiểu nữa.
 
-Đúng theo như chủ topic nói ở cuối,mình vẫn chưa thấy cải tiến về phần hình ảnh chụp ngoại trừ cái chế độ Chân Dung là mới,nhưng quay phim thì rất khác biệt,rất đẹp
+Lúc mình mới bóc hộp máy cảm giác khác nhất là độ dày và đầm tay hơn, ram thì khỏi chê.
 
-Cay cú nhất là cục sạc chậm như rùa, năm nào mà không nâng cấp nổi cục sạc nhanh nhỉ? ngoài ra mọi thông số camera chỉ nâng cấp nhẹ chứ cũng không khác gì mấy, chỉ có hiệu năng thì tốt hơn nhiều. tuy ok nhưng iphone vẫn còn thiếu nhiều lắm và nhiều nhất vẫn là sạc nhanh
+Touch ID ngon, pin ngon, nhanh
 
-Cục sạc iPad nha, sạc như điện. Apple có nói là sạc iPad dùng được cho cả iPhone. Con 6 Plus của mình cũng toàn xài cục iPad. Cục đi kèm thì đúng là chậm thật.
+Lỗi camera, thi thoảng bị đơ 3s, lỗi app gọi điện thi thoảng có ng gọi tới có chuông nhưng không thấy giao diện nhận cuộc gọi.
 
-Đợt nâng cấp này không thuyết phục lắm, nếu suy nghĩ kĩ mà nói thì nên chờ iphone 8 bay 7s vì năm sau là kỉ niệm Apple 10 năm gì đó thì đáng giá hơn. Theo mình năm nay nếu note 7 không phốt thì mình đã chọn thay iphone rồi
+Mình vẫn thấy ok với em 6 plus, hơn nữa ko ham hố với rose gold nên chả có nhu cầu đổi. Hiệu năng thì có lẽ ko khác biệt nhiều, nhưng quan trọng nhất với mình là pin 6 plus quá ngon.
 
-Toàn sử dụng cục sạc 5 cổng 52W vì nhiều thứ cần sạc, sạc zin toàn bỏ hộp, cơ bản vì cục sạc zin quá tốt chỗ 
+Rose Gold quá chuẩn luôn sao phải ngại. Ít ra thì gái theo ko hết, ko như mấy chú ngồi gato "thẩm du tinh thần" :))
 
-Cơ bản là đừng dùng cục sạc đi theo máy, mình mua cục sạc của anker, sạc cực lẹ cho iphone plus
+6s plus đi. Màn hình to chút trải nghiệm sẽ thú vị hơn nhiều
 
-Thấy cái video so hiệu năng của iphone 6s plus của năm ngoái với s7 và thậm chí cả note 7 chưa? Nghiên cứu thêm đi
+Hả Lumia lấy nét lâu chứ còn các thông số khác em ko nghĩ nó auto cùi đâu bác. Cả khoản chụp đêm thì iphone 6s quá tệ với đt Android chứ đừng nói Lumia. Toàn out nét thôi
 
-Thằng không biết gì cũng phán không thấy thông số ip7 nó để ram 2gb chip 4 nhân màn HD sao chỉ đáng tầm trung android không phải à
+Chụp đêm thì nãn đều luôn. Bao giờ apple nâng cấp camera để chụp đêm và phơi sáng nhỉ 
 
-Đương nhiên là iphone nó phải hơn rồi cái hệ điều hành ios của nó nữa chứ thông số cấu hình của nó chip 4 nhân, ram 2gb, màn HD, pin 17xx thì ngang ngữa với mấy tầm trung android thui
+Thật ra đáng giá nhất là ram 2g nếu xét theo 3 tiêu chí kia! Nhưng với ios 1 g ram vẫn thoải mái chán! Và khác biệt nhau không quá lớn ngoài tiêu chí 3d. Cho nên quyết định của em là vẫn dùng em 6+!
 
-iPhone chụp buổi tối xấu đau xấu đớn. Hôm bữa đi chơi cầm 6S+ ra làm vài bô hình mà con bạn nó lôi Note 5 ra chụp xong, nhìn hình nó chụp xong cất ngay điện thoại vào không dám đem ra lại luôn 
+Xem mấy bài review thì hiệu năng quá ngon , cài ios tối ưu hóa tuyệt vời , mong android cungd cnhu thể
 
-Mình dùng 128G nhưng vẫn muốn mua thêm dung lượng icloud mà tài khoản việt nam không cho mua ức chế thật. Không biết có bạn nào biết cách mua bằng tài khoản việt nam không chỉ mình với
+Nhưng công nhận là ảnh chụp cái AW vs 6s grey đẹp thiệt
 
-iphone đối với mình giờ ko còn hấp dẫn như hồi ip4 và 4s nữa, trên tay e 7Plus gole nhạt tóa, như cầm ip6plus, cầm con Jetblack còn thấy cảm giác vì màu nó lạ, giờ ko còn yêu iphone như ngày xưa nữa, hi vọng bản 10 năm sẽ đột phá
+Tốc độ hay nói chung ưu thế cấu hình cao hơn đã rõ ràng, cải tiến chất liệu vỏ và khả năng chống nước vừa phải cũng là điểm đáng lưu tâm, 3D là công nghệ đột phá mang tính đi trc. 6s rất đáng để mua nhưng chưa cần mua ngay đối với người dùng 6. Với khoảng khác biệt giá nhỏ hơn thì nên mua. Khi đó mọi thứ sẽ khớp: hiệu quả/giá cao hơn, tính năng 3D đc tận dụng nhiều hơn, hữu ích hơn 
 
-Cần gì link cái antutu hay gêekbech nó là 1 cái ứn dụng chạy đa nhân đấy. Chứ một cái game nặng nó chạy ông biết nó chạy như thế nào bên trong à nếu không có phần mềm kiểm tra. Còn cái 8 nhân là chạy như thế nào, 8 nhân exynox có thua 4 nhân snap không cùng andoid nhá ;))
+3D touch là công nghệ tương lai, giống như touch ID trên 5s mà 5 ko có vậy, các máy sau này buộc phải có. 
 
-Không biết nói sao nhưng thật sự cầm 7 plus thấy nó đẹp hơn 6s Plus rất nhìu.
+Phần cứng double mọi mặt, chip, ram, bộ nhớ trong đều chuẩn mới và nhanh hơn. Nó giống như từ 4 lên 4s vậy, 1 khoảng cách cấu hình rất xa. 2 cái ở trên thôi đã rất đáng kể rồi, chưa kể touch ID thế hệ 2 nhanh hơn. Camera cũng được nâng cấp hơn so với ip6
 
-Tất cả những gì m muốn là 1 e 5s màn 5.7'' ok
+Giá cả miễn bàn đi, chơi iphone thì lo gì giá. CÒn muốn khoe thì dễ lắm, cứ mở máy lướt qua lướt lại là xong hà, iOS 9 mà chạy ầm ầm siêu mượt, lại có 3D touch và live photo thú vị thì chỉ có 6s/6s+. Ram nó còn 2GB cơ mà, chơi game gì chả được.
 
-Ảnh chụp từ ip7 chất lượng còn hơn cả con Mirroless Yi M1 của xiaomi
+Cầm con iphone màu vàng hồng thì con gà nó cũng biết là là chỉ 6s mới có. Còn 1 điều này nữa là con 6s thấy nó nhanh hơn con 6s plus dù 2 con mua cách nhau có mấy ngày thôi.
 
-Tí nữa sẽ ra FPT lấy con 7 plus 128GB. Mình không quan tâm về vụ chip bắt sóng nhanh hay chậm. Quan trọng các bạn có sử dụng được 100% hiệu năng con 7plus hay không?.
+Hải nói con màu vàng hồng nhìn rất đẹp. 6s, 6s+ cầm rắc chắc chắn và đầm tay. Ram khủng, camera khủng, nếu có tiền thì mình cũng lên đời máy đấy.
 
-Mua về cũng chỉ chụp hình, facebook.
+Một điều nữa là 3d touch tuy có vào nhanh hơn thật nhưng cũng có mặt trái là liệu h hỏng màn vỡ màn có thay thế đc ở việt nam ko. T lại cỏn ở tỉnh lẻ nữa chứ
 
-Con 7 plus cái camera kép lòi, xấu đê tiện vậy mà nhiều bác vẫn khen đẹp hơn 7
+Nhanh thì có nhanh thật nhưng riêng mình không thích nó cho lắm do hệ điều hành nó gò bó quá.cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2" mà lại không full HD nữa. 
 
-Thì nên mình mới nói là hệ điều hành của táo vẫn luôn mang lại sự trải nghiệm dễ dàng và nhanh nhất, không rườm rà
+Note 5 test tốc độ thấy bị lép vế rất nhiều so với 6s mà bác, ram em 6s này tận 2GB cơ mà, ngang với mấy con 4Gb cửa các dòng khác.
 
-Đẹp moẹ gì. Đẹp so với mấy con đt khác thôi và chất lượng ảnh cũng chỉ ở mức đủ nhìn được. Chứ để mà nói đẹp thì còn xa lắm đối với camera phone
+Hic mấy bác chê màn hình iPhone 6s chưa đủ nét chứng tỏ mắt các bác khủng thật. Em thì chịu vì thấy nó ổn lắm rồi. Trước thì ram 1GB thì hơi thiếu thốn, h ram nâng lên 2gb, đó là cái nâng cấp đáng giá nhât.
 
-Bản black nhìn đẹp quá, nhưng ai thích thì cứ mua thôi, giá trên trời
+Bác dao xuan thuy! Bác dùng 6+ thật chưa đấy? Cái gì thì em không dám bình luận chứ pin thì note5 xách dép cho 6+ bác ạ, còn lại thì 6+ không có gì ấn tượng, hệ điều hành quá chán. Chỉ ấn tượng phần mềm camera của apple đó là lấy nét, đo sáng và khóa nét, khóa sáng bằng tay rất nhanh cho những ai chưa hiểu ISO, EV, tốc độ màn trập là gì, chụp trên ip ngoài sự tối ưu đc điều chỉnh tự động mà vẫn có thể đo sáng theo ý mình, chọn được tấm ảnh không bị quá sáng đến mức cháy sáng. Cái này thì Sony, samsung từ S6 trở xuống khi để chế đô tự động không có, chỉ có trên note5 và HTC M8 nhưng không ưu việt bằng ip.
 
-Thôi khỏi nhây. Không tìm được thì coi như ông nói xàm cho nhanh. Cãi gì mà chả có cái link để tham khảo mà cãi nhây từ sáng giờ.
+Các bác xài ip 6s rồi cho mình hỏi có nhanh nóng máy k, mình gọi camera bằng messenger tầm 15p là máy nóng rồi
 
-Camera ấn tượng quá, hiệu năng thì giờ nói đến mấy dòng cao cấp thì quá thừa thãi rồi. Nhưng cái ngoại hình hơi củ chuối. Pin hơi hẻo nhưng với quả pin vậy thì ko mong chờ nhiều hơn đc rồi. Nói chung là ifan và nhiều tiền thì mua thôi :D
+Mình cảm thấy 6s ram 2gb nhưng chỉ nhanh hơn ip6 có một chút xíu. Ở hiện tại thì chưa biết, nhưng tương lai khi update hệ điều hành, chắc mới thấy rõ được,
 
-Nói về HĐH tối ưu, kết hợp tốt giữa phần cứng với phần mềm và sp hoàn thiện xuất sắc, thì 1 fan BB từ 2008 cho đến giờ, m chuyển sang dùng IP thôi.
+6s bị nóng máy là đúng rồi .do chip nó nhanh nóng hơn thế hệ cũ. Nhưng yên tam xài đi không sao đâu. Mà ram khủng hơn nên chắc cũng ngốn pin hơn
 
-Những cmt ngoan đạo như thế này cũng khiến mình phân vân khi muốn chuyển qua dùng iphone. 
+Công nhận khi dùng quen 3d touch thì thấy rất sướng. Quả camera cũng cực ngon, chụp pano cực đẹp. cảm biến vân tay thì nhạy hơn rõ rệt so với 6. Còn ram 2gb so với 1gb của 6 mình thấy vẫn không quá khác biệt. 6 vẫn nhanh như 6s
 
-Màu jetblack bạn mới khui hộp ra nhìn chịu ko nổi thiệt , nhưng cầm sài 1 ngày thôi nó xước dăm te tua. Vì ở nhà bx xài mate black rồi nên mình mua jeblack , bỏ trong ốp lưng vẫn bị xước nhăm nhé. Nói chung ai kỹ tính thì hãy dùng màu jet , còn bê bối thì cứ các màu khác mà phang. Được cái cầm màu jet cảm giác nguyên khối liền lạc .
+Công nhận 6s ngon. Trước cứ phải mua 6sp vì sợ con bé nó pin kém, bây giờ thực tế dùng 6s thấy cây 6sp thành thừa. 6s pin rất tốt.
 
-Ko cần nói thêm chủ thớt nói hết miạ nó rồi. Nó vẫn là cái đt đáng xấu nhất
+Chuẩn. Trước mình cũng xài 6+ nhưng năm nay lên đời 6s thôi vì pin đã đc cải thiện. Nhìều ông ko dùng mình nói 6s pin trâu ko tin, cứ nhìn cái số 1715 mAh thì nghĩ là pin yếu, hehe
 
-Cơ bản thích ip là vì cái ios của nó chứ cũng ko quan tâm chụp ảnh hay gì lắm
+Mỗi tội 6s pin yếu hơn, chắc do ram 2GB nên tốn nhiều pin hơn nhỉ ? Camera cũng được nâng cấp để dành cho các chị em tự sướng 
 
-Bác cho hỏi jet black nếu mình ko gắn ốp mà dán mặt trước & mặt sau có trầy ko vậy???
+Tuy nhiên phải công nhận kho ứng dụng ios tốt nhất trong tất cả các HDH, mà giờ ram 2GB có khi cân cả bản đồ. Đánh giá chung là camera cũng đẹp hơn so với ip6.
 
-Cái này thì sai rồi, cấu hình iphone bây giờ rất mạnh. Với đặc điểm chip to gấp đôi điện thoại Android nên dễ tích hợp GPU khỏe hơn, chíp mạnh hơn. Bù lại kích thước viên pin nhỏ.
+Các bác cho e hỏi, em mới mua 1 cái ip6s mà thấy mau hết pin quá, em mở 3g cả ngày, xài cũng k nhiểu lắm nhưng tâm 3h là chỉ còn có 20%. Em kiểm tra bằng ibackupot và itools 3 thì thấy design capacity chỉ có 1690 mAh thôi. Lên đây thấy dung lượng là 1715 nên hoang mang quá. Các bác có thể giúp em check lại 1 lần nữa dung lượng pin của 6s đc k ạ
 
-Mấy bác cho em hỏi em dùng 7 plus khi ấn vào nút home thì nó vẫn rung nhưng khi em ấn vào một ứng dụng hỗ trợ 3d touch thì không rung xin hỏi là bị sao ạ
+Ip nâng cấp những tính năng không thiết thực. Chẳng hạng như live pt chắc éo ai dùng hoặc vài 3 lần là chán =))
 
-Chụp ảnh có máy chụp hình rùi bác ạ,ai lại đi đem smartphone ra chụp ảnh bao giờ,mún chụp đẹp thì phải máy ảnh nha bác, chán ghê,S7 gì đó chụp đêm cũng vỡ hình chứ có tốt lành gì đâu mà nói
+Bluetooth thì cực kỳ tù, 1 số thiết bị không cho phép connect hoặc connect nhưng kém ổn định.
 
-Mua điện thoại để phục vụ mình, chứ ai rãnh đâu mà tối ngày ép xung rùi root máy, để dành thời gian đó đi làm kím tiền bạn ơi.Cái đó đã có nhà sản xuất lo mình chỉ việc sài thui
+Camera nâng cấp nhưng chụp đêm khá chán, có có nâng cấp ram là đáng giá thôi. Gấu mình mê cái màu hòng mới chết chứ, tốn tiền quá.
 
-Ngoài chống nc, s7 hơn nhìu thứ bạn. Và nói ko bít bạn tin ko, khi mình cầm flagship ss hay iphone, quan hệ giao dịch thuận lợi hơn đó. Cùng với đồng hồ. Đó là giá trị thương hiệu
+Từ g2 lên ip 6s thấy hẫng quá. Màn có 720p mà xem ko nét má ơi. Otg ko hoạt động, văn bản ko copy tiện được mà sách thì nhiều vô cùng
 
-Không thích iphone vì giá cao, máy xấu, pin yếu, sóng kém, 3g, wifi lởm. Vậy là những cái cần có ở một cái điện thoại thì iphone đều kém nên không dùng
+Camera nét hơn nhiều so với IP6 ở trời sáng, chế độ chụp 4K thực tế không sắc sảo như Sony Z5. Máy đôi khi đơ nhẹ không bấm được, các bạn sẽ thấy lỗi này khi text máy tại TGDD. Camera trước chụp đẹp hơn nhiều so với IP6. Thêm cảm biến vân tay nhạy hơn và công nghệ 3D touch hỗ trợ nhanh ứng dụng. Và đúng là để sanh chảnh với đời, và dành cho mục đích PR về công việc cần thể hiện. Vớ ram 2gb, thực sự là một cải tiến đáng chú ý.
 
-Từ 6s plus mà lên em này thì hơi phí, vì dùng chả khác gì nhau mấy, được cái nhanh hơn nếu chơi tác vụ nặng còn nghe gọi nt bình thường thì không nên lên, mình lên thấy hơi phí
+Ghét cái camera lồi xấu kinh khủng, nhưng vẫn sẽ cân nhắc vì ram GB, do mình cũng không thích chụp ảnh lắm.
 
-Thiết kế quá đẹp và mang tính định hướng cho ngành công nghệ, mình ki tìm được lý do thay đổi thiết kế của iphone, giống như xe Roll Royce vậy trăm năm vẫn một thiết kế.
+Camera quá cùi, thua note 5, z5 và nexus 6p, thua cả lu930 vs 1520 và tất nhiên là 950. Trang đánh giá camera trên smartphone uy tín đã làm rồi. Pin quá tệ, nhất là 6s.
 
-Có bác nào đang dùng Iphone 7/7 plus mà khi quay video thì bị hiện tượng vỡ pixel, tối cảnh giống trong Vid này ko ? Em hoang mang quá TT
+Pin yếu, tuy được nâng cấp đáng kể về chip và ram, nhưng vì thế mà pin cũng không thể trâu hơn được. 
 
-7plus tgdd camera sau đen xì. Moá nó. Chắc mai phải vác lên bảo hành. Chán
+Năm nay có quả cải tiến, camera, màu hồng cho chị em và ram 2GB là đáng chú ý nhất.
 
-Đỏ đen mặt trước thì nam còn mua được. Đỏ trắng nhìn nữ quá. Sao không ra 2 bản đỏ đen và đỏ trắng luôn. Nhìn màu đỏ này sang, ko có màu mè rẻ tiền như 5c.
+Pin trâu hơn . ram cao hơn . bự hơn . máy cầm cũng chắc tay hơn, thực sự rất đầm tay, đáng để mua
 
-Cá nhân mình không thích mặt trước màu trắng, nhìn nó chẳng hợp với tông màu tổng thể gì cả.
+Em dùng thì thấy pin hao cũng nhanh , tầm 5h chiều là phải sạc lại rồi, ram 2GB nó ngốn pin thật đấy.
 
-Lấy máy trắng tháu lưng ra thay lưng đỏ vô, thay thêm một số chi tiết như nút âm lượng, nguồn và cần gạt => bán mắc hơn. Để ý thấy mặt trước hoàn toàn là của bản màu trắng, ngay cả nút home.
+Không chụp được xa mấy. Quá bình thường không có j suất sắc.ai làm bài so sánh vs lumia 1020 xem hơn máy 2013 không.
 
-Thật sự đẹp với màu đỏ hoàn hảo. Nhưng mình thích màu đỏ nhưng màn màu đen hơn
+Tính mua vì em 6s có 2GB ram nhưn mà gặp camera vậy hơi trùng tay tí rùi .
 
-Chụp rõ cái cái cọng lông luôn âý chứ nhỉ?
+Ảnh nét vãi. Màu lên trung thực. Cấu hình cao, ram quá khủng khiếp so với IP6.
 
-Cái này chụp macro là perfect, nhưng có điều k hiểu rõ lắm là khi bật flash thì nó sẽ ntn
+Thiết kế quá đẹp và mang tính định hướng cho ngành công nghệ, mình không tìm được lý do thay đổi thiết kế của iphone, giống như xe Roll Royce vậy trăm năm vẫn một thiết kế.
 
-IPhone chụp ảnh đẹp nhất từ trước đến nay.
+IPhone chụp ảnh đẹp nhất từ trước đến nay, chưa kể còn được trạng bị thêm ram 2GB, chơi game mượt mà.
 
-Chất lượng chụp cũng ổn, chưa phải xuất sắc,
+Bản màu hồng nhìn đẹp quá, nhưng ai thích thì cứ mua thôi, giá trên trời
 
-Ảnh nét vãi. Màu nên trung thực
+Nhiều bạn lúc nào cũng chê màn HD thế ? iphone nó leo lên ngôi số 1 nhờ số điểm ảnh á ? Mà sao ai cũng chê cái ram nhỉ, bạn thử dùng cái ip ram 1gb với những dòng kahcs ram 3gb đi, xem con nào mượt hơn.
 
-Hơn hẳn 6s plus về màu sắc, độ sáng, chiều sâu rất đáng cho a e nào muốn nâng cấp máy để chụp hình
+Cấu hình bình thường, nhưng với ram 2GB thì chắc mình sẽ nghĩ lại.
 
-Nghe nói e này camera vẫn kém hơn s7edge và note7.nhưng ko kém đến mức như 6s so với note 5 -v10 năm ngoái. hóng bác chủ có bài so sánh cụ thể.
+IPhone giờ xấu kinh nhỉ, không so được với IP 5, 5S. Hàng Apple thích ở thiết kế đẹp, còn lại cũng bình thường.
 
-Hóng chụp đêm chứ chụp ngày hầu như con nào giờ chịp cũng ổn cả rồi
+Đúng theo như chủ topic nói ở cuối, mình vẫn chưa thấy cải tiến về phần hình ảnh chụp ngoại trừ cái chế độ chân dung là mới
 
-Nhìn thì có vẻ tiện nhưng ảnh vẫn không đặc sắc, nếu không nói là thấy nhợt nhạt hơn 6/6s (Cũng chỉ là cảm nhận của cá nhân em)
+Không thích iphone vì giá cao, máy xấu, pin yếu, ram yếu, sóng kém, 3g, wifi lởm. Vậy là những cái cần có ở một cái điện thoại thì iphone đều kém nên không dùng
 
-Tính mua mà gặp camera vậy hơi trùng tay tí rùi .
+Biết bao thế hệ ngậm ngùi với ram 1gb, h nó đã lên 2gb cho bằng anh bằng em rồi.
 
-Như vậy là camera hơn hẳn 950/950XL rồi phải không các bác. Mình gà khoản camera nên mới hỏi như vậy
+Máy cầm chắc tay hơn, chứ không mỏng như em 6. Nâng cấp ram thế này thì chắc dùng được vài thế hệ nữa mà không sợ giật, lag
 
-Mình thích camera kép như G5 hơn, 1 ống kính bt 1 ống kính siêu rộng. Mà ghét iphone ở cái k chụp được ảnh khung hình 16:9
+Mình thì không quan tâm lắm đến ram, nhưng camera đẹp, lại tốn tiền mua bộ nhớ thôi, mình chụp choẹt nhiều 64gb còn thấy thiếu
 
-Cứ tưởng 2 camera cùng chụp để ra một bức ảnh siêu phẩm. Ai ngờ chụp riêng ra.
+Các dòng khác toàn ram 3gb, 4gb mà giờ ip mới nâng cấp lên 2gb mà ác ifan đã sốt hết cả lên.
 
-Camera điện thoại nó cũng đến giới hạn rồi so kè làm gì chứ. Hơn kém nhau cũng chỉ tý ti chụp ban ngày thì không phân biệt nổi phải lôi vào chỗ tối để chụp xem con nào sáng hơn thì đẹp hơn :). Mà vào chỗ tối thì con nào chụp chả xấu. Một con 9 với một con 9.2 điểm thì camera không phải là vấn đề lăn tăn khi chọn điện thoại nữa rồi
+Liệu em 6s này có chụp đẹp như note 5 không nhỉ? Chí thấy tốn tiền cho vài cái nâng cấp linh tinh.
 
-Đẹp, rõ nét Nhưng cái mình ấn tượng và thích nhất là màu lên nhìn đẹp thật. Gom lúa chờ giá ổn định Chắc tháng 11
+Cá nhân mình thấy tốc độ em 6 với em 6s không khác nhau là mấy. chắc ram 1gb vẫn đủ mượt rồi, nên chắc chờ lên ip7 rồi nâng cấp 1 thể.
 
-Không chụp được xa mấy.quá bình thường không có j suất sắc.ai làm bài so sánh vs lumia 1020 xem hơn máy 2013 không.
+Sao mình thấy em 6 nhìn vẫn đẹp hơn nhỉ. 6s có màu hồng nên bọn con gái đổi xô nhau đi mua. Cái khiến mình lăn tăn là ram 2gb thôi, ae mong mỏi mãi để chơi được game khủng mà không bị giật.
 
-Thực sự là chiêu marketing thôi chứ camera từ 6s lên con 7 này mình chả thấy đột phá gì cả.
+Camera nâng câp rõ rệt, chụp hơn thằng 6 ở khoản chụp ban ngày, ảnh cho nét và thật hơn.
 
-Chỉ bằng một chiêu bỏ đi cổng 3.5mm mà mọi sự chú ý đều đổ dồn vào nó mà không nhận thấy là iphone 7/7plus thực sự chả có gì mới mẻ cả.
+Mính thích dùng các phiên bản s hơn vì nó là bản nâng câp dáng kể so với bản thường. Như ở lần này có sự nâng cấp đang kể về camera và ram. Máy cầm chắc tay hơn, không bị ơi linh tinh như em 6 
 
-Thế này mà cũng kêu đột phá về chất lượng hình chụp, thôi tiếp tục xài 6s+ chờ iPhone đời sau vậy.
+Cái 3d touch mượt phết, nhưng sao bằng được touchpad của macbook, thấy trá hình vãi.
 
-Đã ấn tượng nay còn ấn tượng hơn. Ios quản lí pin, các thành phần sử dụng năng lượng như màn hình, các kết nối, từng xung nhịp, tác vụ quá tốt mà, ứng dụng thì cực kỳ tối ưu nữa, ko bá mới lạ. Bởi vậy mới xứng danh đệ nhất smartphone chứ
+Mình thấy em 6 của mình chạy vẫn mượt lắm, không chụp ảnh mấy nên không care lắm đến camera và ram. Dành tiền chờ ip7, xem kiểu dnags có thay đổi tý nào không.
 
-Sạc lẹ thì xả cũng lẹ. Chưa kể pin mau xuống (chai) . Cứ xạc bình thường mà lại hay , ko lo cháy nổ 
+Mới mua tặng gấu em màu hồng, xót tiền phết cơ mà ẻm thích, thấy chụp choẹt suốt.
 
-Pin tốt nhĩ, mà cũng phải thôi. Màn hình vậy thì pin lâu là phải rồi.
+2 GB RAM không có gì to tát đối với anh em Android nhưng ở iOS, nó là một món nâng cấp vô cùng quý báu. 
 
-Em dùng thì thấy pin hao cũng nhanh , tầm 5h chiều là phải sạc lại rồi
+Mình nghĩ chắc nhiều bạn sẽ cười vì chỉ có 2 GB RAM thôi mà sao người dùng iPhone thấy sướng đến thế nhưng nó quả thật đúng. Hiện giờ nhiều người vẫn hài lòng với iPhone 6 chỉ có 1 GB RAM thay vì chọn những máy Android có 3 GB thậm chí 4 GB RAM.
 
-Con này cắm sac vào dẫn bồ đi nhà nghỉ về xong khéo vẫn chưa đầy pin
+2 GB RAM chỉ có thể xếp vào hạng tầm trung bên Android nhưng đối với người dùng iPhone 6 trở về trước thì đây là một nâng cấp vô cùng lớn, đủ lớn để mang lại sự hài lòng cho hầu hết người dùng iPhone hiện tại.
 
-Mình đang dùng 7plus đây mà chụp chán lắm luôn,chụp chân tay thì da lại đen hơn bên ngoài.chụp mặt thì khuyết điểm da nhìn bt ko sao,chụp iphone thì kiểu như nó room vào cho to ra những khuyết điểm đấy ý. Máy cũ là s5 của ss mà chụp thấy đẹp hơn bn.
+Đồng thời 6s cũng nặng hơn 6 một cách rõ rệt, cầm lên là cảm nhận được ngay. Apple cũng nói đây là dòng iPhone cứng nhất của họ từ trước đến giờ.
 
-Đã test ảnh vẫn bị phân mảng nhiều! Nhưng nếu nhìn qua thì k bị chênh nhiều mặt khác khí phóng sẽ khác.
+Để giảm bớt cảm giác nhàm chán, năm nay Apple thêm một màu mới cho iPhone (và iPad) đó là Vàng Hồng (Rose Gold). Nó không hẳn là màu hồng nguyên bản mà được pha trộn giữa Vàng (Gold) và Hồng (Rose/Pink). 
 
-Màu sắc có vẻ thể hiện rõ nét hơn các đời trước nhiều, nhưng vẫn giữ dc chất ip là màu luôn thật
+Tốc độ nhận diện dấu vân tay của máy cũng nhanh hơn so với iPhone 6. Nhờ bộ nhớ RAM tăng lên 2GB nên iPhone 6S có thể sử dụng đa nhiệm nhiều ứng dụng hay tải các trang web nhiều nội dung nhanh chóng mà không gặp tình trạng giật vốn từng xuất hiện trên cả iPhone 6 lẫn 6 Plus.
 
-Đấy hôm trước chụp ở sân bóng thấy đẹp là do nhiếp ảnh gia, giờ các mod chụp ảnh biết ngay là không được như thế mà. Còn thấy thiếu màn chụp tối, để xem chụp tối so với 6s+ hơn được bao nhiêu
-
-Chụp đẹp màu chuẩn thì ok nhưng đẹp nhất thì còn htc 10 ,lg g4 g5 v10 v20, lumia 950/950xl. Nhiều lắm chế ơi !
-
-iPhone 7 Plus không có quá nhiều thay đổi về mặt tính năng so với thế hệ cũ, iPhone 7 Plus là sự thụt lùi của Apple"… Chắc chắn là các bạn đã nghe rất nhiều những nhận định đó từ những người xung quanh. Nếu là iFan, “mình thích thì mình mua thôi”, nhưng nếu là người dùng bình thường, hay thậm chí là Android fan muốn đổi gió thì iPhone 7 có xứng đáng để mua hay không lại là một câu chuyện khác.
-
-Tạp chí WSJ từng đăng một câu nói nổi tiếng: nếu nó không có vấn đề gì thì đừng tìm cách sửa nó. Thiết kế của iPhone về một mặt nào đó đúng là không có vấn đề, khi nó vẫn dễ chịu để cầm và dễ nhìn với hầu hết mọi người.
-
-Thế nhưng với một công ty được đánh giá cao về mặt thẩm mỹ như Apple, 3 năm không thay đổi thiết kế là cả một khoảng thời gian dài. Không phải Apple không làm gì, thiết kế iPhone được cải tiến và dần thay đổi để hoàn thiện hơn qua từng thế hệ, từ vật liệu cho đến những hình khối, những đường nét nhỏ. Thế nhưng rõ ràng những cải tiến đó là không đủ, hãy nhìn sang Note 7 hoàn thiện không tốt bằng nhưng có thiết kế truyền cảm hứng hơn nhiều, nhìn sang Xiaomi Mi Mix với viền màn hình mỏng dính và thiết kế độc đáo hơn, chúng ta có thể thấy iPhone 7 và những người anh em của nó đang hơi lỗi nhịp với thời đại rồi.
-
-Trên iPhone 7 Plus, tỉ lệ sử dụng màn hình ở mặt trước vẫn quá thấp, viền màn hình vẫn quá lớn nên các bạn sẽ thấy một chiếc máy lớn hơn so với những điện thoại khác cùng kích cỡ. Apple cũng đã trang bị rất nhiều gioăng cao su và keo chạy dọc khung máy để tăng cường khả năng chống nước nên phần chênh giữa những thành phần độc lập có thể cảm nhận dễ dàng hơn, đặc biệt là ở khu ghép nối giữa màn hình và thân máy. Đây là những điểm mà mình không thích, nhưng rồi cũng dần phải quen.
-
-Nói về chống nước, iPhone 7 Plus cho phép sử dụng dưới nước nhưng không khuyến cáo dùng khi đi lặn hay các hoạt động thể thao dưới nước. Mình dùng khi đi tắm, ngâm bồn hay đi bơi thì đều chưa gặp vấn đề gì cả. Nhưng bạn cũng cần lưu ý là nếu máy đã bị mở ra (không phải do kỹ thuật Apple) hoặc bị rơi thì nên cẩn thận. Một người bạn của mình bị rơi, móp máy, khi đem xuống hồ bơi nước vào bên trong. May mắn là bên trong iPhone 7 Plus có rất nhiều gioăng cao su nên nước không vào linh kiện mà chỉ đọng hơi nước trong cụm camera thôi, hút ẩm là dùng lại bình thường. Không phải ai cũng may mắn như vậy nên nếu mua máy cũ các bạn cũng cần để ý đấy.
-
-Phím home là một tính năng mới mà mình thích trên iPhone 7 Plus, khi chưa quen thì rất khó chịu nhưng sau đó thì lại thấy tốt hơn rất nhiều, không sợ hỏng nút home như các máy cũ mà thao tác đa nhiệm lại nhanh chóng hơn.
-
-Về phần jack cắm tai nghe, rõ ràng đây là một điểm không tốt của iPhone 7. Cứ cho là nó sẽ thúc đẩy âm thanh tốt với bằng cách sử dụng DAC ngoài, cứ cho là tai nghe Bluetooth đang ngày một phát triển hơn (doanh thu tai nghe không dây ở Mỹ đã vượt qua tai nghe có dây) nhưng với đại đa số người dùng thì tai nghe là cái gì đó quá quen thuộc và chúng ta đã phải đầu tư quá nhiều tiền cho nó. Hơn nữa, dù Apple có tặng kèm tai nghe Lightning và adapter chuyển đổi Lightning sang 3.5mm trong hộp nhưng việc không vừa sạc vừa nghe nhạc được (rất cần thiết khi đi máy bay hay các phương tiện công cộng) và phải mang theo một adapter cũng khá là bất tiện.
-
-Đúng là rất dễ để đưa ra những nhận định đó, và cũng rất dễ ăn gạch nếu nói iPhone 7 Plus là điện thoại có màn hình xuất sắc nhất thế giới ở thời điểm này. Nhưng dừng lại đó đã, ở một góc độ nào đó thì iPhone 7 Plus thật sự xuất sắc nhất.
-
-Cùng là màn hình FullHD nhưng có rất nhiều kiểu tấm nền khác nhau, có nhiều kiểu căn chỉnh khác nhau, nhiều kiểu thiết kế khác nhau. Trên iPhone 7 Plus, Apple vẫn dùng tấm nền IPS LCD nhưng lần này thì họ mở rộng ra hỗ trợ không gian màu DCI-P3, không gian màu dùng trong điện ảnh có khả năng hiển thị nhiều trạng thái màu sắc hơn là dải màu sRGB vốn khá hẹp được sử dụng rộng rãi. Bạn cứ thử tưởng tượng trước kia chúng ta có màu đỏ, giờ thì có màu đỏ đỏ hơn, màu cam cam hơn, màu vàng vàng hơn và hồng thì hồng hơn. Tuy vậy, màu xanh lá thì không xanh lá hơn nhiều nhé, vì không gian màu DCI P3 không mạnh ở dải màu này.
-
-DCI-P3 thì có gì mới, LG G5 chả phủ 98% không gian màu DCI-P3 đấy thôi. Samsung không thèm nhắc đến không gian màu rộng thôi, chứ màn hình AMOLED trước giờ không gian màu vẫn rộng thôi.
-
-Ok, đó là sự thật. Nhưng Apple luôn có một điểm mà các nhà sản xuất Android khác không có được: khả năng quản lý iOS. Khi Apple nói họ hỗ trợ DCI-P3, thì cả phần cứng và phần mềm đều hỗ trợ, camera chụp ảnh ra ở profile màu DCI P3, màu sắc hiển thị trong những ứng dụng nào hỗ trợ DCI-P3 sẽ là DCI-P3, ứng dụng nào chưa hỗ trợ DCI thì hiển thị ở không gian màu sRGB. Đây là điểm rất quan trọng vì nếu bắt tất cả các nội dung đều hiển thị ở DCI-P3 dù nó không hỗ trợ thì hình ảnh có thể trở nên rất ảo và bị lệch màu.
-
-Và đó là chúng ta cũng chưa nhắc đến việc có vẻ như Apple đã cân chỉnh từng tấm nền một để có được kết quả hiển thị đồng nhất giữa các tấm nền khác nhau về màu sắc. Một số báo cáo cho thấy có sự đồng đều về màu sắc giữa tất cả các màn hình iPhone bán ra cùng một thị trường, điều rất hiếm hay thậm chí là chưa từng xảy ra với các sản phẩm khác.
-
-Nếu có điểm gì đó giữ không cho màn hình iPhone 7 Plus trở thành xuất sắc nhất thì đó là độ phân giải vẫn là FullHD và sự không đồng nhất giữa những thị trường, có thị trường máy cho màn hình màu xanh hơn và thị trường thì ngả vàng hơn (điều này còn gây tranh cãi). Ngoài ra, việc thiếu vắng công nghệ True Tone từng xuất hiện trên iPad Pro 9.7 cũng là một điểm đáng tiếc.
-
-Pin dòng plus khác xa vs bản thường, rất đáng dùng
-
-IPhone nó cứ cải tiến nhỏ nhỏ hữu ích thôi là nó còn tiễn nhiều anh nữa đi lắm. Cái cảm giác bấm phím home mới sướng hơn phím cũ 9 lần.
-
-Thật sự mua cái iphone 7 plus xài 3 năm vẫn còn xài tốt . đáng đồng tiền bát gạo . chip mạnh , ram khủng , pin trâu , hiển thị màn hình tốt .
-
-A9 pro vẫn là vô đối, tuy nhiên to quá. Mình thích smartphone tầm như ip7 nhưng pin như A9 pro
-
-Ngon. Pin phải thế chứ. Hóng Apple update xuống 60% như Note 7 cho pin bớt. Trâu bò 
-
-Chọn a9 pro. Éo bao giờ sợ hết pin
-
-Chưa biết thế nào mà đã bảo 3 năm còn tốt. Chịu hẳn. Nửa năm nữa nó phồng pin thì ngon
-
-A9 pro có phải flagship đâu. Dùng iPhone quen rồi sang con đấy thì chán méo muốn dùng luôn. Màn to, máy dày thì pin trâu cũng ko có gì lạ
-
-Dùng em 6 plus 2 năm nay chả biết chai pin bao nhiêu % rồi mà dùng từ sáng đến tối vẫn chưa hết pin, mặc dù em on face với lướt web bằng điện thoại khá nhiều.
-
-Pin trâu hơn . ram cao hơn . bự hơn . đáng để mua hơn iphone 7 bạn
-
-Đẹp nhất trong họ nhà iPhone. Chứ ai nói chiếc điện thoại đẹp nhất đâu. Có vấn đề về đọc hiểu à bác. Vào phán như đúng rồi
-
-Bình thường, màu có vẻ rực hơn các đơi ip cũ.
-
-Ngon. Chỉ tiếc cái 7 nó lại không làm camera kép. Dùng 7+ thì bị to quá.
-
-Iphone thì chỉ cần cầm lên và chụp là ra ảnh đẹp, đây là camera của chiếc iPhone đầu bảng năm nay, thấy cũng tiệm cận dần DSLR như bác Cook nói rồi nhỉ
-
-Qua ảnh bài này, e thấy iphone ngoài chụp đẹp, còn chụp to & tròn nữa, thực tế ko rõ có đúng vậy ? hay do camera kép nó thế ?!!! 
-
-Hai camera cho màu không đồng nhất lắm nhỉ ?
-
-Công nhận pin của ip dung lượng thấp nhưng trâu bò, mỗi tội sạc hơi chậm, con ipad của mình sạc 10w mất 10h mới đầy.

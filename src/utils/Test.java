@@ -114,8 +114,10 @@ public class Test implements Serializable {
 		
 		WordUtils utils = new WordUtils();
 		List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
-		List<I_ComplexArray> result = new I_AprioriAlgorithrm().generate_K_ItemSet(complexArrays);
-		for (I_ComplexArray s : result) {
+		I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
+		List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
+		List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
+		for (I_ComplexArray s : items) {
 			for (String i : s.getComplexObject()) {
 				System.out.print(i + " ");
 			}

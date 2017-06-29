@@ -176,7 +176,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		return dataResultItemsClone;
 	}
 
-	private List<I_ComplexArray> getAtomFirstData(List<I_ComplexArray> dataItemsParent) {
+	public List<I_ComplexArray> getAtomFirstData(List<I_ComplexArray> dataItemsParent) {
 		List<I_ComplexArray> itemsFirst = new ArrayList<>();
 		List<String> atomItems = getAtomItems(dataItemsParent);
 		I_ComplexArray com;
