@@ -8,18 +8,18 @@ public class I_Item {
 	
 	private int quantity;
 	
-	private List<String> itemsParent;
-	private List<String> itemsChild;
+	private List<Word> itemsParent;
+	private List<Word> itemsChild;
 
 	private int HASH_CONST = 17;
 	
-	public I_Item(List<String> itemsChild) {
+	public I_Item(List<Word> itemsChild) {
 		super();
 		this.itemsChild = itemsChild;
 		quantity = 0;
 	}
 
-	public I_Item(List<String> itemsParent, List<String> itemsChild) {
+	public I_Item(List<Word> itemsParent, List<Word> itemsChild) {
 		super();
 		this.itemsParent = itemsParent;
 		this.itemsChild = itemsChild;
@@ -34,11 +34,11 @@ public class I_Item {
 		this.quantity = quantity;
 	}
 	
-	public List<String> getItemsParent() {
+	public List<Word> getItemsParent() {
 		return itemsParent;
 	}
 
-	public void setItemsParent(List<String> itemsParent) {
+	public void setItemsParent(List<Word> itemsParent) {
 		this.itemsParent = itemsParent;
 		
 		if(GeneralUtil.checkSubArrayContain(itemsParent, itemsChild)){
@@ -46,11 +46,11 @@ public class I_Item {
 		}
 	}
 
-	public List<String> getItemsChild() {
+	public List<Word> getItemsChild() {
 		return itemsChild;
 	}
 
-	public void setItemsChild(List<String> itemsChild) {
+	public void setItemsChild(List<Word> itemsChild) {
 		this.itemsChild = itemsChild;
 	}
 
@@ -80,7 +80,7 @@ public class I_Item {
 
 		I_Item i = (I_Item) o;
 
-		for (String s : itemsChild) {
+		for (Word s : itemsChild) {
 			if (!i.getItemsChild().contains(s)) {
 				return false;
 			}

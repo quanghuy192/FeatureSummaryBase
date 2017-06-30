@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import controller.I_AprioriAlgorithrm;
-import model.ComplexArray;
 import model.I_ComplexArray;
+import model.Word;
 
 public class Test implements Serializable {
 
@@ -51,34 +51,34 @@ public class Test implements Serializable {
 		// VnPOS_Utils.get_VN_POS_mean(word.getType()));
 		// }
 
-		// String[][][] data = { { { "1" }, { "A", "C", "D" } },
-		// { { "2" }, { "B", "C", "E" } },
-		// { { "3" }, { "A", "B", "C", "E" } },
-		// { { "4" }, { "B", "E" } } };
-		// // HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
-		// List<I_ComplexArray> dataItems = new ArrayList<>();
-		// List<String> l1 = new ArrayList<>();
-		// l1.add("A");
-		// l1.add("C");
-		// l1.add("D");
-		// List<String> l2 = new ArrayList<>();
-		// l2.add("B");
-		// l2.add("C");
-		// l2.add("E");
-		// List<String> l3 = new ArrayList<>();
-		// l3.add("A");
-		// l3.add("B");
-		// l3.add("C");
-		// l3.add("E");
-		// List<String> l4 = new ArrayList<>();
-		// l4.add("B");
-		// l4.add("E");
-		//
-		// dataItems.add(new I_ComplexArray(0,l1));
-		// dataItems.add(new I_ComplexArray(1,l2));
-		// dataItems.add(new I_ComplexArray(2,l3));
-		// dataItems.add(new I_ComplexArray(3,l4));
-		//
+//		 String[][][] data = { { { "1" }, { "A", "C", "D" } },
+//		 { { "2" }, { "B", "C", "E" } },
+//		 { { "3" }, { "A", "B", "C", "E" } },
+//		 { { "4" }, { "B", "E" } } };
+//		 // HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
+//		 List<I_ComplexArray> dataItems = new ArrayList<>();
+//		 List<Word> l1 = new ArrayList<>();
+//		 l1.add(new Word("A"));
+//		 l1.add(new Word("C"));
+//		 l1.add(new Word("D"));
+//		 List<Word> l2 = new ArrayList<>();
+//		 l2.add(new Word("B"));
+//		 l2.add(new Word("C"));
+//		 l2.add(new Word("E"));
+//		 List<Word> l3 = new ArrayList<>();
+//		 l3.add(new Word("A"));
+//		 l3.add(new Word("B"));
+//		 l3.add(new Word("C"));
+//		 l3.add(new Word("E"));
+//		 List<Word> l4 = new ArrayList<>();
+//		 l4.add(new Word("B"));
+//		 l4.add(new Word("E"));
+//		
+//		 dataItems.add(new I_ComplexArray(0,l1));
+//		 dataItems.add(new I_ComplexArray(1,l2));
+//		 dataItems.add(new I_ComplexArray(2,l3));
+//		 dataItems.add(new I_ComplexArray(3,l4));
+		
 		// List<I_ComplexArray> result = new
 		// I_AprioriAlgorithrm().generate_K_ItemSet(dataItems);
 		// for (I_ComplexArray s : result) {
@@ -116,10 +116,11 @@ public class Test implements Serializable {
 		List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
 		I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
 		List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
+		// List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
 		List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
 		for (I_ComplexArray s : items) {
-			for (String i : s.getComplexObject()) {
-				System.out.print(i + " ");
+			for (Word i : s.getComplexObject()) {
+				System.out.print(i.getWord() + " ");
 			}
 			System.out.println();
 		}

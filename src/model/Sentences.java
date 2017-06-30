@@ -69,6 +69,7 @@ public class Sentences {
 					word.setOriginalWord(builder.toString());
 					i += s + 1;
 				}
+				word.setSentences(getOriginalSentences());
 				wordList.add(word);
 			}
 		}

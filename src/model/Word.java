@@ -4,15 +4,18 @@ public class Word {
 
 	private final String BLANK = "";
 	private final String SEPERATOR = "/";
+	private int HASH_CONST = 17;
 
 	private String word;
 	private String type;
 	private String originalWord;
+	private String sentences;
 
 	public Word() {
 	}
 
 	public Word(String value) {
+		this.word = value;
 	}
 
 	public String getWord() {
@@ -40,6 +43,50 @@ public class Word {
 
 		// convert word
 		createWord();
+	}
+
+	public String getSentences() {
+		return sentences;
+	}
+
+	public void setSentences(String sentences) {
+		this.sentences = sentences;
+	}
+
+	@Override
+	public int hashCode() {
+
+		int hash_code = HASH_CONST;
+
+		int wordHash = word == null ? 1 : 0;
+		int typeHash = type == null ? 1 : 0;
+		int originalWordHash = originalWord == null ? 1 : 0;
+		int sentencesHash = sentences == null ? 1 : 0;
+
+		hash_code = HASH_CONST + 31 * wordHash;
+		hash_code = HASH_CONST + 31 * typeHash;
+		hash_code = HASH_CONST + 31 * originalWordHash;
+		hash_code = HASH_CONST + 31 * sentencesHash;
+
+		return hash_code;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+
+		if (o == this) {
+			return true;
+		}
+		if (!(o instanceof Word)) {
+			return false;
+		}
+
+		Word i = (Word) o;
+
+		return i.getWord().equalsIgnoreCase(word)
+				/*&& i.getType().equalsIgnoreCase(type)
+				&& i.getOriginalWord().equalsIgnoreCase(originalWord)
+				&& i.getSentences().equalsIgnoreCase(sentences)*/;
 	}
 
 	@Override

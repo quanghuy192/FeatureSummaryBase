@@ -152,7 +152,7 @@ public class WordUtils {
 		// mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
 		// mBufferedWriter = new BufferedWriter(mWriter);
 		List<I_ComplexArray> featureBases = new ArrayList<>();
-		List<String> featureList;
+		List<Word> featureList;
 		I_ComplexArray complexArray;
 
 		List<Review> listReview = getReviewList();
@@ -167,7 +167,7 @@ public class WordUtils {
 					if (nounTagList.contains(w.getType()) && BLANK != w.getWord()) {
 						// mBufferedWriter.write(w.getWord() + BLANK);
 						// System.out.print(w.getWord() + BLANK);
-						featureList.add(w.getWord());
+						featureList.add(w);
 					}
 				}
 			}

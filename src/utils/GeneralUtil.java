@@ -7,6 +7,7 @@ import java.util.Set;
 
 import model.I_ComplexArray;
 import model.I_Item;
+import model.Word;
 
 public class GeneralUtil {
 	
@@ -66,8 +67,8 @@ public class GeneralUtil {
 		return true;
 	}
 	
-	public static boolean checkSubArrayContain(List<String> parent, List<String> child) {
-		for (String s : child) {
+	public static boolean checkSubArrayContain(List<Word> parent, List<Word> child) {
+		for (Word s : child) {
 			if (!parent.contains(s)) {
 				return false;
 			}
