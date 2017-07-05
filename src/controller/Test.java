@@ -1,12 +1,12 @@
-package utils;
+package controller;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.I_AprioriAlgorithrm;
 import model.I_ComplexArray;
 import model.Word;
+import utils.WordUtils;
 
 public class Test implements Serializable {
 

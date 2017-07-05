@@ -1,6 +1,8 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import controller.I_AprioriFindingSubChild_Thread.AprioriFindingSubChild;
@@ -41,6 +43,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 	private int N;
 	private int step = 0;
 	private double SUPPORT_MIN = 0.01;
+	private String SEPERATOR = "";
 	// private int CONFIDENCE_MIN = 2;
 
 	public I_AprioriAlgorithrm() {
@@ -115,8 +118,9 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		itemsRule = GeneralUtil.pruneDuplicateItem(itemsRule);
 
 		int count = 0;
-		// List<I_ComplexArray> dataResultItemsClone =
-		// cloneArray(dataResultItems);
+
+		// make clone from result data
+		List<I_ComplexArray> dataResultItemsClone = cloneArray(dataResultItems);
 		dataResultItems.clear();
 		for (I_Item i : itemsRule) {
 			double percent = 1.0 * i.getQuantity() / N;
@@ -127,6 +131,11 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 				dataResultItems.add(com);
 				count++;
 			}
+		}
+
+		// make clone from result data items if result change
+		if (dataResultItems.size() > 0) {
+			dataResultItemsClone = cloneArray(dataResultItems);
 		}
 
 		// dataItemsChild = getItemsChild(dataResultItems);
@@ -156,11 +165,11 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
-			return generate_K_ItemSet(dataItemsChild);
+			return pruneRules(generate_K_ItemSet(dataItemsChild));
 		} else {
-			System.out.println("Count : " + dataItemsChild.size() + " items");
+			System.out.println("Count : " + dataResultItemsClone.size() + " items");
 			GeneralUtil.setTimeEnd();
-			return dataResultItems;
+			return pruneRules(dataResultItemsClone);
 		}
 	}
 
@@ -315,12 +324,23 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		}
 	}
 
-	public void pruneRules() {
+	public List<I_ComplexArray> pruneRules(List<I_ComplexArray> list) {
+
+		// if empty list
+		if (null == list || list.size() == 0) {
+			return Collections.emptyList();
+		}
+
+		// Get atom item form result list
+		List<I_ComplexArray> result = getAtomFirstData(list);
+
+		// prune feature base with one word
+		result = oneWordPrunning(result);
 
 		// This method checks features that contain
 		// at least two words, which we call feature phrases, and remove
 		// those that are likely to be meaningless.
-		compactnessPruning();
+		// result = compactnessPruning(result);
 
 		// n this step, we focus on removing
 		// redundant features that contain single words. To describe the
@@ -328,10 +348,27 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		// (pure support). p-support of feature ftr is the number of sentences
 		// that ftr appears in as a noun or noun phrase, and these sentences
 		// must contain no feature phrase that is a superset of ftr.
-		redundancyPruning();
+		// result = redundancyPruning(result);
+
+		return result;
 	}
 
-	public void compactnessPruning() {
+	private List<I_ComplexArray> oneWordPrunning(List<I_ComplexArray> list) {
+		List<I_ComplexArray> result = new ArrayList<>();
+		Word word;
+		I_ComplexArray com;
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			com = i.next();
+			word = com.getComplexObject().get(0);
+			String feature = word.getWord();
+			if (feature.length() > 2) {
+				result.add(com);
+			}
+		}
+		return result;
+	}
+
+	public List<I_ComplexArray> compactnessPruning(List<I_ComplexArray> list) {
 
 		// • Let f be a frequent feature phrase and f contains n
 		// words. Assume that a sentence s contains f and the
@@ -342,9 +379,31 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		// • If f occurs in m sentences in the review database, and
 		// it is compact in at least 2 of the m sentences, then we
 		// call f a compact feature phrase.
+
+		// Protect list from Concurrent Exception
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			List<Word> temp = i.next().getComplexObject();
+			Word w = temp.get(0);
+			String word = w.getWord();
+
+			String[] arrWord = word.split(SEPERATOR);
+
+			// if word have only one word, it's compact feature base
+			if (arrWord.length == 1) {
+				continue;
+				// if word have more than 3 word, it's not compact feature base
+			} else if (arrWord.length > 3) {
+				list.remove(temp);
+			} else {
+				// check
+				// TODO
+			}
+		}
+
+		return list;
 	}
 
-	public void redundancyPruning() {
-
+	public List<I_ComplexArray> redundancyPruning(List<I_ComplexArray> list) {
+		return list;
 	}
 }
