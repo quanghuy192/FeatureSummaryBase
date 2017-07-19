@@ -108,7 +108,7 @@ public class WordUtils {
 		}
 	}
 
-	private List<Review> getReviewList() {
+	public List<Review> getReviewList() {
 
 		// Create data
 		generateWordTagData();

@@ -9,8 +9,11 @@ import controller.I_AprioriFindingSubChild_Thread.AprioriFindingSubChild;
 import controller.I_AprioriItemsChild_Thread.AprioriItemsChild;
 import model.I_ComplexArray;
 import model.I_Item;
+import model.Review;
+import model.Sentences;
 import model.Word;
 import utils.GeneralUtil;
+import utils.WordUtils;
 
 /**
  * Apriori algorithm Find the pattern substring matching in parent string (maybe
@@ -42,7 +45,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 0.02;
 	private String SEPERATOR = "";
 	// private int CONFIDENCE_MIN = 2;
 
@@ -62,6 +65,8 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		if (step == 1) {
 			dataOriginalItems = dataItemsParent;
 			dataItemsParent = getAtomFirstData(dataItemsParent);
+			
+			dataItemsParent = pruneRules(dataItemsParent);
 
 			show(dataItemsParent);
 			GeneralUtil.setTimeEnd();
@@ -370,6 +375,8 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	public List<I_ComplexArray> compactnessPruning(List<I_ComplexArray> list) {
 
+		List<I_ComplexArray> result = new ArrayList<>();
+		I_ComplexArray com;
 		// • Let f be a frequent feature phrase and f contains n
 		// words. Assume that a sentence s contains f and the
 		// sequence of the words in f that appear in s is: w1, w2,
@@ -382,7 +389,8 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		// Protect list from Concurrent Exception
 		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
-			List<Word> temp = i.next().getComplexObject();
+			com = i.next();
+			List<Word> temp = com.getComplexObject();
 			Word w = temp.get(0);
 			String word = w.getWord();
 
@@ -390,20 +398,77 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 			// if word have only one word, it's compact feature base
 			if (arrWord.length == 1) {
-				continue;
+				result.add(com);
 				// if word have more than 3 word, it's not compact feature base
-			} else if (arrWord.length > 3) {
-				list.remove(temp);
+			} else if (arrWord.length >= 3) {
+				continue;
 			} else {
-				// check
-				// TODO
+				// check compactness rule
+				if (compactnessRule(list)) {
+					result.add(com);
+				} else {
+					continue;
+				}
 			}
 		}
-
 		return list;
 	}
 
+	private boolean compactnessRule(List<I_ComplexArray> list) {
+
+		WordUtils utils = new WordUtils();
+		List<Review> listReview = utils.getReviewList();
+		Word word;
+		I_ComplexArray com;
+
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			com = i.next();
+			word = com.getComplexObject().get(0);
+			String[] items = word.getWord().split(SEPERATOR);
+			if (items.length != 2) {
+				return false;
+			} else {
+				String word1 = items[0];
+				String word2 = items[1];
+				int count = 0;
+
+				for (Review r : listReview) {
+
+					List<Sentences> sentences = r.getListSentences();
+					for (Sentences s : sentences) {
+						List<Word> words = s.getListWord();
+
+						// If the word distance in s between any two
+						// adjacent words (wi and wi+1) in the above sequence is
+						// no greater than 3, then we say f is compact in s.
+						for (int j = 0; j < words.size() - 2; j++) {
+							String w = words.get(j).getWord();
+							String w1 = words.get(j + 1).getWord();
+							String w2 = words.get(j + 2).getWord();
+							if ((word1.equalsIgnoreCase(w) && !word2.equalsIgnoreCase(w1))
+									&& (word1.equalsIgnoreCase(w) && !word2.equalsIgnoreCase(w2))) {
+								return false;
+							} else {
+								count++;
+							}
+						}
+					}
+				}
+				if (count >= 2) {
+					return true;
+				}
+			}
+		}
+		return true;
+	}
+
 	public List<I_ComplexArray> redundancyPruning(List<I_ComplexArray> list) {
+
+		// We use the minimum p-support to prune those redundant features. If a
+		// feature has a p-support lower than the minimum p-support (in our
+		// system, we set it to 3) and the feature is a subset of another
+		// feature phrase (which suggests that the feature alone may not be
+		// interesting), it is pruned.
 		return list;
 	}
 }
