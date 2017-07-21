@@ -37,6 +37,8 @@ public class FeatureBaseUtils {
 
 		utils = new WordUtils();
 		listReview = utils.getReviewList();
+		
+		featureBase();
 	}
 
 	// generate feature base after filter
@@ -80,11 +82,10 @@ public class FeatureBaseUtils {
 
 	public List<Feature> getOpinionWords() {
 		List<Feature> opinionWords = new ArrayList<>();
-
 		return opinionWords;
 	}
 
-	private List<Feature> getAdjectiveList() {
+	public List<Feature> getAdjectiveList() {
 		List<Feature> adjectiveList = new ArrayList<>();
 
 		if (GeneralUtil.isEmptyList(featureList)) {
@@ -109,7 +110,11 @@ public class FeatureBaseUtils {
 				for (Sentences sen : review.getListSentences()) {
 					if(sen.getOriginalSentences().contains(feature)) {
 						Feature f = getFeature(sen);
-						adjectiveList.add(f);
+						f.setFeature(feature);
+						
+						if(!GeneralUtil.isEmptyList(f.getOpinionWords())) {
+							adjectiveList.add(f);
+						}
 					}
 				}
 			}
