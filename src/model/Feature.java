@@ -8,7 +8,7 @@ public class Feature {
 	private String feature;
 	private List<String> adjectiveList;
 	private List<String> opinionWords;
-	private List<String> opinionSentences;
+	private List<Word> opinionSentences;
 	private List<String> positiveSentences;
 	private List<String> negativeSentences;
 	
@@ -38,10 +38,10 @@ public class Feature {
 	public void setOpinionWords(List<String> opinionWords) {
 		this.opinionWords = opinionWords;
 	}
-	public List<String> getOpinionSentences() {
+	public List<Word> getOpinionSentences() {
 		return opinionSentences;
 	}
-	public void setOpinionSentences(List<String> opinionSentences) {
+	public void setOpinionSentences(List<Word> opinionSentences) {
 		this.opinionSentences = opinionSentences;
 	}
 	public List<String> getPositiveSentences() {

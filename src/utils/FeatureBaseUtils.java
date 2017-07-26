@@ -21,7 +21,8 @@ public class FeatureBaseUtils {
 	private List<Review> listReview;
 	private WordUtils utils;
 	private List<String> adjectiveTagList;
-	private final String BLANK = " ";
+	private final String BLANK = "";
+	private final String SEPERATOR = "-";
 
 	public FeatureBaseUtils() {
 		// try {
@@ -30,14 +31,14 @@ public class FeatureBaseUtils {
 		// } catch (IOException e) {
 		// e.printStackTrace();
 		// }
-		
+
 		adjectiveTagList = new ArrayList<>();
 		adjectiveTagList.add("A");
 		adjectiveTagList.add("AP");
 
 		utils = new WordUtils();
 		listReview = utils.getReviewList();
-		
+
 		featureBase();
 	}
 
@@ -68,6 +69,13 @@ public class FeatureBaseUtils {
 		List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(featureBases);
 		featureList = algorithrm.getAtomFirstData(result);
 
+		for (I_ComplexArray s : featureList) {
+			for (Word i : s.getComplexObject()) {
+				System.out.print(i.getWord() + " ");
+			}
+			System.out.println();
+		}
+
 		return featureList;
 	}
 
@@ -80,9 +88,79 @@ public class FeatureBaseUtils {
 	// }
 	// }
 
-	public List<Feature> getOpinionWords() {
-		List<Feature> opinionWords = new ArrayList<>();
-		return opinionWords;
+	public List<Feature> getEffectiveWords() {
+		List<Feature> effectiveWords = new ArrayList<>();
+		List<Feature> featuresList = getAdjectiveList();
+
+		if (GeneralUtil.isEmptyList(featuresList)) {
+			return effectiveWords;
+		}
+
+		List<String> opinionAllList;
+		String feature;
+		List<Word> sentenceList;
+
+		for (Feature f : featuresList) {
+			opinionAllList = f.getOpinionWords();
+			feature = f.getFeature();
+			sentenceList = f.getOpinionSentences();
+
+			int size = sentenceList.size();
+
+			for (int i = 0; i < size; i++) {
+
+				int featurePosition = -1;
+				String word = BLANK;
+				String item = BLANK;
+				try {
+					item = sentenceList.get(i).getWord();
+
+					if (null == item) {
+						continue;
+					}
+
+					word = item.split(SEPERATOR)[0];
+				} catch (Exception e) {
+					System.out.println(sentenceList.get(i).getWord());
+				}
+				if (word.equalsIgnoreCase(feature)) {
+					featurePosition = i;
+				}
+
+				if (featurePosition == -1) {
+					continue;
+				}
+
+				int adjPosition1 = featurePosition + 1;
+				int adjPosition2 = featurePosition - 1;
+
+				while (adjPosition1 < size && !opinionAllList.contains(sentenceList.get(adjPosition1).getWord()))
+					adjPosition1++;
+				while (adjPosition2 > -1 && !opinionAllList.contains(sentenceList.get(adjPosition2).getWord()))
+					adjPosition2--;
+
+				Feature resultFeature = new Feature();
+
+				if (adjPosition1 < size) {
+					String opinion1 = sentenceList.get(adjPosition1).getWord();
+					if (opinionAllList.contains(opinion1)) {
+						resultFeature.getOpinionWords().add(opinion1);
+					}
+				}
+
+				if (adjPosition2 > -1) {
+					String opinion2 = sentenceList.get(adjPosition2).getWord();
+					if (opinionAllList.contains(opinion2)) {
+						resultFeature.getOpinionWords().add(opinion2);
+					}
+				}
+
+				resultFeature.setFeature(feature);
+				effectiveWords.add(resultFeature);
+			}
+		}
+
+		return effectiveWords;
 	}
 
 	public List<Feature> getAdjectiveList() {
@@ -99,20 +177,20 @@ public class FeatureBaseUtils {
 		String feature;
 		Word word;
 		for (I_ComplexArray com : featureList) {
-			
+
 			word = com.getComplexObject().get(0);
-			if(null == word) {
+			if (null == word) {
 				continue;
 			}
-			
+
 			feature = word.getWord();
 			for (Review review : listReview) {
 				for (Sentences sen : review.getListSentences()) {
-					if(sen.getOriginalSentences().contains(feature)) {
+					if (sen.getOriginalSentences().contains(feature)) {
 						Feature f = getFeature(sen);
 						f.setFeature(feature);
-						
-						if(!GeneralUtil.isEmptyList(f.getOpinionWords())) {
+
+						if (!GeneralUtil.isEmptyList(f.getOpinionWords())) {
 							adjectiveList.add(f);
 						}
 					}
@@ -126,9 +204,9 @@ public class FeatureBaseUtils {
 	private Feature getFeature(Sentences sen) {
 		Feature feature = new Feature();
 		for (Word w : sen.getListWord()) {
-			if(adjectiveTagList.contains(w.getType()) && BLANK != w.getWord()) {
+			if (adjectiveTagList.contains(w.getType()) && BLANK != w.getWord()) {
 				feature.getOpinionWords().add(w.getWord());
-				feature.getOpinionSentences().add(sen.getOriginalSentences());
+				feature.setOpinionSentences(sen.getListWord());
 			}
 		}
 		return feature;

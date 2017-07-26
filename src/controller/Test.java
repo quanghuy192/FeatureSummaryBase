@@ -122,12 +122,15 @@ public class Test implements Serializable {
 		// }
 
 		FeatureBaseUtils utils = new FeatureBaseUtils();
-		List<Feature> adjectiveList = utils.getAdjectiveList();
+		List<Feature> adjectiveList = utils.getEffectiveWords();
+		int count = 0;
 
 		for (Feature f : adjectiveList) {
+			count++;
 			System.out.println(f.getFeature());
 			System.out.println(f.getOpinionWords() + " ");
 		}
+		System.out.println(count);
 		
 	}
 }

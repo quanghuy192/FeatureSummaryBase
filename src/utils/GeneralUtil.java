@@ -89,11 +89,16 @@ public class GeneralUtil {
 	}
 
 	public static boolean isEmptyList(List<?> list) {
-
 		if (null == list || list.size() == 0) {
 			return true;
 		}
-
+		return false;
+	}
+	
+	public static boolean isEmpty(String string) {
+		if (null == string || string.length() == 0) {
+			return true;
+		}
 		return false;
 	}
 }
