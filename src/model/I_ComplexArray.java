@@ -10,7 +10,7 @@ public class I_ComplexArray implements Cloneable {
 	private int HASH_CONST = 17;
 	private boolean deleteTag;
 	private String sentences;
-	
+
 	public I_ComplexArray() {
 		super();
 	}
@@ -27,7 +27,7 @@ public class I_ComplexArray implements Cloneable {
 		this.complexObject = complexObject;
 		deleteTag = false;
 	}
-	
+
 	public int getPosition() {
 		return position;
 	}
@@ -43,7 +43,7 @@ public class I_ComplexArray implements Cloneable {
 	public void setComplexObject(List<Word> complexObject) {
 		this.complexObject = complexObject;
 	}
-	
+
 	public boolean isDeleteTag() {
 		return deleteTag;
 	}
@@ -51,7 +51,7 @@ public class I_ComplexArray implements Cloneable {
 	public void setDeleteTag(boolean deleteTag) {
 		this.deleteTag = deleteTag;
 	}
-	
+
 	public String getSentences() {
 		return sentences;
 	}
@@ -88,7 +88,7 @@ public class I_ComplexArray implements Cloneable {
 		if (i.getComplexObject().size() != complexObject.size()) {
 			return false;
 		}
-		
+
 		for (Word s : i.getComplexObject()) {
 			if (!complexObject.contains(s)) {
 				return false;
@@ -96,10 +96,10 @@ public class I_ComplexArray implements Cloneable {
 		}
 		return true;
 	}
-	
+
 	@Override
 	public I_ComplexArray clone() throws CloneNotSupportedException {
-		
+
 		// Deep clone
 		List<Word> list = new ArrayList<Word>();
 		for (Word s : this.getComplexObject()) {
@@ -110,7 +110,7 @@ public class I_ComplexArray implements Cloneable {
 			w.setSentences(s.getSentences());
 			list.add(w);
 		}
-		
+
 		I_ComplexArray complexArray = null;
 		try {
 			complexArray = (I_ComplexArray) super.clone();
@@ -123,6 +123,18 @@ public class I_ComplexArray implements Cloneable {
 			new AssertionError();
 		}
 		return complexArray;
+	}
+
+	@Override
+	public String toString() {
+
+		StringBuilder builder = new StringBuilder();
+		if (null != getComplexObject() && getComplexObject().size() > 0) {
+			for (Word w : complexObject) {
+				builder.append(w.getWord() + " ");
+			}
+		}
+		return builder.toString();
 	}
 
 }

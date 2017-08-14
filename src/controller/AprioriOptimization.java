@@ -35,9 +35,11 @@ public class AprioriOptimization {
 	private List<I_ComplexArray> dataResultItems;
 	private int N;
 	private double SUPPORT_MIN = 2;
+	private List<I_Item> itemsRuleAll;
 
 	public AprioriOptimization() {
 		dataResultItems = new ArrayList<>();
+		itemsRuleAll = new ArrayList<>();
 	}
 
 	public List<I_ComplexArray> generate_K_ItemSet(List<I_ComplexArray> dataItemsParent) {
@@ -66,7 +68,10 @@ public class AprioriOptimization {
 		for (int k = 2; candidate.size() > 0; k++) {
 
 			// Ck=apriori-gen(Lk-1);
-			candidate = join(dataResultItems, candidate);// generate new candidate itemsetss
+			candidate = join(dataResultItems, candidate);// generate new candidate itemsets
+			candidate = GeneralUtil.pruneDuplicateComplex(candidate);
+
+			itemsRuleAll.clear();
 
 			// for all transactions t∈D and t.delete=0
 			for (I_ComplexArray c : dataOriginalItems) {
@@ -80,9 +85,10 @@ public class AprioriOptimization {
 						c.setDeleteTag(true);
 					} else {
 						// Ct=subset(Ck,t); //candidate itemsets contained in transaCion t
-						List<I_Item> itemsRule = getSubChild(candidate);
-						showQuantity(itemsRule);
-						int size = itemsRule.size();
+						System.out.println("Parent = " + c.toString());
+						getSubChild(candidate, c);
+						showQuantity();
+						int size = itemsRuleAll.size();
 
 						// if Ct = ∅ then // if t does not contain any subset of candidate itemsets Ck,
 						// mark the deleting tag
@@ -91,31 +97,35 @@ public class AprioriOptimization {
 						} else {
 							// for all candidates c∈Ct
 							// c.count++;
-							itemsRule = GeneralUtil.pruneDuplicateItem(itemsRule);
-							int count = 0;
-
-							dataResultItemsClone = cloneArray(dataResultItems);
-							dataResultItems.clear();
-							// make clone from result data
-							for (I_Item i : itemsRule) {
-								double percent = 1.0 * i.getQuantity();
-								List<Word> subList;
-								if (percent >= SUPPORT_MIN) {
-									subList = i.getItemsChild();
-									I_ComplexArray com = new I_ComplexArray(count, subList);
-									dataResultItems.add(com);
-									count++;
-								}
-							}
-
-							// make clone from result data items if result change
-							if (dataResultItems.size() > 0) {
-								dataResultItemsClone = cloneArray(dataResultItems);
-							}
+							itemsRuleAll = GeneralUtil.pruneDuplicateItem(itemsRuleAll);
 						}
 					}
 				}
 			}
+
+			int count = 0;
+
+			dataResultItemsClone = cloneArray(dataResultItems);
+			dataResultItems.clear();
+			// make clone from result data
+			for (I_Item i : itemsRuleAll) {
+				double percent = 1.0 * i.getQuantity();
+				List<Word> subList;
+				if (percent >= SUPPORT_MIN) {
+					subList = i.getItemsChild();
+					I_ComplexArray com = new I_ComplexArray(count, subList);
+					dataResultItems.add(com);
+					count++;
+				}
+			}
+
+			// make clone from result data items if result change
+			if (dataResultItems.size() > 0) {
+				dataResultItemsClone = cloneArray(dataResultItems);
+			}
+
+			candidate = cloneArray(dataResultItems);
+
 			if (dataResultItems.size() > 1) {
 				show(dataResultItems);
 				GeneralUtil.setTimeEnd();
@@ -131,10 +141,10 @@ public class AprioriOptimization {
 		return dataResultItemsClone;
 	}
 
-	private void showQuantity(List<I_Item> itemsRule) {
+	private void showQuantity() {
 		System.out.println("======================");
-		System.out.println(itemsRule.size());
-		for (I_Item i : itemsRule) {
+		System.out.println(itemsRuleAll.size());
+		for (I_Item i : itemsRuleAll) {
 			for (Word w : i.getItemsChild()) {
 				System.out.print(w.getWord() + " ");
 			}
@@ -166,25 +176,23 @@ public class AprioriOptimization {
 		return dataResultItemsClone;
 	}
 
-	private List<I_Item> getSubChild(List<I_ComplexArray> dataItemsParent) {
-		List<I_Item> itemsRule = new ArrayList<>();
+	private void getSubChild(List<I_ComplexArray> indicate, I_ComplexArray parent) {
 
-		for (I_ComplexArray parent : dataOriginalItems) {
-			for (I_ComplexArray child : dataItemsParent) {
+		// for (I_ComplexArray parent : dataOriginalItems) {
+		for (I_ComplexArray child : indicate) {
 
-				I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
-				if (!itemsRule.contains(i)) {
-					i.setItemsParent(parent.getComplexObject());
-					itemsRule.add(i);
-				} else {
-					I_Item clone = getItem(child.getComplexObject(), itemsRule);
-					if (null != clone) {
-						clone.setItemsParent(parent.getComplexObject());
-					}
+			I_Item i = new I_Item(parent.getComplexObject(), child.getComplexObject());
+			if (!itemsRuleAll.contains(i)) {
+				i.setItemsParent(parent.getComplexObject());
+				itemsRuleAll.add(i);
+			} else {
+				I_Item clone = getItem(child.getComplexObject(), itemsRuleAll);
+				if (null != clone) {
+					clone.setItemsParent(parent.getComplexObject());
 				}
 			}
 		}
-		return itemsRule;
+		// }
 	}
 
 	private I_Item getItem(List<Word> child, List<I_Item> items) {
