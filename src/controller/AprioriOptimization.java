@@ -34,7 +34,7 @@ public class AprioriOptimization {
 	private List<I_ComplexArray> dataOriginalItems;
 	private List<I_ComplexArray> dataResultItems;
 	private int N;
-	private double SUPPORT_MIN = 2;
+	private double SUPPORT_MIN = 0.02;
 	private List<I_Item> itemsRuleAll;
 
 	public AprioriOptimization() {
@@ -109,7 +109,7 @@ public class AprioriOptimization {
 			dataResultItems.clear();
 			// make clone from result data
 			for (I_Item i : itemsRuleAll) {
-				double percent = 1.0 * i.getQuantity();
+				double percent = 1.0 * i.getQuantity() / N;
 				List<Word> subList;
 				if (percent >= SUPPORT_MIN) {
 					subList = i.getItemsChild();
