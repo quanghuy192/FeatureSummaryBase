@@ -1,12 +1,18 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
+import controller.Apriori_FindingSubChild_Thread.AprioriFindingSubChild;
 import model.I_ComplexArray;
 import model.I_Item;
+import model.Review;
+import model.Sentences;
 import model.Word;
 import utils.GeneralUtil;
+import utils.WordUtils;
 
 /**
  * Apriori algorithm Find the pattern substring matching in parent string (maybe
@@ -29,13 +35,15 @@ import utils.GeneralUtil;
  * @author dqhuy
  *
  */
-public class AprioriOptimization {
+public class AprioriOptimization implements AprioriFindingSubChild {
+
+	private String SEPERATOR = "";
 
 	private List<I_ComplexArray> dataOriginalItems;
 	private List<I_ComplexArray> dataResultItems;
 	private int N;
 	private double SUPPORT_MIN = 0.02;
-	private List<I_Item> itemsRuleAll;
+	private volatile List<I_Item> itemsRuleAll;
 
 	public AprioriOptimization() {
 		dataResultItems = new ArrayList<>();
@@ -44,7 +52,6 @@ public class AprioriOptimization {
 
 	public List<I_ComplexArray> generate_K_ItemSet(List<I_ComplexArray> dataItemsParent) {
 
-		GeneralUtil.setTimeStart();
 		dataOriginalItems = dataItemsParent;
 		List<I_ComplexArray> dataResultItemsClone = new ArrayList<>();
 
@@ -52,6 +59,7 @@ public class AprioriOptimization {
 
 		// L1 = {large 1-itemsets};
 		List<I_ComplexArray> candidate = getAtomFirstData(dataItemsParent);
+		candidate = pruneRules(dataItemsParent);
 		dataResultItems = candidate;
 
 		if (dataResultItems.size() > 1) {
@@ -67,6 +75,7 @@ public class AprioriOptimization {
 		// for (k=2; Lk-1 ≠ ∅ ; k++)
 		for (int k = 2; candidate.size() > 0; k++) {
 
+			GeneralUtil.setTimeStart();
 			// Ck=apriori-gen(Lk-1);
 			candidate = join(dataResultItems, candidate);// generate new candidate itemsets
 			candidate = GeneralUtil.pruneDuplicateComplex(candidate);
@@ -86,7 +95,19 @@ public class AprioriOptimization {
 					} else {
 						// Ct=subset(Ck,t); //candidate itemsets contained in transaCion t
 						System.out.println("Parent = " + c.toString());
-						getSubChild(candidate, c);
+
+						for (int i = 0; i < Apriori_FindingSubChild_Thread.MULTI_THREAD; i++) {
+							Apriori_FindingSubChild_Thread thread = new Apriori_FindingSubChild_Thread(this, i,
+									candidate, c);
+							thread.start();
+							try {
+								thread.join();
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+						}
+
+						// getSubChild(candidate, c);
 						showQuantity();
 						int size = itemsRuleAll.size();
 
@@ -135,9 +156,10 @@ public class AprioriOptimization {
 				System.out.println("----------------------------------------");
 				System.out.println("----------------------------------------");
 			}
+			GeneralUtil.setTimeEnd();
 		}
 		System.out.println("Count : " + dataResultItemsClone.size() + " items");
-		GeneralUtil.setTimeEnd();
+		
 		return dataResultItemsClone;
 	}
 
@@ -150,7 +172,6 @@ public class AprioriOptimization {
 			}
 			System.out.println(" quantity = " + i.getQuantity());
 		}
-
 	}
 
 	public void show(List<I_ComplexArray> result) {
@@ -205,32 +226,32 @@ public class AprioriOptimization {
 		return null;
 	}
 
-	private List<I_ComplexArray> aprioriGen(List<I_ComplexArray> items) {
-		List<I_ComplexArray> dataItemsChild = new ArrayList<>();
-		List<Word> itemAtom = getAtomItems(items);
-
-		System.out.println("items size = " + items.size());
-		System.out.println("item atom size =" + itemAtom.size());
-
-		for (I_ComplexArray s : items) {
-			for (Word a : itemAtom) {
-
-				List<Word> temp = new ArrayList<>();
-				temp.addAll(s.getComplexObject());
-				if (temp.contains(a)) {
-					continue;
-				}
-
-				temp.add(a);
-				I_ComplexArray complex = new I_ComplexArray(temp);
-
-				if (!dataItemsChild.contains(complex)) {
-					dataItemsChild.add(complex);
-				}
-			}
-		}
-		return dataItemsChild;
-	}
+	// private List<I_ComplexArray> aprioriGen(List<I_ComplexArray> items) {
+	// List<I_ComplexArray> dataItemsChild = new ArrayList<>();
+	// List<Word> itemAtom = getAtomItems(items);
+	//
+	// System.out.println("items size = " + items.size());
+	// System.out.println("item atom size =" + itemAtom.size());
+	//
+	// for (I_ComplexArray s : items) {
+	// for (Word a : itemAtom) {
+	//
+	// List<Word> temp = new ArrayList<>();
+	// temp.addAll(s.getComplexObject());
+	// if (temp.contains(a)) {
+	// continue;
+	// }
+	//
+	// temp.add(a);
+	// I_ComplexArray complex = new I_ComplexArray(temp);
+	//
+	// if (!dataItemsChild.contains(complex)) {
+	// dataItemsChild.add(complex);
+	// }
+	// }
+	// }
+	// return dataItemsChild;
+	// }
 
 	public List<I_ComplexArray> getAtomFirstData(List<I_ComplexArray> dataItemsParent) {
 		List<I_ComplexArray> itemsFirst = new ArrayList<>();
@@ -264,9 +285,17 @@ public class AprioriOptimization {
 
 		int size1 = cK1.size();
 		int size2 = cK2.size();
+		
+		System.out.println("========================================");
+		System.out.println("Size Ck1 = " + size1);
+		System.out.println("Size Ck2 = " + size2);
+		
+		int count = 0;
+		
 		List<Word> temp;
 		for (int i = 0; i < size1; i++) {
 			for (int j = i + 1; j < size2; j++) {
+				count++;
 				temp = new ArrayList<>();
 				temp.addAll(cK1.get(i).getComplexObject());
 				List<Word> wordCk2 = cK2.get(j).getComplexObject();
@@ -280,7 +309,174 @@ public class AprioriOptimization {
 				candidates.add(complex);
 			}
 		}
+		System.out.println("Real count = " + count);
+		System.out.println("========================================");
 		return candidates;
+	}
+
+	public List<I_ComplexArray> pruneRules(List<I_ComplexArray> list) {
+
+		// if empty list
+		if (null == list || list.size() == 0) {
+			return Collections.emptyList();
+		}
+
+		// Get atom item form result list
+		List<I_ComplexArray> result = getAtomFirstData(list);
+
+		// prune feature base with one word
+		result = oneWordPrunning(result);
+
+		// This method checks features that contain
+		// at least two words, which we call feature phrases, and remove
+		// those that are likely to be meaningless.
+		// result = compactnessPruning(result);
+
+		// n this step, we focus on removing
+		// redundant features that contain single words. To describe the
+		// meaning of redundant features, we use the concept of p-support
+		// (pure support). p-support of feature ftr is the number of sentences
+		// that ftr appears in as a noun or noun phrase, and these sentences
+		// must contain no feature phrase that is a superset of ftr.
+		// result = redundancyPruning(result);
+
+		return result;
+	}
+
+	private List<I_ComplexArray> oneWordPrunning(List<I_ComplexArray> list) {
+		List<I_ComplexArray> result = new ArrayList<>();
+		Word word;
+		I_ComplexArray com;
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			com = i.next();
+			word = com.getComplexObject().get(0);
+			String feature = word.getWord();
+			if (feature.length() > 2) {
+				result.add(com);
+			}
+		}
+		return result;
+	}
+
+	public List<I_ComplexArray> compactnessPruning(List<I_ComplexArray> list) {
+
+		List<I_ComplexArray> result = new ArrayList<>();
+		I_ComplexArray com;
+		// • Let f be a frequent feature phrase and f contains n
+		// words. Assume that a sentence s contains f and the
+		// sequence of the words in f that appear in s is: w1, w2,
+		// …, wn. If the word distance in s between any two
+		// adjacent words (wi and wi+1) in the above sequence is
+		// no greater than 3, then we say f is compact in s.
+		// • If f occurs in m sentences in the review database, and
+		// it is compact in at least 2 of the m sentences, then we
+		// call f a compact feature phrase.
+
+		// Protect list from Concurrent Exception
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			com = i.next();
+			List<Word> temp = com.getComplexObject();
+			Word w = temp.get(0);
+			String word = w.getWord();
+
+			String[] arrWord = word.split(SEPERATOR);
+
+			// if word have only one word, it's compact feature base
+			if (arrWord.length == 1) {
+				result.add(com);
+				// if word have more than 3 word, it's not compact feature base
+			} else if (arrWord.length >= 3) {
+				continue;
+			} else {
+				// check compactness rule
+				if (compactnessRule(list)) {
+					result.add(com);
+				} else {
+					continue;
+				}
+			}
+		}
+		return list;
+	}
+
+	private boolean compactnessRule(List<I_ComplexArray> list) {
+
+		WordUtils utils = new WordUtils();
+		List<Review> listReview = utils.getReviewList();
+		Word word;
+		I_ComplexArray com;
+
+		for (Iterator<I_ComplexArray> i = list.iterator(); i.hasNext();) {
+			com = i.next();
+			word = com.getComplexObject().get(0);
+			String[] items = word.getWord().split(SEPERATOR);
+			if (items.length != 2) {
+				return false;
+			} else {
+				String word1 = items[0];
+				String word2 = items[1];
+				int count = 0;
+
+				for (Review r : listReview) {
+
+					List<Sentences> sentences = r.getListSentences();
+					for (Sentences s : sentences) {
+						List<Word> words = s.getListWord();
+
+						// If the word distance in s between any two
+						// adjacent words (wi and wi+1) in the above sequence is
+						// no greater than 3, then we say f is compact in s.
+						for (int j = 0; j < words.size() - 2; j++) {
+							String w = words.get(j).getWord();
+							String w1 = words.get(j + 1).getWord();
+							String w2 = words.get(j + 2).getWord();
+							if ((word1.equalsIgnoreCase(w) && !word2.equalsIgnoreCase(w1))
+									&& (word1.equalsIgnoreCase(w) && !word2.equalsIgnoreCase(w2))) {
+								return false;
+							} else {
+								count++;
+							}
+						}
+					}
+				}
+				if (count >= 2) {
+					return true;
+				}
+			}
+		}
+		return true;
+	}
+
+	public List<I_ComplexArray> redundancyPruning(List<I_ComplexArray> list) {
+
+		// We use the minimum p-support to prune those redundant features. If a
+		// feature has a p-support lower than the minimum p-support (in our
+		// system, we set it to 3) and the feature is a subset of another
+		// feature phrase (which suggests that the feature alone may not be
+		// interesting), it is pruned.
+		return list;
+	}
+
+	@Override
+	public void findSubChild(List<I_ComplexArray> indicate,
+			I_ComplexArray parent) {
+		List<I_Item> itemsRuleLocal = new ArrayList<>();
+		for (I_ComplexArray child : indicate) {
+
+			I_Item i = new I_Item(parent.getComplexObject(),
+					child.getComplexObject());
+			if (!itemsRuleLocal.contains(i)) {
+				i.setItemsParent(parent.getComplexObject());
+				itemsRuleLocal.add(i);
+			} else {
+				I_Item clone = getItem(child.getComplexObject(),
+						itemsRuleLocal);
+				if (null != clone) {
+					clone.setItemsParent(parent.getComplexObject());
+				}
+			}
+		}
+		itemsRuleAll.addAll(itemsRuleLocal);
 	}
 
 }

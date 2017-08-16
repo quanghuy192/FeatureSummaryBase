@@ -3,12 +3,12 @@ package utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.I_AprioriAlgorithrm;
 import model.Feature;
 import model.I_ComplexArray;
 import model.Review;
 import model.Sentences;
 import model.Word;
+import old.I_AprioriAlgorithrm;
 
 public class FeatureBaseUtils {
 

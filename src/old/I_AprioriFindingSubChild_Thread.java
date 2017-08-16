@@ -1,24 +1,24 @@
-package controller;
+package old;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import model.I_ComplexArray;
 
-public class I_AprioriItemsChild_Thread extends Thread {
+public class I_AprioriFindingSubChild_Thread extends Thread {
 
 	// Delegate Pattern
-	interface AprioriItemsChild {
-		public void getItemsChild(List<I_ComplexArray> dataItemsParent);
+	interface AprioriFindingSubChild {
+		public void findSubChild(List<I_ComplexArray> dataItemsParent);
 	}
 
-	AprioriItemsChild apriAction;
+	AprioriFindingSubChild apriAction;
 
 	private long id;
 	private List<I_ComplexArray> dataItemsParent;
-	public static int MULTI_THREAD = 1;
+	public static int MULTI_THREAD = 200;
 
-	public I_AprioriItemsChild_Thread(AprioriItemsChild apriAction, long id, List<I_ComplexArray> dataItemsParent) {
+	public I_AprioriFindingSubChild_Thread(AprioriFindingSubChild apriAction, long id, List<I_ComplexArray> dataItemsParent) {
 		super();
 		this.apriAction = apriAction;
 		this.id = id;
@@ -47,6 +47,6 @@ public class I_AprioriItemsChild_Thread extends Thread {
 	@Override
 	public void run() {
 		super.run();
-		apriAction.getItemsChild(dataItemsParent);
+		apriAction.findSubChild(dataItemsParent);
 	}
 }

@@ -6,6 +6,7 @@ import java.util.List;
 
 import model.I_ComplexArray;
 import model.Word;
+import old.I_AprioriAlgorithrm;
 import utils.WordUtils;
 
 public class Test implements Serializable {
@@ -56,6 +57,7 @@ public class Test implements Serializable {
 		// { { "3" }, { "A", "B", "C", "E" } },
 		// { { "4" }, { "B", "E" } } };
 		// // HashMap<Integer, List<String[]>> dataItems = new HashMap<>();
+		
 //		List<I_ComplexArray> dataItems = new ArrayList<>();
 //		List<Word> l1 = new ArrayList<>();
 //		l1.add(new Word("A"));
@@ -111,7 +113,7 @@ public class Test implements Serializable {
 
 		 WordUtils utils = new WordUtils();
 		 List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
-		 AprioriOptimization algorithrm = new AprioriOptimization();
+		 I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
 		 List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
 		 // List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
 		 List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);

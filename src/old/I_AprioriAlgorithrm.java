@@ -1,17 +1,17 @@
-package controller;
+package old;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import controller.I_AprioriFindingSubChild_Thread.AprioriFindingSubChild;
-import controller.I_AprioriItemsChild_Thread.AprioriItemsChild;
 import model.I_ComplexArray;
 import model.I_Item;
 import model.Review;
 import model.Sentences;
 import model.Word;
+import old.I_AprioriFindingSubChild_Thread.AprioriFindingSubChild;
+import old.I_AprioriItemsChild_Thread.AprioriItemsChild;
 import utils.GeneralUtil;
 import utils.WordUtils;
 

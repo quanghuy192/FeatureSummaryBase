@@ -103,12 +103,12 @@ public class Word {
 			String[] items = originalWord.split(SEPERATOR);
 			if (items.length >= 2) {
 				if (!":".equalsIgnoreCase(items[0]) && !",".equalsIgnoreCase(items[0])) {
-					this.word = items[0];
+					this.word = items[0].trim();
 					this.type = items[1];
 				}
 			} else if (items.length >= 1) {
 				if (!":".equalsIgnoreCase(items[0]) && !",".equalsIgnoreCase(items[0])) {
-					this.word = items[0];
+					this.word = items[0].trim();
 				}
 			}
 		}
