@@ -11,8 +11,8 @@ import model.Word;
 
 public class GeneralUtil {
 
-	private static long startTime;
-	private static long endTime;
+	private static double startTime;
+	private static double endTime;
 
 	/**
 	 * private constructor
@@ -70,12 +70,12 @@ public class GeneralUtil {
 	}
 
 	public static void setTimeStart() {
-		startTime = System.nanoTime();
+		startTime =  System.nanoTime();
 	}
 
 	public static void setTimeEnd() {
 		endTime = System.nanoTime();
-		System.out.println("Took " + (1.0 * endTime / (1000000000) - 1.0 * startTime / (1000000000)) + " s");
+		System.out.println("Took " + (1.0 * endTime - 1.0 * startTime)/1000000000 + " s");
 	}
 
 	public static List<I_Item> pruneDuplicateItem(List<I_Item> items) {

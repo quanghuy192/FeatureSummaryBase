@@ -45,7 +45,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.02;
+	private double SUPPORT_MIN = 0.01;
 	private String SEPERATOR = "";
 	// private int CONFIDENCE_MIN = 2;
 
@@ -55,7 +55,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	public List<I_ComplexArray> generate_K_ItemSet(List<I_ComplexArray> dataItemsParent) {
 
-		GeneralUtil.setTimeStart();
+		// GeneralUtil.setTimeStart();
 		step++;
 
 		itemsRule = new ArrayList<>();
@@ -162,7 +162,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		if (dataItemsChild.size() > 1) {
 			show(dataItemsChild);
-			GeneralUtil.setTimeEnd();
+			// GeneralUtil.setTimeEnd();
 			System.out.println("Support min = " + SUPPORT_MIN);
 			System.out.println("Count : " + dataItemsChild.size() + " items");
 			System.out.println("----------------------------------------");
@@ -173,7 +173,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			return pruneRules(generate_K_ItemSet(dataItemsChild));
 		} else {
 			System.out.println("Count : " + dataResultItemsClone.size() + " items");
-			GeneralUtil.setTimeEnd();
+			// GeneralUtil.setTimeEnd();
 			return pruneRules(dataResultItemsClone);
 		}
 	}
