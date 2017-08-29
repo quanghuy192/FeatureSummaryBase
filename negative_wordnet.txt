@@ -2,8 +2,6 @@ xấu
 xấu xí
 khó
 khó khăn
-vất vả
-gian khổ
 không tốt
 xoàng
 mèng
@@ -30,7 +28,6 @@ tồi tệ
 đáng buồn
 đáng trách
 đáng tiếc
-to lớn
 nặng
 hư
 tuyệt vọng
@@ -40,10 +37,7 @@ không hi vọng
 kém
 kém cỏi
 bất tài
-vô tài
-không giỏi
 thiếu khả năng
-thiếu trình độ
 tồi
 kém
 yếu
@@ -87,8 +81,6 @@ chán
 vô giá trị
 hạng bét
 tầm thường
-bình dân
-giá rẻ
 trung bình
 tàm tạm
 vừa phải
@@ -114,7 +106,6 @@ hãi hùng
 đờ ra
 đừ ra
 hoảng sợ
-hoảng hốt
 đáng sợ
 ghê sợ
 hổ thẹn
@@ -156,9 +147,7 @@ không thể có được
 không thể xảy ra
 không thể làm được
 bất tài vô dụng
-không đủ năng lực
 không có khả năng
-không có năng lực
 cẩu thả
 lơ đễnh
 yếu ớt
@@ -246,7 +235,6 @@ kém hơn
 tồi hơn
 nông thôn
 không chính thức
-không theo quy định
 hạn chế
 có hạn
 có giới hạn
@@ -276,8 +264,6 @@ sai sót
 không đúng
 có lỗi
 quá lớn
-lớn hơn bình thường
-to lớn khác thường
 ngoại cỡ
 quá cỡ
 quá khổ
@@ -285,7 +271,6 @@ ngoại khổ
 to bự
 to kềnh
 thùng thình
-khá lớn
 phồng
 phồng ra
 bồng lên
@@ -297,7 +282,6 @@ nghèo nàn
 lèo tèo
 thưa thớt
 không đa dạng
-kiên định
 nhiều vấn đề
 tệ
 làm bực mình
@@ -314,7 +298,6 @@ bị bỏ rơi
 bị bỏ quên
 bị lãng quên
 bị quên lãng
-không được chăm sóc
 tối
 tối tăm
 tối mò
@@ -337,10 +320,6 @@ bị trừ ra
 bị loại bỏ
 vụng về
 lỏng lẻo
-không chặt chẽ
-thiếu năng lực
-thiếu chuyên môn
-thiếu kĩ năng
 mong manh
 không gọn
 lỉnh kỉnh
@@ -351,13 +330,11 @@ giấu giếm
 rạn
 rối
 rối rắm
-phùng
 phình
 phùng lên
 phình lên
 tưởng tượng
 không có thật
-truyện cổ tích
 không thật
 tưởng tượng
 bịa đặt
@@ -370,8 +347,6 @@ lừa dối
 lừa bịp
 đánh lừa
 không thiết thực
-thuộc lí thuyết
-có tính chất lí thuyết
 quá độ
 thái quá
 phi thường
@@ -410,21 +385,15 @@ hạng chót
 kém nhất
 yếu kém nhất
 nhỏ bé
-trẻ tuổi hơn
-ít tuổi hơn
-ít thâm niên hơn
 ở cấp dưới
 quê mùa
 thô kệch
 quê kệch
-có tính chất nông thôn
 có vẻ nông thôn
 thứ yếu
 hẹp
 chật hẹp
 eo hẹp
-bị ảnh hưởng
-chịu ảnh hưởng
 khó ưa
 quá
 quá thể
@@ -451,17 +420,6 @@ bấp bênh
 không chắc chắn
 loạn
 không thoải mái
-đểu
-khăm
-có ý xấu
-có ác ý
-ác nghiệt
-mờ ám
-ám muội
-hắc ám
-ác hiểm
-ma quỷ
-quỷ sứ
 quỷ quái
 mơ hồ
 không rõ
@@ -493,10 +451,7 @@ thừa mứa
 quá thừa
 dư thừa
 thừa thãi
-cố định
-chặt
 bé
-chật
 nghèo
 nghèo khó
 nghèo túng
@@ -507,7 +462,6 @@ kém tài nguyên
 pha tạp
 lai căng
 pha trộn
-cùn
 cô độc
 đơn độc
 đơn chiếc
@@ -515,14 +469,10 @@ lẻ loi
 trơ trọi
 bị bỏ
 không thay đổi
-cũng như vậy
-cũng như thế
-không được quan tâm chăm sóc
 buồn thiu
 bi thảm
 thảm thương
 bi kịch
-thảm khốc
 bi đát
 đục
 xỉn
@@ -541,15 +491,9 @@ hững hờ
 ẩu
 bất cẩn
 ẻo lả
-chật cứng
-chật ních
-chưa đụng đến
-chưa sờ đến
-chưa mó đến
 lừa đảo
 màu mè
 chiếu lệ
-theo quy ước
 cứng nhắc
 hữu danh vô thực
 khó hiểu
@@ -577,17 +521,11 @@ khác biệt
 khác nhau
 mù quáng
 vô lý
-vô cơ
 u mê
 trái lẽ
 vô nghĩa
 buồn cười
 lố lăng
-ngu đần
-ngu dại
-đần độn
-chậm hiểu
-đặc mệnh
 lạ đời
 dị biệt
 kỳ
@@ -600,9 +538,6 @@ bệnh tật
 điên
 tâm thần
 thần kinh
-bị điên
-bị tâm thần
-bị thần kinh
 liệt
 tê liệt
 bị liệt
@@ -611,63 +546,42 @@ tức cười
 nực cười
 giống hề
 như hề
-hề
 giống như hề
 chế giễu
 châm biếm
 trào phúng
-nói đùa
-nói giỡn
-đùa bỡn
 nực cười
 lố lỉnh
 đáng cười
 lung lay
-sắp đổ
 liêu xiêu
 xiêu vẹo
-loạng choạng
-lung lay
 khập khiễng
 ọp ẹp
 tròng trành
-trùng triềng
 dễ nổ
-bừa bãi
 không gọn gàng
 không ngăn nắp
-vội vàng
-vội vã
-hối hả
 hấp tấp
-điên cuồng
-cuồng điên
 điên rồ
 điên dại
 nóng
 quái gở
 không có tác dụng
 thấp
-có chừng đỗi
 dưới
 bậc dưới
-cấp dưới
 thô
 thiển cận
-nông cạn
-nhỏ nhen
 phụ
 thứ
 thứ hai
 thứ nhì
-không đáng kể
-tối thiểu
 giật gấu vá vai
 giật đầu cá vá đầu tôm
 vắt mũi đút miệng
-ít oi
+ít ỏi 
 hạn hẹp
-đạm bạc
 sơ sài
 phát sợ
 vô lường
