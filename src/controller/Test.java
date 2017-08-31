@@ -1,14 +1,10 @@
 package controller;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-import model.I_ComplexArray;
-import model.Word;
-import old.I_AprioriAlgorithrm;
-import utils.GeneralUtil;
-import utils.WordUtils;
+import model.Feature;
+import utils.FeatureBaseUtils;
 
 public class Test implements Serializable {
 
@@ -112,30 +108,31 @@ public class Test implements Serializable {
 		// String[] child = {"A","D","G","B"};
 		// System.out.println(al.checkSubArrayContain(parent, child));
 
-		 WordUtils utils = new WordUtils();
-		 List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
-		 I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
-		 GeneralUtil.setTimeStart();
-		 List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
-		 GeneralUtil.setTimeEnd();
-		 // List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
-		 List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
-		 for (I_ComplexArray s : items) {
-		 for (Word i : s.getComplexObject()) {
-		 System.out.print(i.getWord() + " ");
-		 }
-		 System.out.println();
-		 }
-//		FeatureBaseUtils utils = new FeatureBaseUtils();
-//		List<Feature> adjectiveList = utils.getEffectiveWords();
-//		int count = 0;
-//
-//		for (Feature f : adjectiveList) {
-//			count++;
-//			System.out.println(f.getFeature());
-//			System.out.println(f.getOpinionWords() + " ");
-//		}
-//		System.out.println(count);
+//		 WordUtils utils = new WordUtils();
+//		 List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
+//		 I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
+//		 GeneralUtil.setTimeStart();
+//		 List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
+//		 GeneralUtil.setTimeEnd();
+//		 // List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
+//		 List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
+//		 for (I_ComplexArray s : items) {
+//		 for (Word i : s.getComplexObject()) {
+//		 System.out.print(i.getWord() + " ");
+//		 }
+//		 System.out.println();
+//		 }
+
+		FeatureBaseUtils utils = new FeatureBaseUtils();
+		List<Feature> adjectiveList = utils.getEffectiveWords();
+		int count = 0;
+
+		for (Feature f : adjectiveList) {
+			count++;
+			System.out.println(f.getFeature());
+			System.out.println(f.getOpinionWords() + " ");
+		}
+		System.out.println(count);
 
 	}
 }

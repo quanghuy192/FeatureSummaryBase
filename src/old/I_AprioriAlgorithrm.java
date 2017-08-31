@@ -45,7 +45,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 0.02;
 	private String SEPERATOR = "";
 	// private int CONFIDENCE_MIN = 2;
 
