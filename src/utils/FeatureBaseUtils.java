@@ -11,8 +11,8 @@ import model.Word;
 import old.I_AprioriAlgorithrm;
 
 public class FeatureBaseUtils {
-	
-	enum Orientation{
+
+	enum Orientation {
 		POSITIVE, NEGATIVE
 	}
 
@@ -25,9 +25,13 @@ public class FeatureBaseUtils {
 	private List<Review> listReview;
 	private WordUtils utils;
 	private List<String> adjectiveTagList;
-	
+
 	private final String BLANK = "";
 	private final String SEPERATOR = "-";
+
+	private WordOrientaionUtil u = new WordOrientaionUtil();
+	private List<String> posAdjList = u.getPositiveAdjList();
+	private List<String> negAdjList = u.getNegativeAdjList();
 
 	public FeatureBaseUtils() {
 		// try {
@@ -92,17 +96,24 @@ public class FeatureBaseUtils {
 	// e.printStackTrace();
 	// }
 	// }
-	
+
 	public Orientation getOrientationSentences(Sentences sentences) {
 		int orientation = 0;
 		return Orientation.NEGATIVE;
 	}
-	
-	public Orientation getOrientationWord(Sentences sentences, Word word) {
+
+	public int getOrientationWord(Sentences sentences, Word word) {
 		int orientation = 0;
-		return Orientation.NEGATIVE;
+		String opinionWord = word.getWord();
+		if (posAdjList.contains(opinionWord)) {
+			orientation = 1;
+		}
+		if (negAdjList.contains(opinionWord)) {
+			orientation = -1;
+		}
+		return orientation;
 	}
-	
+
 	public boolean isOpositeWord(Sentences sentences, Word word) {
 		int orientation = 0;
 		return false;
