@@ -11,6 +11,10 @@ import model.Word;
 import old.I_AprioriAlgorithrm;
 
 public class FeatureBaseUtils {
+	
+	enum Orientation{
+		POSITIVE, NEGATIVE
+	}
 
 	// private FileReader reader;
 	// private BufferedReader bufferedReader;
@@ -21,6 +25,7 @@ public class FeatureBaseUtils {
 	private List<Review> listReview;
 	private WordUtils utils;
 	private List<String> adjectiveTagList;
+	
 	private final String BLANK = "";
 	private final String SEPERATOR = "-";
 
@@ -87,6 +92,21 @@ public class FeatureBaseUtils {
 	// e.printStackTrace();
 	// }
 	// }
+	
+	public Orientation getOrientationSentences(Sentences sentences) {
+		int orientation = 0;
+		return Orientation.NEGATIVE;
+	}
+	
+	public Orientation getOrientationWord(Sentences sentences, Word word) {
+		int orientation = 0;
+		return Orientation.NEGATIVE;
+	}
+	
+	public boolean isOpositeWord(Sentences sentences, Word word) {
+		int orientation = 0;
+		return false;
+	}
 
 	public List<Feature> getEffectiveWords() {
 		List<Feature> effectiveWords = new ArrayList<>();
