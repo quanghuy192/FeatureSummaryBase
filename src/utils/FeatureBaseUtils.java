@@ -99,6 +99,9 @@ public class FeatureBaseUtils {
 
 	public Orientation getOrientationSentences(Sentences sentences) {
 		int orientation = 0;
+		for (String string : adjectiveTagList) {
+			
+		}
 		return Orientation.NEGATIVE;
 	}
 
@@ -116,6 +119,10 @@ public class FeatureBaseUtils {
 
 	public boolean isOpositeWord(Sentences sentences, Word word) {
 		int orientation = 0;
+		int positionWord = 0;
+		for (int i = 0; i < sentences.getListWord().size(); i++) {
+			
+		}
 		return false;
 	}
 
