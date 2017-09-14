@@ -153,6 +153,11 @@ public class Test implements Serializable {
 			count++;
 			System.out.println(f);
 		}
+		List<String> l3 = u.getOppositeWordList();
+		for (String f : l3) {
+			count++;
+			System.out.println(f);
+		}
 		System.out.println(count);
 
 	}

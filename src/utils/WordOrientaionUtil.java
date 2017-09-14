@@ -2,6 +2,7 @@ package utils;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class WordOrientaionUtil {
 		try {
 			positiveAdjList = new ArrayList<>();
 			negativeAdjList = new ArrayList<>();
-			
+
 			readerPos = new FileReader(new File(FILE_POSITIVE_ADJ));
 			bufferedReaderPos = new BufferedReader(readerPos);
 			readerNeg = new FileReader(new File(FILE_NEGATIVE_ADJ));
@@ -70,6 +71,26 @@ public class WordOrientaionUtil {
 
 	public List<String> getNegativeAdjList() {
 		return negativeAdjList;
+	}
+
+	public List<String> getOppositeWordList() {
+		List<String> oppositeWordList = new ArrayList<>();
+		FileReader reader;
+		BufferedReader bufferedReader;
+		String negativeWord;
+		try {
+			reader = new FileReader(new File("negative.txt"));
+			bufferedReader = new BufferedReader(reader);
+
+			while (null != (negativeWord = bufferedReader.readLine())) {
+				oppositeWordList.add(negativeWord);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return oppositeWordList;
 	}
 
 }
