@@ -3,13 +3,10 @@ package controller;
 import java.io.Serializable;
 import java.util.List;
 
-import model.Feature;
-import model.I_ComplexArray;
-import model.Word;
-import old.I_AprioriAlgorithrm;
+import model.Review;
+import model.Sentences;
 import utils.FeatureBaseUtils;
-import utils.GeneralUtil;
-import utils.WordOrientaionUtil;
+import utils.FeatureBaseUtils.Orientation;
 import utils.WordUtils;
 
 public class Test implements Serializable {
@@ -115,50 +112,53 @@ public class Test implements Serializable {
 		// String[] child = {"A","D","G","B"};
 		// System.out.println(al.checkSubArrayContain(parent, child));
 
-//		WordUtils utils = new WordUtils();
-//		List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
-//		I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
-//		GeneralUtil.setTimeStart();
-//		List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
-//		GeneralUtil.setTimeEnd();
-//		// List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
-//		List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
-//		for (I_ComplexArray s : items) {
-//			for (Word i : s.getComplexObject()) {
-//				System.out.print(i.getWord() + " ");
-//			}
-//			System.out.println();
-//		}
+		// WordUtils utils = new WordUtils();
+		// List<I_ComplexArray> complexArrays = utils.generateFeatureBase();
+		// I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
+		// GeneralUtil.setTimeStart();
+		// List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(complexArrays);
+		// GeneralUtil.setTimeEnd();
+		// // List<I_ComplexArray> result = algorithrm.generate_K_ItemSet(dataItems);
+		// List<I_ComplexArray> items = algorithrm.getAtomFirstData(result);
+		// for (I_ComplexArray s : items) {
+		// for (Word i : s.getComplexObject()) {
+		// System.out.print(i.getWord() + " ");
+		// }
+		// System.out.println();
+		// }
 
+		WordUtils wordUtils = new WordUtils();
 		FeatureBaseUtils utilss = new FeatureBaseUtils();
-		List<Feature> adjectiveList = utilss.getEffectiveWords();
-		int count = 0;
 
-		for (Feature f : adjectiveList) {
-			count++;
-			System.out.println(f.getFeature());
-			System.out.println(f.getOpinionWords() + " ");
-		}
-		System.out.println(count);
+		List<Review> listReview = wordUtils.getReviewList();
+		for (Review r : listReview) {
+			List<Sentences> listS = r.getListSentences();
+			for (int i = 0; i < listS.size(); i++) {
+				Sentences s = listS.get(i);
+				Sentences sPrev = null;
+				if (i > 0) {
+					sPrev = listS.get(i - 1);
+				}
+				Orientation o = utilss.getOrientationSentences(s, sPrev);
+				System.out.println(o.name());
+			}
 
-		count = 0;
-		WordOrientaionUtil u = new WordOrientaionUtil();
-		List<String> l1 = u.getPositiveAdjList();
-		List<String> l2 = u.getNegativeAdjList();
-		for (String f : l1) {
-			count++;
-			System.out.println(f);
 		}
-		for (String f : l2) {
-			count++;
-			System.out.println(f);
-		}
-		List<String> l3 = u.getOppositeWordList();
-		for (String f : l3) {
-			count++;
-			System.out.println(f);
-		}
-		System.out.println(count);
+		// List<Feature> adjectiveList = utilss.getEffectiveWords();
+		// int count = 0;
+
+		/*
+		 * for (Feature f : adjectiveList) { count++;
+		 * System.out.println(f.getFeature()); System.out.println(f.getOpinionWords() +
+		 * " "); } System.out.println(count);
+		 * 
+		 * count = 0; WordOrientaionUtil u = new WordOrientaionUtil(); List<String> l1 =
+		 * u.getPositiveAdjList(); List<String> l2 = u.getNegativeAdjList(); for (String
+		 * f : l1) { count++; System.out.println(f); } for (String f : l2) { count++;
+		 * System.out.println(f); } List<String> l3 = u.getOppositeWordList(); for
+		 * (String f : l3) { count++; System.out.println(f); }
+		 * System.out.println(count);
+		 */
 
 	}
 }

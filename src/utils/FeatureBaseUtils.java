@@ -13,7 +13,7 @@ import old.I_AprioriAlgorithrm;
 
 public class FeatureBaseUtils {
 
-	enum Orientation {
+	public static enum Orientation {
 		POSITIVE, NEGATIVE
 	}
 
@@ -111,6 +111,9 @@ public class FeatureBaseUtils {
 
 	public int getOrientationWord(Sentences sentences, String word) {
 
+		WordOrientaionUtil utils = new WordOrientaionUtil();
+		List<String> positiveWordList = utils.getOppositeWordList();
+
 		int orientation = 0;
 		int positionWord = -1;
 
@@ -133,13 +136,27 @@ public class FeatureBaseUtils {
 			return 0;
 		}
 
-		int adjPosition1 = positionWord + 1;
-		int adjPosition2 = positionWord - 1;
+		int adjPosition1 = positionWord++;
+		int adjPosition2 = positionWord--;
 
-		while (adjPosition1 < size)
+		int count = 0;
+		while (adjPosition1 < size && count < 3) {
+			String w1 = lw.get(adjPosition2).getWord();
+			if (positiveWordList.contains(w1)) {
+				orientation *= (-1);
+			}
 			adjPosition1++;
-		while (adjPosition2 > -1)
+			count++;
+		}
+
+		count = 0;
+		while (adjPosition2 > -1 && count < 3) {
+			String w2 = lw.get(adjPosition2).getWord();
+			if (positiveWordList.contains(w2)) {
+				orientation *= (-1);
+			}
 			adjPosition2--;
+		}
 
 		return orientation;
 	}
