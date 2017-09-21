@@ -82,11 +82,17 @@ public class Word {
 		}
 
 		Word i = (Word) o;
+		String s = i.getWord();
+		if (null == s || s.length() == 0) {
+			return false;
+		}
 
 		return i.getWord().equalsIgnoreCase(word)
-				/*&& i.getType().equalsIgnoreCase(type)
-				&& i.getOriginalWord().equalsIgnoreCase(originalWord)
-				&& i.getSentences().equalsIgnoreCase(sentences)*/;
+		/*
+		 * && i.getType().equalsIgnoreCase(type) &&
+		 * i.getOriginalWord().equalsIgnoreCase(originalWord) &&
+		 * i.getSentences().equalsIgnoreCase(sentences)
+		 */;
 	}
 
 	@Override

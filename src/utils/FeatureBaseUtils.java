@@ -141,7 +141,7 @@ public class FeatureBaseUtils {
 
 		int count = 0;
 		while (adjPosition1 < size && count < 3) {
-			String w1 = lw.get(adjPosition2).getWord();
+			String w1 = lw.get(adjPosition1).getWord();
 			if (positiveWordList.contains(w1)) {
 				orientation *= (-1);
 			}
@@ -156,6 +156,7 @@ public class FeatureBaseUtils {
 				orientation *= (-1);
 			}
 			adjPosition2--;
+			count++;
 		}
 
 		return orientation;
