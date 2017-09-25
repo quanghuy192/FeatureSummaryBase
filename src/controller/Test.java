@@ -131,19 +131,22 @@ public class Test implements Serializable {
 		FeatureBaseUtils utilss = new FeatureBaseUtils();
 
 		List<Review> listReview = wordUtils.getReviewList();
+		int count = 0;
+		int countNeuTral = 0;
 		for (Review r : listReview) {
 			List<Sentences> listS = r.getListSentences();
 			for (int i = 0; i < listS.size(); i++) {
-				Sentences s = listS.get(i);
-				Sentences sPrev = null;
-				if (i > 0) {
-					sPrev = listS.get(i - 1);
+				count++;
+				Orientation o = utilss.getOrientationSentences(listS, i);
+				if(o.equals(Orientation.NEUTRAL)) {
+					countNeuTral++;
 				}
-				Orientation o = utilss.getOrientationSentences(s, sPrev);
 				System.out.println(o.name());
 			}
 
 		}
+		System.out.println(count);
+		System.out.println(countNeuTral);
 		// List<Feature> adjectiveList = utilss.getEffectiveWords();
 		// int count = 0;
 

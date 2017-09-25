@@ -14,7 +14,7 @@ import old.I_AprioriAlgorithrm;
 public class FeatureBaseUtils {
 
 	public static enum Orientation {
-		POSITIVE, NEGATIVE
+		POSITIVE, NEGATIVE, NEUTRAL
 	}
 
 	private List<I_ComplexArray> featureList;
@@ -59,7 +59,8 @@ public class FeatureBaseUtils {
 		return featureList;
 	}
 
-	public Orientation getOrientationSentences(Sentences sentences, Sentences preSentences) {
+	public Orientation getOrientationSentences(List<Sentences> listS, int position) {
+		Sentences sentences = listS.get(position);
 		int orientation = 0;
 		for (I_ComplexArray ic : featureList) {
 			for (Word w : ic.getComplexObject()) {
@@ -94,12 +95,13 @@ public class FeatureBaseUtils {
 							else if (orientation < 0)
 								return Orientation.NEGATIVE;
 							else {
-								if (null != preSentences) {
-									return getOrientationSentences(preSentences, preSentences);
+								int size = listS.size();
+								if (position > 0 && position < size) {
+									return getOrientationSentences(listS, position - 1);
 								} else {
-									return new Random().nextInt(9) % 2 == 0 ? Orientation.POSITIVE
-											: Orientation.NEGATIVE;
+									return Orientation.NEUTRAL;
 								}
+								// return Orientation.NEUTRAL;
 							}
 						}
 					}
@@ -136,8 +138,8 @@ public class FeatureBaseUtils {
 			return 0;
 		}
 
-		int adjPosition1 = positionWord++;
-		int adjPosition2 = positionWord--;
+		int adjPosition1 = positionWord + 1;
+		int adjPosition2 = positionWord - 1;
 
 		int count = 0;
 		while (adjPosition1 < size && count < 3) {
