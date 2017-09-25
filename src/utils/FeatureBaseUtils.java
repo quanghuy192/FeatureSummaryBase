@@ -2,7 +2,6 @@ package utils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import model.Feature;
 import model.I_ComplexArray;
@@ -354,6 +353,15 @@ public class FeatureBaseUtils {
 			}
 		}
 		return feature;
+	}
+	
+	public List<String> getInfrequentFeature() {
+		List<String> infrequentFeature = new ArrayList<>();
+		List<Review> listReview = utils.getReviewList();
+		for (Review re : listReview) {
+			
+		}
+		return infrequentFeature;
 	}
 
 }
