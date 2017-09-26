@@ -354,12 +354,25 @@ public class FeatureBaseUtils {
 		}
 		return feature;
 	}
-	
+
 	public List<String> getInfrequentFeature() {
 		List<String> infrequentFeature = new ArrayList<>();
 		List<Review> listReview = utils.getReviewList();
 		for (Review re : listReview) {
-			
+			for (Sentences sen : re.getListSentences()) {
+				for (I_ComplexArray com : featureList) {
+					Word word = com.getComplexObject().get(0);
+					if (sen.getListWord().contains(word)) {
+						break;
+					}
+				}
+				List<String> optionWord = new ArrayList<>();
+				optionWord.addAll(posAdjList);
+				optionWord.addAll(negAdjList);
+				for (String o : optionWord) {
+					
+				}
+			}
 		}
 		return infrequentFeature;
 	}
