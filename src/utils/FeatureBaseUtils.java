@@ -369,7 +369,7 @@ public class FeatureBaseUtils {
 			for (Sentences sen : re.getListSentences()) {
 				for (I_ComplexArray com : featureList) {
 					Word word = com.getComplexObject().get(0);
-					if (sen.getListWord().contains(word)) {
+					if (sen.getOriginalSentences().contains(word.getWord())) {
 						break;
 					}
 				}
@@ -426,7 +426,7 @@ public class FeatureBaseUtils {
 			String w1 = listW.get(optPosition1).getWord();
 			String t1 = listW.get(optPosition1).getType();
 			if (nounTagList.contains(t1)) {
-				if(w1.length() > 2) {
+				if (w1.length() > 2) {
 					results.add(w1);
 				}
 				break;
@@ -440,7 +440,7 @@ public class FeatureBaseUtils {
 			String w2 = listW.get(optPosition2).getWord();
 			String t2 = listW.get(optPosition2).getType();
 			if (nounTagList.contains(t2)) {
-				if(w2.length() > 2) {
+				if (w2.length() > 2) {
 					results.add(w2);
 				}
 				break;
