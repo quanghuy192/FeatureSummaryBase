@@ -138,7 +138,7 @@ public class Test implements Serializable {
 			for (int i = 0; i < listS.size(); i++) {
 				count++;
 				Orientation o = utilss.getOrientationSentences(listS, i);
-				if(o.equals(Orientation.NEUTRAL)) {
+				if (o.equals(Orientation.NEUTRAL)) {
 					countNeuTral++;
 				}
 				System.out.println(o.name());
@@ -147,6 +147,12 @@ public class Test implements Serializable {
 		}
 		System.out.println(count);
 		System.out.println(countNeuTral);
+		System.out.println("================================");
+
+		List<String> infrequentFeature = utilss.getInfrequentFeature();
+		for (String s : infrequentFeature) {
+			System.out.println(s);
+		}
 		// List<Feature> adjectiveList = utilss.getEffectiveWords();
 		// int count = 0;
 

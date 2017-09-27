@@ -70,12 +70,12 @@ public class GeneralUtil {
 	}
 
 	public static void setTimeStart() {
-		startTime =  System.nanoTime();
+		startTime = System.nanoTime();
 	}
 
 	public static void setTimeEnd() {
 		endTime = System.nanoTime();
-		System.out.println("Took " + (1.0 * endTime - 1.0 * startTime)/1000000000 + " s");
+		System.out.println("Took " + (1.0 * endTime - 1.0 * startTime) / 1000000000 + " s");
 	}
 
 	public static List<I_Item> pruneDuplicateItem(List<I_Item> items) {
@@ -88,13 +88,18 @@ public class GeneralUtil {
 		return new ArrayList<>(sets);
 	}
 
+	public static List<String> pruneDuplicateString(List<String> items) {
+		Set<String> sets = new HashSet<>(items);
+		return new ArrayList<>(sets);
+	}
+
 	public static boolean isEmptyList(List<?> list) {
 		if (null == list || list.size() == 0) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public static boolean isEmpty(String string) {
 		if (null == string || string.length() == 0) {
 			return true;

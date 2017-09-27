@@ -40,7 +40,7 @@ public class FeatureBaseUtils {
 		// nounTagList.add("Np");
 		// nounTagList.add("Nc");
 		// nounTagList.add("Nu");
-		nounTagList.add("NP");
+		// nounTagList.add("NP");
 
 		utils = new WordUtils();
 		listReview = utils.getReviewList();
@@ -365,7 +365,6 @@ public class FeatureBaseUtils {
 
 	public List<String> getInfrequentFeature() {
 		List<String> infrequentFeature = new ArrayList<>();
-		List<Review> listReview = utils.getReviewList();
 		for (Review re : listReview) {
 			for (Sentences sen : re.getListSentences()) {
 				for (I_ComplexArray com : featureList) {
@@ -380,7 +379,14 @@ public class FeatureBaseUtils {
 				for (String o : opinionWordList) {
 					List<Word> listW = sen.getListWord();
 					for (Word word : listW) {
-						if (word.getWord().contains(o) && adjectiveTagList.contains(word.getType())) {
+						String w = word.getWord();
+						String t = word.getType();
+
+						if (GeneralUtil.isEmpty(w) || GeneralUtil.isEmpty(t)) {
+							continue;
+						}
+
+						if (w.contains(o) && adjectiveTagList.contains(t)) {
 							List<String> opinionWords = findInfrequentFeature(o, listW);
 							infrequentFeature.addAll(opinionWords);
 						}
@@ -389,6 +395,7 @@ public class FeatureBaseUtils {
 				}
 			}
 		}
+		infrequentFeature = GeneralUtil.pruneDuplicateString(infrequentFeature);
 		return infrequentFeature;
 	}
 
@@ -397,7 +404,13 @@ public class FeatureBaseUtils {
 		int positionW = -1;
 		int size = listW.size();
 		for (int i = 0; i < size; i++) {
-			if (listW.get(i).getWord().contains(o)) {
+			String w = listW.get(i).getWord();
+
+			if (GeneralUtil.isEmpty(w)) {
+				continue;
+			}
+
+			if (w.contains(o)) {
 				positionW = i;
 			}
 		}
@@ -413,7 +426,9 @@ public class FeatureBaseUtils {
 			String w1 = listW.get(optPosition1).getWord();
 			String t1 = listW.get(optPosition1).getType();
 			if (nounTagList.contains(t1)) {
-				results.add(w1);
+				if(w1.length() > 2) {
+					results.add(w1);
+				}
 				break;
 			}
 			optPosition1++;
@@ -425,7 +440,9 @@ public class FeatureBaseUtils {
 			String w2 = listW.get(optPosition2).getWord();
 			String t2 = listW.get(optPosition2).getType();
 			if (nounTagList.contains(t2)) {
-				results.add(w2);
+				if(w2.length() > 2) {
+					results.add(w2);
+				}
 				break;
 			}
 			optPosition2--;
