@@ -20,6 +20,7 @@ public class FeatureBaseUtils {
 	private List<Review> listReview;
 	private WordUtils utils;
 	private List<String> adjectiveTagList;
+	private List<String> nounTagList;
 
 	private final String BLANK = "";
 	private final String SEPERATOR = "-";
@@ -33,6 +34,13 @@ public class FeatureBaseUtils {
 		adjectiveTagList = new ArrayList<>();
 		adjectiveTagList.add("A");
 		adjectiveTagList.add("AP");
+
+		nounTagList = new ArrayList<>();
+		nounTagList.add("N");
+		// nounTagList.add("Np");
+		// nounTagList.add("Nc");
+		// nounTagList.add("Nu");
+		nounTagList.add("NP");
 
 		utils = new WordUtils();
 		listReview = utils.getReviewList();
@@ -366,15 +374,64 @@ public class FeatureBaseUtils {
 						break;
 					}
 				}
-				List<String> optionWord = new ArrayList<>();
-				optionWord.addAll(posAdjList);
-				optionWord.addAll(negAdjList);
-				for (String o : optionWord) {
-					
+				List<String> opinionWordList = new ArrayList<>();
+				opinionWordList.addAll(posAdjList);
+				opinionWordList.addAll(negAdjList);
+				for (String o : opinionWordList) {
+					List<Word> listW = sen.getListWord();
+					for (Word word : listW) {
+						if (word.getWord().contains(o) && adjectiveTagList.contains(word.getType())) {
+							List<String> opinionWords = findInfrequentFeature(o, listW);
+							infrequentFeature.addAll(opinionWords);
+						}
+					}
+
 				}
 			}
 		}
 		return infrequentFeature;
+	}
+
+	private List<String> findInfrequentFeature(String o, List<Word> listW) {
+		List<String> results = new ArrayList<>();
+		int positionW = -1;
+		int size = listW.size();
+		for (int i = 0; i < size; i++) {
+			if (listW.get(i).getWord().contains(o)) {
+				positionW = i;
+			}
+		}
+		if (positionW == -1) {
+			return results;
+		}
+
+		int optPosition1 = positionW + 1;
+		int optPosition2 = positionW - 1;
+
+		int count = 0;
+		while (optPosition1 < size && count < 3) {
+			String w1 = listW.get(optPosition1).getWord();
+			String t1 = listW.get(optPosition1).getType();
+			if (nounTagList.contains(t1)) {
+				results.add(w1);
+				break;
+			}
+			optPosition1++;
+			count++;
+		}
+
+		count = 0;
+		while (optPosition2 > -1 && count < 3) {
+			String w2 = listW.get(optPosition2).getWord();
+			String t2 = listW.get(optPosition2).getType();
+			if (nounTagList.contains(t2)) {
+				results.add(w2);
+				break;
+			}
+			optPosition2--;
+			count++;
+		}
+		return results;
 	}
 
 }
