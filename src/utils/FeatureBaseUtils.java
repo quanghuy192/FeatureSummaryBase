@@ -16,7 +16,7 @@ public class FeatureBaseUtils {
 		POSITIVE, NEGATIVE, NEUTRAL
 	}
 
-	private List<I_ComplexArray> featureList;
+	private List<I_ComplexArray> featureList, infrequentFeatureList;
 	private List<Review> listReview;
 	private WordUtils utils;
 	private List<String> adjectiveTagList;
@@ -66,10 +66,33 @@ public class FeatureBaseUtils {
 		return featureList;
 	}
 
-	public Orientation getOrientationSentences(List<Sentences> listS, int position) {
+	// generate ỉnfrequent feature base after filter
+	public List<I_ComplexArray> infrequentFeatureBase() {
+
+		List<String> infrequentFeature = getInfrequentFeature();
+		infrequentFeatureList = new ArrayList<>();
+		I_ComplexArray com = null;
+
+		for (String s : infrequentFeature) {
+			List<Word> listW = new ArrayList<>();
+			Word w = new Word();
+			w.setOriginalWord(s);
+			w.setType("N");
+			w.setWord(s);
+			listW.add(w);
+
+			com = new I_ComplexArray();
+			com.setComplexObject(listW);
+			infrequentFeatureList.add(com);
+		}
+
+		return infrequentFeatureList;
+	}
+
+	public Orientation getOrientationSentences(List<Sentences> listS, int position, List<I_ComplexArray> features) {
 		Sentences sentences = listS.get(position);
 		int orientation = 0;
-		for (I_ComplexArray ic : featureList) {
+		for (I_ComplexArray ic : features) {
 			for (Word w : ic.getComplexObject()) {
 				List<Word> lw = sentences.getListWord();
 				if (!lw.contains(w)) {
@@ -104,7 +127,7 @@ public class FeatureBaseUtils {
 							else {
 								int size = listS.size();
 								if (position > 0 && position < size) {
-									return getOrientationSentences(listS, position - 1);
+									return getOrientationSentences(listS, position - 1, features);
 								} else {
 									return Orientation.NEUTRAL;
 								}
@@ -364,15 +387,24 @@ public class FeatureBaseUtils {
 	}
 
 	public List<String> getInfrequentFeature() {
+
+		boolean escape = false;
+
 		List<String> infrequentFeature = new ArrayList<>();
 		for (Review re : listReview) {
 			for (Sentences sen : re.getListSentences()) {
+				escape = false;
 				for (I_ComplexArray com : featureList) {
 					Word word = com.getComplexObject().get(0);
-					if (sen.getOriginalSentences().contains(word.getWord())) {
-						break;
+					if (sen.getOriginalSentences().toLowerCase().contains(word.getWord())) {
+						escape = true;
 					}
 				}
+
+				if (escape) {
+					break;
+				}
+
 				List<String> opinionWordList = new ArrayList<>();
 				opinionWordList.addAll(posAdjList);
 				opinionWordList.addAll(negAdjList);
