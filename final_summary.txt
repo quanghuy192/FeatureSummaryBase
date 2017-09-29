@@ -14,12 +14,12 @@ _ Màn hình thì 6splus là full HD , tuy nhiên e thấy màn hình của 6s t
 _ Nâng cấp rất đáng giá so với 6 nhưng vẫn chờ một sự thay đổi mạnh mẽ : viền màn hình mỏng hơn , pin dung lượng cao hơn , ram cũng ngon hơn 
 _  Màn to nhưng tối ưu tốt ko gian hiển thị nên nhìn màn hình có vẻ to hơn cả note 5 dù thực tế nhỏ hơn 
 _ Màn hình 3D Touch mang lại nhiều tiện ích trong quá trình sử dụng , ứng dụng trong tương lai chắc chắn sẽ càng nhiều hơn 
-_  cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2 " mà lại không full HD nữa 
 _ Hic mấy bác chê màn hình i Phone 6s chưa đủ nét chứng tỏ mắt các bác khủng thật 
 _ Dù biết nó tốt nhưng nghĩ tới cái màn hình chỉ hd như Đt tầm trung là thấy chán 
 _  Sau màn hình cảm ứng đa điểm , bây giờ là cảm ứng lực 
 _ Màn hình của 6s có đẹp như 6s + ko vậy mấy bác ? Như 2 vc em đang dùng 6 và 6 + thấy màn của 6 màu nhợt nhạt quá , trong khi đó 6 + màu sắc đẹp hơn bao nhiêu 
 _  Tại thấy các thím đánh giá nhìn màn hình 6plus quen rồi chuyển qua 6 cảm giác ko đc mịn , đẹp bằng 
+_  Hiệu năng không tăng nhiều mà chỉ thay đổi kích cỡ màn hình 
 _  Màn hình 3D-Touch mới nhất dc áp dụng trên smartphone 
 _  Màn hình Full-HD : nhưng mắt ng dù Full HD , 2K hay 4K thì cũng chưa thể phân biệt dc ở 1 khoảng cách tương đối , dĩ nhiên là độ phân giải càng cao càng tốt nhưng sẽ phải đánh đổi thời lượng pin 
 
@@ -27,9 +27,9 @@ Negative:6
 
 _  Màu sắc màn ổn tuy nhiên lỗi hở sáng màn hình vẫn còn dù rất nhẹ ko để ý kĩ sẽ ko thấy 
 _  Màn hình xấu so với các máy cao cấp khác 
+_  cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2 " mà lại không full HD nữa 
 _  Còn màn hình 2k hay 4k dĩ nhiên là tốt , nhưng tốt lên ko bao nh so vs full hd mà pin kém đi thì cũng chẳng ích lợi gì , cứ để full hd chạy có phải hay hơn ko , sau này cải thiện dc công nghệ pin lên cũng ko muộn 
 _ Có 1 điểm làm mình đắn đo khá nhiều giữa iphone 6s và 6s plus là về camera và màn hình 
-_  Hiệu năng không tăng nhiều mà chỉ thay đổi kích cỡ màn hình 
 _  Màn hình xấu so với các máy cao cấp khác 
 
 Neutral:3
@@ -41,11 +41,9 @@ _ So sánh về chất lượng màn hình 6plus vs 6s thì như thế nào ad
 ====================================
 CHẤT LƯỢNG
 
-Positive:6
+Positive:4
 
 _ Ngoài cái màn hình kém xa Z3 , S6 hay G4 về cả chất lượng lẫn độ phân giải ra thì Ip6s khá ngon 
-_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
-_ Apple music và các service rất rẻ mà tiện , nghe nhạc chất lượng cao nữa 
 _ Lên 12MP cũng chỉ để quay 4k , chất lượng ảnh không cải thiện mấy , dự là ip 7 cũng chỉ tốt hơn 1 tí , có lẽ phải 7s mới cải thiện camera nhiều 
 _  Camera thì chụp tối kém , chất lượng hình ảnh camera cũng thua các Đt cùng giá 
 _  Camera 12mp nhưng chất lượng chụp buổi tối ko có nhiều đột phá , đặc biệt khi so vs note 5 hay g 4 , 3D touch : mình ko dám ý kiến vì cần tgian để ng dùng thay đổi thói quen 
@@ -54,16 +52,17 @@ Negative:1
 
 _ Camera 12mp nhưng chất lượng chụp đêm ko tốt 
 
-Neutral:1
+Neutral:3
 
+_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
+_ Apple music và các service rất rẻ mà tiện , nghe nhạc chất lượng cao nữa 
 _ So sánh về chất lượng màn hình 6plus vs 6s thì như thế nào ad 
 
 ====================================
 CAMERA
 
-Positive:23
+Positive:22
 
-_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _ Máy có vẻ chắc chắn hơn 6 , ram và camera cải tiến lên nhiều 
 _ Mỗi tội 6s pin yếu hơn , chắc do ram 2GB nên tốn nhiều pin hơn nhỉ ? Camera cũng được nâng cấp để dành cho các chị em tự sướng 
 _  Đánh giá chung là camera cũng đẹp hơn so với ip 6 
@@ -102,10 +101,11 @@ _ Có 1 điểm làm mình đắn đo khá nhiều giữa iphone 6s và 6s plus 
 _ Iphone 6s vẩn camera lồi , ko đẹp tí nào , đành xài con 5s và 5c thêm 1 thời gian nữa , chờ iphone 7 thế nào 
 _  Camera cũng không hơn nhau là mấy 
 
-Neutral:16
+Neutral:17
 
 _ Mình sẽ chờ ip 7 , vì chỉ với nâng cấp ram và camera thì chưa thuyết phục lắm để mua 6s , mình cần pin trâu hơn nữa 
 _ Cảm nhận riêng là thích cái camera 12mpx 
+_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _ Cái camera trước 5MP sao ko thấy a nhắc đến ta 
 _ Camera vẫn để độ phân giải khá thấp so với mặt bằng trung để ém hàng , bây giờ máy mới được trang bị ram 2GB , mà thiên hạ ram 4gb , 6gb hết rồi 
 _ Nói chung mọi thứ đều được nâng cấp , ram , camera , pin , máy cầm cũng chắc tay hơn 
@@ -144,7 +144,7 @@ _ Chuẩn bác , tại bác ấy cứ thích so sánh vs android
 ====================================
 RAM
 
-Positive:41
+Positive:40
 
 _ Đánh giá khá khách quan ! Nhất là về ram , cá nhân mình vẫn thấy IOS ram 1G vẫn ổn , nhưng lên 2G vẫn ngon hơn nhiều 
 _  MÀ giờ được trang bị hẳn ram 2gb , pin cũng có phần ngon hơn 6 
@@ -172,7 +172,6 @@ _ Không thích iphone vì giá cao , máy xấu , pin yếu , ram yếu , sóng
 _ Mình thì không quan tâm lắm đến ram , nhưng camera đẹp , lại tốn xiền mua bộ nhớ thôi , mình chụp choẹt nhiều 64gb còn thấy thiếu 
 _  chắc ram 1gb vẫn đủ mượt rồi , nên chắc chờ lên ip 7 rồi nâng cấp 1 thể 
 _  Hiện giờ nhiều người vẫn hài lòng với i Phone 6 chỉ có 1 GB RAM thay vì chọn những máy Android có 3 GB thậm chí 4 GB RAM 
-_  Nhờ bộ nhớ RAM tăng lên 2GB nên i Phone 6S có thể sử dụng đa nhiệm nhiều ứng dụng hay tải các trang web nhiều nội dung nhanh chóng mà không gặp tình trạng giật vô ́ n tư ̀ ng xuâ ́ t hiê ̣ n trên ca ̉ iPhone 6 lâ ̃ n 6 Plus 
 _  Còn ram 2gb so với 1gb của 6 mình thấy vẫn không quá khác biệt 
 _  Phần cứng double mọi mặt , chip , ram , bộ nhớ trong đều chuẩn mới và nhanh hơn 
 _ Thật ra đáng giá nhất là ram 2g nếu xét theo 3 tiêu chí kia ! Nhưng với ios 1 g ram vẫn thoải mái chán ! Và khác biệt nhau không quá lớn ngoài tiêu chí 3d 
@@ -188,7 +187,7 @@ _  Còn nếu bác so vs android thì RAM 2GB , camera 12 Mpx đã quá tầm th
 _  Sức mạnh phần cứng : Vi xử lý mới nhất , RAM 2GB , bộ nhớ Flash tốc độ nhanh nhất tại thời điểm hiện tại dc áp dụng từ MB 12 ' 
 _  ram 2G mang lại chải nghiệm tốt hơn rõ ràng 
 
-Negative:16
+Negative:17
 
 _  Nếu là ram 2gb thì cũng lăn tăn phết 
 _  Ram 2Gb với pin được nâng cấp để chơi game nặng 
@@ -202,6 +201,7 @@ _ Mình thấy em 6 của mình chạy vẫn mượt lắm , không chụp ảnh
 _ 2 GB RAM không có gì to tát đối với anh em Android nhưng ở i OS , nó là một món nâng cấp vô cùng quý báu 
 _ Mình nghĩ chắc nhiều bạn sẽ cười vì chỉ có 2 GB RAM thôi mà sao người dùng i Phone thấy sướng đến thế nhưng nó quả thật đúng 
 _ 2 GB RAM chỉ có thể xếp vào hạng tầm trung bên Android nhưng đối với người dùng i Phone 6 trở về trước thì đây là một nâng cấp vô cùng lớn 
+_  Nhờ bộ nhớ RAM tăng lên 2GB nên i Phone 6S có thể sử dụng đa nhiệm nhiều ứng dụng hay tải các trang web nhiều nội dung nhanh chóng mà không gặp tình trạng giật vô ́ n tư ̀ ng xuâ ́ t hiê ̣ n trên ca ̉ iPhone 6 lâ ̃ n 6 Plus 
 _  Ram 2gb thì dùng tẹt vài năm cũng không sợ bị lỗi thời 
 _  Trong khi từ ip 5 5s 6 đều ở mức 1gb ram 
 _  Quả thực nâng cấp ram và Apple A9 khiến ip nhanh và mạnh khủng khiếp 
@@ -417,9 +417,8 @@ _ 3D touch là công nghệ tương lai , giống như touch ID trên 5s mà 5 k
 ====================================
 ẢNH
 
-Positive:9
+Positive:8
 
-_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _  Vài ảnh chụp từ em xám k gian , đẹp vãi 
 _ Ảnh nét vãi 
 _ IPhone chụp ảnh đẹp nhất từ trước đến nay , chưa kể còn được trạng bị thêm ram 2GB , chơi game mượt mà 
@@ -437,8 +436,9 @@ _ Đúng theo như chủ topic nói ở cuối , mình vẫn chưa thấy cải 
 _ Mình thấy em 6 của mình chạy vẫn mượt lắm , không chụp ảnh mấy nên không care lắm đến camera và ram 
 _  Chỉ chấm được mỗi cái sang chảnh , chạy cũng khá mượt 
 
-Neutral:2
+Neutral:3
 
+_ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _ Ghét cái camera , xấu kinh khủng , nhưng vẫn sẽ cân nhắc vì ram GB , do mình cũng không thích chụp ảnh lắm 
 _ Tôi chỉ quan trong mỗi cái pin và ram thôi , nâng cấp này rất đáng để gom lúa , không quan tâm lắm đến camera , vì t ít chụp ảnh lắm 
 
@@ -477,12 +477,12 @@ Neutral:0
 ====================================
 SÁCH
 
-Positive:1
+Positive:0
+
+
+Negative:1
 
 _  Otg ko hoạt động , văn bản ko copy tiện được mà sách thì nhiều vô cùng 
-
-Negative:0
-
 
 Neutral:0
 
@@ -605,21 +605,21 @@ Neutral:0
 ====================================
 IPHONE
 
-Positive:8
+Positive:6
 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
-_  cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2 " mà lại không full HD nữa 
 _ IPhone chụp ảnh đẹp nhất từ trước đến nay , chưa kể còn được trạng bị thêm ram 2GB , chơi game mượt mà 
 _ Nhiều người lúc nào cũng chê màn HD thế ? iphone nó leo lên ngôi số 1 nhờ số điểm ảnh á ? Mà sao ai cũng chê cái ram nhỉ , bạn thử dùng cái ip ram 1gb với những dòng kahcs ram 3gb đi , xem con nào mượt hơn 
 _ Không thích iphone vì giá cao , máy xấu , pin yếu , ram yếu , sóng kém , 3g , wifi lởm 
-_  Nhờ bộ nhớ RAM tăng lên 2GB nên i Phone 6S có thể sử dụng đa nhiệm nhiều ứng dụng hay tải các trang web nhiều nội dung nhanh chóng mà không gặp tình trạng giật vô ́ n tư ̀ ng xuâ ́ t hiê ̣ n trên ca ̉ iPhone 6 lâ ̃ n 6 Plus 
 _  Riêng cái tên Iphone thôi cũng đủ nâng tầm người dùng 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
 
-Negative:10
+Negative:12
 
 _ Cả khoản chụp tối thì iphone 6s quá tệ với đt Android chứ đừng nói Lumia 
+_  cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2 " mà lại không full HD nữa 
 _ IPhone giơ ̀ xâ ́ u kinh nhi ̉ , không so đươ ̣ c vơ ́ i IP 5 , 5S 
+_  Nhờ bộ nhớ RAM tăng lên 2GB nên i Phone 6S có thể sử dụng đa nhiệm nhiều ứng dụng hay tải các trang web nhiều nội dung nhanh chóng mà không gặp tình trạng giật vô ́ n tư ̀ ng xuâ ́ t hiê ̣ n trên ca ̉ iPhone 6 lâ ̃ n 6 Plus 
 _ Camera iphone 6s có retina flash nhìn cái là biết ﻿ 
 _ Sao pin iphone 6s hết nhanh vậy trời ai có cách nào tối ưu không giúp mình với 
 _ Mình mới lấy em iphone 6s đây 
