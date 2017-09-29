@@ -41,7 +41,7 @@ _ So sánh về chất lượng màn hình 6plus vs 6s thì như thế nào ad
 ====================================
 CHẤT LƯỢNG
 
-Positive:20
+Positive:6
 
 _ Ngoài cái màn hình kém xa Z3 , S6 hay G4 về cả chất lượng lẫn độ phân giải ra thì Ip6s khá ngon 
 _ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
@@ -50,18 +50,18 @@ _ Lên 12MP cũng chỉ để quay 4k , chất lượng ảnh không cải thi�
 _  Camera thì chụp tối kém , chất lượng hình ảnh camera cũng thua các Đt cùng giá 
 _  Camera 12mp nhưng chất lượng chụp buổi tối ko có nhiều đột phá , đặc biệt khi so vs note 5 hay g 4 , 3D touch : mình ko dám ý kiến vì cần tgian để ng dùng thay đổi thói quen 
 
-Negative:7
+Negative:1
 
 _ Camera 12mp nhưng chất lượng chụp đêm ko tốt 
 
-Neutral:4
+Neutral:1
 
 _ So sánh về chất lượng màn hình 6plus vs 6s thì như thế nào ad 
 
 ====================================
 CAMERA
 
-Positive:43
+Positive:23
 
 _ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _ Máy có vẻ chắc chắn hơn 6 , ram và camera cải tiến lên nhiều 
@@ -87,7 +87,7 @@ _ App cực tốt , ko bị lỗi vặt , ko hề bị bug , thiết kế đồn
 _  Còn nếu bác so vs android thì RAM 2GB , camera 12 Mpx đã quá tầm thường ngoại trừ 3d-touch và bộ nhớ kiểu mb 12 ' 
 _  Camera : 12MPX , quay phim 4k , 1080-60fps , live photo là những nâng cấp tuy nhỏ nhưng hữu dụng 
 
-Negative:19
+Negative:12
 
 _ Camera 12mp nhưng chất lượng chụp đêm ko tốt 
 _  Đặc biệt là camera , chưa kể 3D touch chỉ làm rối thêm thao tác và đau tay , tốn bộ nhớ và pin 
@@ -102,7 +102,7 @@ _ Có 1 điểm làm mình đắn đo khá nhiều giữa iphone 6s và 6s plus 
 _ Iphone 6s vẩn camera lồi , ko đẹp tí nào , đành xài con 5s và 5c thêm 1 thời gian nữa , chờ iphone 7 thế nào 
 _  Camera cũng không hơn nhau là mấy 
 
-Neutral:20
+Neutral:16
 
 _ Mình sẽ chờ ip 7 , vì chỉ với nâng cấp ram và camera thì chưa thuyết phục lắm để mua 6s , mình cần pin trâu hơn nữa 
 _ Cảm nhận riêng là thích cái camera 12mpx 
@@ -124,17 +124,17 @@ _ Đã bao nhiêu lâu rồi apple trung thành vs camera 8mpx và chỉ đến 
 ====================================
 BÁC
 
-Positive:47
+Positive:4
 
 _ Note 5 test tốc độ thấy bị lép vế rất nhiều so với 6s mà bác , ram em 6s này tận 2GB cơ mà , ngang với mấy con 4Gb cửa các dòng khác 
 _ Hic mấy bác chê màn hình i Phone 6s chưa đủ nét chứng tỏ mắt các bác khủng thật 
 _ Màn hình của 6s có đẹp như 6s + ko vậy mấy bác ? Như 2 vc em đang dùng 6 và 6 + thấy màn của 6 màu nhợt nhạt quá , trong khi đó 6 + màu sắc đẹp hơn bao nhiêu 
 _  Còn nếu bác so vs android thì RAM 2GB , camera 12 Mpx đã quá tầm thường ngoại trừ 3d-touch và bộ nhớ kiểu mb 12 ' 
 
-Negative:19
+Negative:0
 
 
-Neutral:24
+Neutral:4
 
 _ Mua màu Rose Gold vợ khoái quá trời , cười suốt , cám ơn bác 
 _ E cũng dùng 6plus 2 tháng trc khi chuyển qua 6s plus đây bác 
@@ -144,7 +144,7 @@ _ Chuẩn bác , tại bác ấy cứ thích so sánh vs android
 ====================================
 RAM
 
-Positive:88
+Positive:41
 
 _ Đánh giá khá khách quan ! Nhất là về ram , cá nhân mình vẫn thấy IOS ram 1G vẫn ổn , nhưng lên 2G vẫn ngon hơn nhiều 
 _  MÀ giờ được trang bị hẳn ram 2gb , pin cũng có phần ngon hơn 6 
@@ -188,7 +188,7 @@ _  Còn nếu bác so vs android thì RAM 2GB , camera 12 Mpx đã quá tầm th
 _  Sức mạnh phần cứng : Vi xử lý mới nhất , RAM 2GB , bộ nhớ Flash tốc độ nhanh nhất tại thời điểm hiện tại dc áp dụng từ MB 12 ' 
 _  ram 2G mang lại chải nghiệm tốt hơn rõ ràng 
 
-Negative:35
+Negative:16
 
 _  Nếu là ram 2gb thì cũng lăn tăn phết 
 _  Ram 2Gb với pin được nâng cấp để chơi game nặng 
@@ -207,7 +207,7 @@ _  Trong khi từ ip 5 5s 6 đều ở mức 1gb ram
 _  Quả thực nâng cấp ram và Apple A9 khiến ip nhanh và mạnh khủng khiếp 
 _  cái đáng đc nhất là ram 2G 
 
-Neutral:48
+Neutral:24
 
 _ Mình sẽ chờ ip 7 , vì chỉ với nâng cấp ram và camera thì chưa thuyết phục lắm để mua 6s , mình cần pin trâu hơn nữa 
 _  Nâng cấp về ram nữa , nói chung cái gì cũng nhanh 
@@ -237,7 +237,7 @@ _  Đa số các phiên bản IP đều dùng RAM 1GB và chỉ có 6s là bắt
 ====================================
 TOUCH
 
-Positive:105
+Positive:17
 
 _ Màn hình 3D Touch mang lại nhiều tiện ích trong quá trình sử dụng , ứng dụng trong tương lai chắc chắn sẽ càng nhiều hơn 
 _  Duyệt web mở tabs ko bị reload , touch id quá ngon 
@@ -257,13 +257,13 @@ _  Có 3d touch xài các tác vụ rất tiện dụng
 _  Màn hình 3D-Touch mới nhất dc áp dụng trên smartphone 
 _  Còn nếu bác so vs android thì RAM 2GB , camera 12 Mpx đã quá tầm thường ngoại trừ 3d-touch và bộ nhớ kiểu mb 12 ' 
 
-Negative:38
+Negative:3
 
 _  Đặc biệt là camera , chưa kể 3D touch chỉ làm rối thêm thao tác và đau tay , tốn bộ nhớ và pin 
 _  Nhờ cái 3d touch thao tác cái gì cũng tiện , đang gõ dở chỉnh sửa rất nhanh , xem trước nội dung cũng là cái tôi cực thích 
 _  3D-Touch : cái này còn chờ đánh giá tương lai nhưng rất có tiềm năng 
 
-Neutral:56
+Neutral:8
 
 _  Cái force touch chỉ xài vài ngày đầu 
 _ Touch ID thế hệ 2 đọc cực kỳ nhanh 
@@ -277,7 +277,7 @@ _ Touch ID thì cũng chưa phải ghê gớm lắm thiết nghĩ cho cùng nhan
 ====================================
 MÀU
 
-Positive:116
+Positive:11
 
 _  Màn hình màu xỉn xỉn nhạt nhạt , nếu soi kỹ thì màn hình Ip6s vẫn rỗ như những máy Android HD cách đây 3 năm 
 _  Mình là con trai còn thích cái màu Rose Gold , đẹp quá 
@@ -291,7 +291,7 @@ _ Màn hình của 6s có đẹp như 6s + ko vậy mấy bác ? Như 2 vc em đ
 _ A đẹp thì a dùng i Phone màu gì chả đẹp 
 _ Nhưng phải nói thật sau khi dùng thử con 6s của đứa bạn : giải trí trên cả tuyệt vời , chụp choẹt nhoay nhoáy , game giếc chạy vèo vèo , màn đẹp và màu sáng , hình ảnh trung thực , thân máy khá sang chảnh , dùng để dụ ánh mắt khá ok 
 
-Negative:44
+Negative:6
 
 _  Màu sắc màn ổn tuy nhiên lỗi hở sáng màn hình vẫn còn dù rất nhẹ ko để ý kĩ sẽ ko thấy 
 _ Thêm cái màu Rose Gold khá bắt mắt , nhưng nâng cấp thì không đáng kể 
@@ -300,7 +300,7 @@ _  Camera với màu hồng cho chị em sang chảnh
 _  6s có màu Rose Gold mới nên bọn con gái đổi xô nhau đi mua 
 _  Màu Rose Gold bên ngoài nó sang trọng và hợp với giới trẻ chứ chả có gì là nữ tính hết 
 
-Neutral:60
+Neutral:4
 
 _ Mua màu Rose Gold vợ khoái quá trời , cười suốt , cám ơn bác 
 _  Gấu mình mê cái màu hòng mới chết chứ , tốn kém quá 
@@ -310,7 +310,7 @@ _ Nói ko phải chứ , bạn nam nào mua màu hồng xài thì cũng nên xem
 ====================================
 PIN
 
-Positive:144
+Positive:28
 
 _  MÀ giờ được trang bị hẳn ram 2gb , pin cũng có phần ngon hơn 6 
 _ Màn hình thì 6splus là full HD , tuy nhiên e thấy màn hình của 6s thôi cũng rất tốt rồi , và như e nói , nếu 2k mà giảm thời lượng pin thì e chọn full HD để tăng thời gian sử dụng 
@@ -341,7 +341,7 @@ _  Đợi đến khi camera vượt qua được giới hạn vât lý hiện gi
 _  Màn hình Full-HD : nhưng mắt ng dù Full HD , 2K hay 4K thì cũng chưa thể phân biệt dc ở 1 khoảng cách tương đối , dĩ nhiên là độ phân giải càng cao càng tốt nhưng sẽ phải đánh đổi thời lượng pin 
 _  Cái này tùy quan điểm nhưng mình nghiêng về thời lượng pin hơn 
 
-Negative:53
+Negative:9
 
 _  Pin thì yếu không trụ được hết ngày 
 _  Đặc biệt là camera , chưa kể 3D touch chỉ làm rối thêm thao tác và đau tay , tốn bộ nhớ và pin 
@@ -353,7 +353,7 @@ _  Trước cứ phải mua 6sp vì sợ con bé nó pin kém , bây giờ thự
 _  Còn màn hình 2k hay 4k dĩ nhiên là tốt , nhưng tốt lên ko bao nh so vs full hd mà pin kém đi thì cũng chẳng ích lợi gì , cứ để full hd chạy có phải hay hơn ko , sau này cải thiện dc công nghệ pin lên cũng ko muộn 
 _ Dung lượng pin thấp hơn mà thời lượng sử dụng pin là như nhau ? Điều này có chính xác không ? 
 
-Neutral:81
+Neutral:21
 
 _ Mình sẽ chờ ip 7 , vì chỉ với nâng cấp ram và camera thì chưa thuyết phục lắm để mua 6s , mình cần pin trâu hơn nữa 
 _ Pin yếu quá dùng bất tiện 
@@ -380,7 +380,7 @@ _ Pin yếu quá dùng bất tiện
 ====================================
 MÁY
 
-Positive:158
+Positive:14
 
 _  Màn hình màu xỉn xỉn nhạt nhạt , nếu soi kỹ thì màn hình Ip6s vẫn rỗ như những máy Android HD cách đây 3 năm 
 _ Máy có vẻ chắc chắn hơn 6 , ram và camera cải tiến lên nhiều 
@@ -397,7 +397,7 @@ _ Với mình , những thay đổi của i Phone giúp máy bền hơn , sử d
 _  Nâng cấp đáng giá nhất của con này mình nghĩ là ram , làm cho việc trãi nghiệm máy thoải mái hơn 
 _ Nút home nhạy quá thì định quy định ngón nào dùng để mở máy , ngón nào chie để check giờ hoặc chụp hình 
 
-Negative:58
+Negative:5
 
 _  Màn hình xấu so với các máy cao cấp khác 
 _  máy cầm cũng chắc tay hơn , đáng để mua 
@@ -405,7 +405,7 @@ _ Máy cầm chắc tay hơn , chứ không mỏng như em 6
 _  Máy cầm khá đầm tay hơn , không bị ơi linh tinh như em 6 
 _  Màn hình xấu so với các máy cao cấp khác 
 
-Neutral:87
+Neutral:6
 
 _ Camera vẫn để độ phân giải khá thấp so với mặt bằng trung để ém hàng , bây giờ máy mới được trang bị ram 2GB , mà thiên hạ ram 4gb , 6gb hết rồi 
 _ 3D touch là công nghệ tương lai , giống như touch ID trên 5s mà 5 ko có vậy , các máy sau này buộc phải có 
@@ -417,7 +417,7 @@ _ 3D touch là công nghệ tương lai , giống như touch ID trên 5s mà 5 k
 ====================================
 ẢNH
 
-Positive:167
+Positive:9
 
 _ Camera e thừa nhận là thua các flagships bên SS và LG , tuy nhiên k 0 phải là quá tệ hại , lấy nét nhanh , chất lượng ảnh khá tốt , và camera của IP luôn dc đánh giá là 1 trong những camera xuất sắc nhất của smartphone , có điều là k 0 dc nhất mà thôi 
 _  Vài ảnh chụp từ em xám k gian , đẹp vãi 
@@ -429,7 +429,7 @@ _ Lên 12MP cũng chỉ để quay 4k , chất lượng ảnh không cải thi�
 _  Camera thì chụp tối kém , chất lượng hình ảnh camera cũng thua các Đt cùng giá 
 _ Nhưng phải nói thật sau khi dùng thử con 6s của đứa bạn : giải trí trên cả tuyệt vời , chụp choẹt nhoay nhoáy , game giếc chạy vèo vèo , màn đẹp và màu sáng , hình ảnh trung thực , thân máy khá sang chảnh , dùng để dụ ánh mắt khá ok 
 
-Negative:63
+Negative:5
 
 _  Camera với màu hồng cho chị em sang chảnh 
 _  Và đúng là để sanh chảnh với đời , và dành cho mục đích PR về công việc cần thể hiện 
@@ -437,7 +437,7 @@ _ Đúng theo như chủ topic nói ở cuối , mình vẫn chưa thấy cải 
 _ Mình thấy em 6 của mình chạy vẫn mượt lắm , không chụp ảnh mấy nên không care lắm đến camera và ram 
 _  Chỉ chấm được mỗi cái sang chảnh , chạy cũng khá mượt 
 
-Neutral:89
+Neutral:2
 
 _ Ghét cái camera , xấu kinh khủng , nhưng vẫn sẽ cân nhắc vì ram GB , do mình cũng không thích chụp ảnh lắm 
 _ Tôi chỉ quan trong mỗi cái pin và ram thôi , nâng cấp này rất đáng để gom lúa , không quan tâm lắm đến camera , vì t ít chụp ảnh lắm 
@@ -461,7 +461,7 @@ Neutral:0
 ====================================
 MỨC
 
-Positive:2
+Positive:1
 
 _ Nút home nhạy quá mức cần thiết thật 
 
@@ -477,11 +477,11 @@ Neutral:0
 ====================================
 SÁCH
 
-Positive:3
+Positive:1
 
 _  Otg ko hoạt động , văn bản ko copy tiện được mà sách thì nhiều vô cùng 
 
-Negative:3
+Negative:0
 
 
 Neutral:0
@@ -490,10 +490,10 @@ Neutral:0
 ====================================
 NÚT
 
-Positive:3
+Positive:0
 
 
-Negative:3
+Negative:0
 
 
 Neutral:0
@@ -502,13 +502,13 @@ Neutral:0
 ====================================
 HỆ ĐIỀU HÀNH
 
-Positive:6
+Positive:3
 
 _ Ram 2 GB quá bá đạo đối với hệ điều hành i OS 
 _  Ở hiện tại thì chưa biết , nhưng tương lai khi update hệ điều hành , chắc mới thấy rõ được , 
 _  cảm nhận cái hệ điều hành nó ổn định nhìn khá đơn giản ít ứng dụng rác 
 
-Negative:6
+Negative:3
 
 _ Ios gần với BB hơn , cùng độc quyền hệ điều hành , chạy mượt dù không cần cấu hình quá cao 
 _ Nhanh thì có nhanh thật nhưng riêng mình không thích nó cho lắm do hệ điều hành nó gò bó quá 
@@ -520,12 +520,12 @@ Neutral:0
 ====================================
 TÍNH NĂNG
 
-Positive:8
+Positive:2
 
 _  Nhìn chung các tính năng tuyệt vời , đặc biệt là thiết kế sang hẳn so với những dòng khác 
 _  Nếu như 6s gọn gàng đẹp mã nhưng lại rút giảm một số tính năng của camera và độ phân giải thì khá đáng tiếc 
 
-Negative:7
+Negative:1
 
 _ Ip nâng cấp những tính năng không thiết thực 
 
@@ -535,7 +535,7 @@ Neutral:0
 ====================================
 LIVE
 
-Positive:14
+Positive:6
 
 _  Live photo thì khỏi thứ , rõ lởm 
 _ Live Photos : cái này liên quan đến cảm xúc nhiều hơn và đối với mình thì nó vô cùng đáng giá 
@@ -544,7 +544,7 @@ _  Chẳng hạng như live pt chắc éo ai dùng hoặc nghịch tý là chán
 _  CÒ n muốn khoe thì dễ lắm , cứ mở máy lướt qua lướt lại là xong hà , iOS 9 mà chạy ầm ầm siêu mượt , lại có 3D touch và live photo thú vị thì chỉ có 6s + 
 _ App cực tốt , ko bị lỗi vặt , ko hề bị bug , thiết kế đồng bộ , camera cân bằng tốt và cực nhanh , 3d touch tiện cực kỳ , live photo giúp e lưu những khoảng khắc với gấu sinh động 
 
-Negative:8
+Negative:1
 
 _  Camera : 12MPX , quay phim 4k , 1080-60fps , live photo là những nâng cấp tuy nhỏ nhưng hữu dụng 
 
@@ -554,13 +554,13 @@ Neutral:0
 ====================================
 TẦM
 
-Positive:17
+Positive:3
 
 _ 2 GB RAM chỉ có thể xếp vào hạng tầm trung bên Android nhưng đối với người dùng i Phone 6 trở về trước thì đây là một nâng cấp vô cùng lớn 
 _ Dù biết nó tốt nhưng nghĩ tới cái màn hình chỉ hd như Đt tầm trung là thấy chán 
 _  Riêng cái tên Iphone thôi cũng đủ nâng tầm người dùng 
 
-Negative:11
+Negative:3
 
 _ Các bác xài ip 6s rồi cho mình hỏi có nhanh nóng máy k , mình gọi camera bằng messenger tầm 15p là máy nóng rồi 
 _ Em dùng thì thấy pin hao cũng nhanh , tầm 5h chiều là phải sạc lại rồi , ram 2GB nó ngốn pin thật đấy 
@@ -572,13 +572,13 @@ Neutral:0
 ====================================
 PHẦN CỨNG
 
-Positive:20
+Positive:3
 
 _ Hiệu năng không khác biệt mấy , nhưng phần cứng là quá ổn 
 _  Phần cứng double mọi mặt , chip , ram , bộ nhớ trong đều chuẩn mới và nhanh hơn 
 _  Sức mạnh phần cứng : Vi xử lý mới nhất , RAM 2GB , bộ nhớ Flash tốc độ nhanh nhất tại thời điểm hiện tại dc áp dụng từ MB 12 ' 
 
-Negative:12
+Negative:1
 
 _  Nếu muốn so thì nên so trên cùng một phần cứng hoặc cùng một os 
 
@@ -588,12 +588,12 @@ Neutral:0
 ====================================
 PHIÊN BẢN
 
-Positive:22
+Positive:2
 
 _ Phiên bản này có quả cải tiến , camera , màu Rose Gold mới cho chị em và ram 2GB là đáng chú ý nhất 
 _ Vỏ nhôm serie 7k : đây gần như là phiên bản cứng nhất của nhôm hợp kim 
 
-Negative:15
+Negative:3
 
 _ Mính thích dùng các phiên bản s hơn vì nó là bản nâng câp dáng kể so với bản thường 
 _  Ở phiên bản này có sự nâng cấp đang kể về camera và ram 
@@ -605,7 +605,7 @@ Neutral:0
 ====================================
 IPHONE
 
-Positive:30
+Positive:8
 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
 _  cầm cái iphone 6s màn hình 4.7 mà nó to ngang cái G2 5.2 " mà lại không full HD nữa 
@@ -616,7 +616,7 @@ _  Nhờ bộ nhớ RAM tăng lên 2GB nên i Phone 6S có thể sử dụng đa
 _  Riêng cái tên Iphone thôi cũng đủ nâng tầm người dùng 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
 
-Negative:25
+Negative:10
 
 _ Cả khoản chụp tối thì iphone 6s quá tệ với đt Android chứ đừng nói Lumia 
 _ IPhone giơ ̀ xâ ́ u kinh nhi ̉ , không so đươ ̣ c vơ ́ i IP 5 , 5S 
@@ -635,11 +635,11 @@ Neutral:0
 ====================================
 CẢM XÚC
 
-Positive:31
+Positive:1
 
 _ Live Photos : cái này liên quan đến cảm xúc nhiều hơn và đối với mình thì nó vô cùng đáng giá 
 
-Negative:25
+Negative:0
 
 
 Neutral:0
@@ -648,14 +648,14 @@ Neutral:0
 ====================================
 NHƯỢC ĐIỂM
 
-Positive:35
+Positive:4
 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
 _  Nhưng một nhược điểm cực lớn là giá cắt cổ và pin quá yếu 
 _  Nhược điểm của i Phone 6s bây giờ là camera chưa theo kịp các đối thủ đến từ Sony và Samsung , dù sao camera của i Phone 6s vẫn là quá đủ dùng cho người dùng phổ thông 
 _ Iphone 6 và 6s có 3 nhược điểm rất lớn 
 
-Negative:25
+Negative:0
 
 
 Neutral:0
@@ -664,13 +664,13 @@ Neutral:0
 ====================================
 DÒNG
 
-Positive:38
+Positive:3
 
 _ Note 5 test tốc độ thấy bị lép vế rất nhiều so với 6s mà bác , ram em 6s này tận 2GB cơ mà , ngang với mấy con 4Gb cửa các dòng khác 
 _ Nhiều người lúc nào cũng chê màn HD thế ? iphone nó leo lên ngôi số 1 nhờ số điểm ảnh á ? Mà sao ai cũng chê cái ram nhỉ , bạn thử dùng cái ip ram 1gb với những dòng kahcs ram 3gb đi , xem con nào mượt hơn 
 _  Nhìn chung các tính năng tuyệt vời , đặc biệt là thiết kế sang hẳn so với những dòng khác 
 
-Negative:30
+Negative:5
 
 _ Hóa ra bấy lâu nay các dòng ip 6s đổ xuống chơi game 3d vẫn lag , giật , còn pin hẻo thế kia thì chịu rồi , nửa buổi sạc một lần , ngày sạc hai làn 
 _  Với ip thì không nên lôi ram với chip để so sánh với dòng khác , vì hệ sinh thái nó khác 
@@ -684,10 +684,10 @@ Neutral:0
 ====================================
 HIỆU NĂNG
 
-Positive:38
+Positive:0
 
 
-Negative:30
+Negative:0
 
 
 Neutral:0
@@ -696,11 +696,11 @@ Neutral:0
 ====================================
 THIẾT KẾ
 
-Positive:40
+Positive:2
 
 _  Nhìn chung các tính năng tuyệt vời , đặc biệt là thiết kế sang hẳn so với những dòng khác 
 _ App cực tốt , ko bị lỗi vặt , ko hề bị bug , thiết kế đồng bộ , camera cân bằng tốt và cực nhanh , 3d touch tiện cực kỳ , live photo giúp e lưu những khoảng khắc với gấu sinh động 
 
-Negative:31
+Negative:1
 
 _ Còn 3 cái mà mình không hài lòng là pin , diện tích màn hình , camera - Apple có thể cải thiện thiết kế màn hình với i Phone 7 
