@@ -151,6 +151,6 @@ public class Test implements Serializable {
 				bufferedWriter.flush();
 			}
 		}
-
+		bufferedWriter.close();
 	}
 }
