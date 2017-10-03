@@ -8,7 +8,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import model.I_ComplexArray;
@@ -32,19 +31,12 @@ public class WordUtils {
 	private List<String> nounTagList;
 
 	public WordUtils() {
-		try {
-			nounTagList = new ArrayList<>();
-			nounTagList.add("N");
-			// nounTagList.add("Np");
-			// nounTagList.add("Nc");
-			// nounTagList.add("Nu");
-			nounTagList.add("NP");
-
-			writer = new FileWriter(new File(FILE_OUTPUT_NAME));
-			bufferedWriter = new BufferedWriter(writer);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		nounTagList = new ArrayList<>();
+		nounTagList.add("N");
+		// nounTagList.add("Np");
+		// nounTagList.add("Nc");
+		// nounTagList.add("Nu");
+		nounTagList.add("NP");
 	}
 
 	private List<String> readFileInput() {
@@ -70,27 +62,47 @@ public class WordUtils {
 
 	private void writeFileInput(List<String> wordsList) {
 		try {
+			writer = new FileWriter(new File(FILE_OUTPUT_NAME));
+			bufferedWriter = new BufferedWriter(writer);
 			for (String words : wordsList) {
 				bufferedWriter.write(words);
 				bufferedWriter.write("\n");
+				bufferedWriter.flush();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
-			closeWrite();
 		}
 	}
 
+	static List<String> in;
+
 	public synchronized void generateWordTagData() {
 		// read file
-		List<String> in = readFileInput();
+
+		Thread t = new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				in = readFileInput();
+			}
+		});
+		try {
+			t.start();
+			t.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		// write file
+		if (GeneralUtil.isEmptyList(in)) {
+			in = new ArrayList<>();
+		}
 		writeFileInput(in);
 		// alert done
 		System.out.println("Success !");
 	}
 
-	private void closeReader() {
+	public void closeReader() {
 		try {
 			bufferedReader.close();
 			reader.close();
@@ -99,7 +111,7 @@ public class WordUtils {
 		}
 	}
 
-	private void closeWrite() {
+	public void closeWrite() {
 		try {
 			bufferedWriter.close();
 			writer.close();
@@ -127,8 +139,6 @@ public class WordUtils {
 			return reviewList;
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
-			closeReader();
 		}
 		return reviewList;
 	}
@@ -160,7 +170,7 @@ public class WordUtils {
 
 			featureList = new ArrayList<>();
 			List<Sentences> sentences = r.getListSentences();
-			for (Sentences s : sentences) { 
+			for (Sentences s : sentences) {
 
 				List<Word> words = s.getListWord();
 				for (Word w : words) {

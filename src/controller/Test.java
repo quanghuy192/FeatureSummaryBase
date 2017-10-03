@@ -30,8 +30,11 @@ public class Test implements Serializable {
 		FeatureBaseUtils utilss = new FeatureBaseUtils();
 
 		List<Review> listReview = wordUtils.getReviewList();
-		List<I_ComplexArray> feature = utilss.featureBase();
+		List<I_ComplexArray> feature = utilss.getFeatureList();
 		List<I_ComplexArray> inFrequentFeature = utilss.infrequentFeatureBase();
+
+		wordUtils.closeReader();
+		wordUtils.closeWrite();
 
 		String FILE_OUTPUT_NAME = "final_summary.txt";
 		FileWriter writer = new FileWriter(new File(FILE_OUTPUT_NAME));

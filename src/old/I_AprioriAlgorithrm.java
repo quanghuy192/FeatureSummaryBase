@@ -65,7 +65,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		if (step == 1) {
 			dataOriginalItems = dataItemsParent;
 			dataItemsParent = getAtomFirstData(dataItemsParent);
-			
+
 			dataItemsParent = pruneRules(dataItemsParent);
 
 			show(dataItemsParent);
@@ -418,6 +418,8 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 		WordUtils utils = new WordUtils();
 		List<Review> listReview = utils.getReviewList();
+		utils.closeReader();
+		utils.closeWrite();
 		Word word;
 		I_ComplexArray com;
 

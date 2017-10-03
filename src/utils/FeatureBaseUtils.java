@@ -44,12 +44,14 @@ public class FeatureBaseUtils {
 
 		utils = new WordUtils();
 		listReview = utils.getReviewList();
+		utils.closeReader();
+		utils.closeWrite();
 
 		featureBase();
 	}
 
 	// generate feature base after filter
-	public List<I_ComplexArray> featureBase() {
+	private List<I_ComplexArray> featureBase() {
 
 		List<I_ComplexArray> featureBases = utils.generateFeatureBase();
 		I_AprioriAlgorithrm algorithrm = new I_AprioriAlgorithrm();
@@ -63,6 +65,10 @@ public class FeatureBaseUtils {
 			System.out.println();
 		}
 
+		return featureList;
+	}
+
+	public List<I_ComplexArray> getFeatureList() {
 		return featureList;
 	}
 
