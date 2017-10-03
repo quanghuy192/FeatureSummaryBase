@@ -178,7 +178,7 @@ public class FeatureBaseUtils {
 		int adjPosition2 = positionWord - 1;
 
 		int count = 0;
-		while (adjPosition1 < size && count < 3) {
+		while (adjPosition1 < size && count < 5) {
 			String w1 = lw.get(adjPosition1).getWord();
 			if (positiveWordList.contains(w1)) {
 				orientation *= (-1);
@@ -188,7 +188,7 @@ public class FeatureBaseUtils {
 		}
 
 		count = 0;
-		while (adjPosition2 > -1 && count < 3) {
+		while (adjPosition2 > -1 && count < 5) {
 			String w2 = lw.get(adjPosition2).getWord();
 			if (positiveWordList.contains(w2)) {
 				orientation *= (-1);
@@ -460,7 +460,7 @@ public class FeatureBaseUtils {
 		int optPosition2 = positionW - 1;
 
 		int count = 0;
-		while (optPosition1 < size && count < 3) {
+		while (optPosition1 < size && count < 5) {
 			String w1 = listW.get(optPosition1).getWord();
 			String t1 = listW.get(optPosition1).getType();
 			if (nounTagList.contains(t1)) {
@@ -474,7 +474,7 @@ public class FeatureBaseUtils {
 		}
 
 		count = 0;
-		while (optPosition2 > -1 && count < 3) {
+		while (optPosition2 > -1 && count < 5) {
 			String w2 = listW.get(optPosition2).getWord();
 			String t2 = listW.get(optPosition2).getType();
 			if (nounTagList.contains(t2)) {
