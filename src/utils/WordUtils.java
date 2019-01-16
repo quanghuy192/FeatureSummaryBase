@@ -40,7 +40,7 @@ public class WordUtils {
 	}
 
 	private List<String> readFileInput() {
-		List<String> wordList = new ArrayList<String>();
+		List<String> wordList = new ArrayList<>();
 
 		String data = FILE_INPUT_NAME;
 		String[] sentences = UTF8FileUtility.getLines(data);
@@ -79,13 +79,7 @@ public class WordUtils {
 	public synchronized void generateWordTagData() {
 		// read file
 
-		Thread t = new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				in = readFileInput();
-			}
-		});
+		Thread t = new Thread(() -> in = readFileInput());
 		try {
 			t.start();
 			t.join();
@@ -155,12 +149,6 @@ public class WordUtils {
 	// Generate feature base raw file
 	public List<I_ComplexArray> generateFeatureBase() {
 
-		// open and create new output file
-		// FileWriter mWriter = null;
-		// BufferedWriter mBufferedWriter = null;
-		// try {
-		// mWriter = new FileWriter(new File(FEATURE_BASE_RAW_FILE));
-		// mBufferedWriter = new BufferedWriter(mWriter);
 		List<I_ComplexArray> featureBases = new ArrayList<>();
 		List<Word> featureList;
 		I_ComplexArray complexArray;
@@ -175,8 +163,6 @@ public class WordUtils {
 				List<Word> words = s.getListWord();
 				for (Word w : words) {
 					if (nounTagList.contains(w.getType()) && BLANK != w.getWord()) {
-						// mBufferedWriter.write(w.getWord() + BLANK);
-						// System.out.print(w.getWord() + BLANK);
 						featureList.add(w);
 					}
 				}
@@ -184,17 +170,7 @@ public class WordUtils {
 
 			complexArray = new I_ComplexArray(featureList);
 			featureBases.add(complexArray);
-			// System.out.println();
-			// mBufferedWriter.write("\n");
-			// mBufferedWriter.write("\n");
 		}
-		// mBufferedWriter.close();
-		// mWriter.close();
-		// } catch (IOException e) {
-		// e.printStackTrace();
-		// } finally {
-		// System.out.println("Done !!!!!!!");
-		// }
 		return featureBases;
 	}
 }

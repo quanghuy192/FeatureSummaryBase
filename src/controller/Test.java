@@ -4,7 +4,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +16,7 @@ import utils.FeatureBaseUtils;
 import utils.FeatureBaseUtils.Orientation;
 import utils.WordUtils;
 
-public class Test implements Serializable {
-
-    /**
-     *
-     */
-    private static final long serialVersionUID = -6889473193102076069L;
+public class Test{
 
     public static void main(String[] args) throws IOException {
 

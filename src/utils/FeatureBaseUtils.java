@@ -12,7 +12,7 @@ import old.I_AprioriAlgorithrm;
 
 public class FeatureBaseUtils {
 
-	public static enum Orientation {
+	public enum Orientation {
 		POSITIVE, NEGATIVE, NEUTRAL
 	}
 
