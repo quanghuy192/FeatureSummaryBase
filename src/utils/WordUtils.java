@@ -24,7 +24,7 @@ public class WordUtils {
 	private BufferedReader bufferedReader;
 	private BufferedWriter bufferedWriter;
 	private final String FILE_OUTPUT_NAME = "words_with_tags.txt";
-	private final String FILE_INPUT_NAME = "reviews_data.txt";
+	private final String FILE_INPUT_NAME = "test_b1000.txt";
 	// private final String FEATURE_BASE_RAW_FILE = "feature_base_raw.txt";
 	private final String BLANK = " ";
 

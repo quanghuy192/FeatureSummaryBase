@@ -45,7 +45,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 	private int N;
 	private int step = 0;
-	private double SUPPORT_MIN = 0.01;
+	private double SUPPORT_MIN = 0.3;
 	private String SEPERATOR = "";
 	// private int CONFIDENCE_MIN = 2;
 
@@ -54,12 +54,9 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 	}
 
 	public List<I_ComplexArray> generate_K_ItemSet(List<I_ComplexArray> dataItemsParent) {
-
 		// GeneralUtil.setTimeStart();
 		step++;
-
 		itemsRule = new ArrayList<>();
-		// List<I_ComplexArray> itemsChild;
 
 		// Create large 1-itemsets
 		if (step == 1) {
@@ -70,7 +67,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 
 			show(dataItemsParent);
 			GeneralUtil.setTimeEnd();
-			System.out.println("Support min = " + SUPPORT_MIN);
+			System.out.println("Support min = " + dynamicSupport(dataOriginalItems.size(), step));
 			System.out.println("Count : " + dataItemsParent.size() + " items");
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
@@ -78,7 +75,6 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
 		}
-		// itemsChild = getItems(dataItemsParent);
 
 		N = dataOriginalItems.size();
 
@@ -93,33 +89,6 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			}
 		}
 
-		// for (I_ComplexArray parent : dataOriginalItems) {
-		// for (I_ComplexArray child : dataItemsParent) {
-		//
-		// int count = 0; // if count equal size of transaction, delete tag
-		// if(parent.isDeleteTag()){
-		// break;
-		// }
-		//
-		// I_Item i = new I_Item(parent.getComplexObject(),
-		// child.getComplexObject());
-		// if (!itemsRule.contains(i)) {
-		// i.setItemsParent(parent.getComplexObject());
-		// itemsRule.add(i);
-		// count++;
-		// } else {
-		// I_Item clone = getItem(child.getComplexObject(), itemsRule);
-		// if (null != clone) {
-		// clone.setItemsParent(parent.getComplexObject());
-		// }
-		// }
-		//
-		// if(count == parent.getComplexObject().size()){
-		// parent.setDeleteTag(true);
-		// }
-		// }
-		// }
-
 		itemsRule = GeneralUtil.pruneDuplicateItem(itemsRule);
 
 		int count = 0;
@@ -128,9 +97,9 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		List<I_ComplexArray> dataResultItemsClone = cloneArray(dataResultItems);
 		dataResultItems.clear();
 		for (I_Item i : itemsRule) {
-			double percent = 1.0 * i.getQuantity() / N;
+//			double percent = 1.0 * i.getQuantity() / N;
 			List<Word> subList;
-			if (percent >= SUPPORT_MIN) {
+			if (i.getQuantity() >= dynamicSupport(N, step)) {
 				subList = i.getItemsChild();
 				I_ComplexArray com = new I_ComplexArray(count, subList);
 				dataResultItems.add(com);
@@ -163,7 +132,7 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 		if (dataItemsChild.size() > 1) {
 			show(dataItemsChild);
 			// GeneralUtil.setTimeEnd();
-			System.out.println("Support min = " + SUPPORT_MIN);
+			System.out.println("Support min = " + dynamicSupport(N, step));
 			System.out.println("Count : " + dataItemsChild.size() + " items");
 			System.out.println("----------------------------------------");
 			System.out.println("----------------------------------------");
@@ -176,6 +145,13 @@ public class I_AprioriAlgorithrm implements AprioriFindingSubChild, AprioriItems
 			// GeneralUtil.setTimeEnd();
 			return pruneRules(dataResultItemsClone);
 		}
+	}
+	
+	private double dynamicSupport(int n, int i) {
+		double alpha = 1.2D;
+		double new_min =  alpha * Math.log10(n)/(10*i) + SUPPORT_MIN;
+		double support = new_min * n / 100;
+		return support;
 	}
 
 	private List<I_ComplexArray> cloneArray(List<I_ComplexArray> resultItems) {
